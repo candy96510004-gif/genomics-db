@@ -1,0 +1,196 @@
+[
+  {
+    "id": 1,
+    "name": "PRSice-2",
+    "cat": "PRS",
+    "desc": "基於 P-value thresholding 與 clumping 的 PRS 計算工具，操作簡便，支援連續與二元表現型，並提供視覺化報告。",
+    "use": "計算個體多基因風險分數、選擇最佳 P-value threshold",
+    "link": "https://choishingwan.github.io/PRSice/",
+    "papers": [
+      {
+        "title": "PRSice-2: Polygenic Risk Score software for biobank-scale data",
+        "author": "Choi et al., 2019",
+        "journal": "GigaScience",
+        "doi": "https://doi.org/10.1093/gigascience/giz082",
+        "note": "主要工具論文"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "LDpred2",
+    "cat": "PRS",
+    "desc": "貝葉斯方法，以 LD 矩陣為基礎調整 summary statistics，提供 LDpred2-inf、LDpred2-grid、LDpred2-auto 三種模式，預測準確度優於 C+T。",
+    "use": "從 GWAS summary stats 計算 PRS，適合大型生物銀行",
+    "link": "https://privefl.github.io/bigsnpr/articles/LDpred2.html",
+    "papers": [
+      {
+        "title": "LDpred2: better, faster, stronger",
+        "author": "Privé et al., 2020",
+        "journal": "Bioinformatics",
+        "doi": "https://doi.org/10.1093/bioinformatics/btaa1029",
+        "note": "LDpred2 方法論文"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "PRS-CS",
+    "cat": "PRS",
+    "desc": "使用連續收縮先驗（continuous shrinkage prior）的貝葉斯 PRS 方法，自動從資料中學習收縮強度，不需手動調參。",
+    "use": "跨族群 PRS、自動調整效果值收縮",
+    "link": "https://github.com/getian107/PRScs",
+    "papers": [
+      {
+        "title": "Polygenic prediction via Bayesian regression and continuous shrinkage priors",
+        "author": "Ge et al., 2019",
+        "journal": "Nature Communications",
+        "doi": "https://doi.org/10.1038/s41467-019-09718-5",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "LDSC",
+    "cat": "LDSC",
+    "desc": "利用 LD score regression 從 GWAS summary statistics 估計 SNP 遺傳力（h²）與兩個性狀之間的遺傳相關性（rg），不需個體水準資料。",
+    "use": "估計 h²、遺傳相關性 rg、區分多基因效應與混雜",
+    "link": "https://github.com/bulik/ldsc",
+    "papers": [
+      {
+        "title": "LD Score regression distinguishes confounding from polygenicity in genome-wide association studies",
+        "author": "Bulik-Sullivan et al., 2015",
+        "journal": "Nature Genetics",
+        "doi": "https://doi.org/10.1038/ng.3211",
+        "note": "LDSC 基礎論文"
+      },
+      {
+        "title": "An atlas of genetic correlations across human diseases and traits",
+        "author": "Bulik-Sullivan et al., 2015",
+        "journal": "Nature Genetics",
+        "doi": "https://doi.org/10.1038/ng.3406",
+        "note": "遺傳相關性應用"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Partitioned LDSC",
+    "cat": "LDSC",
+    "desc": "LDSC 的延伸，將基因組分成功能性注釋區塊（如增強子、啟動子），分析各區塊對遺傳力的貢獻，即 heritability enrichment 分析。",
+    "use": "功能性遺傳力分析、識別疾病相關組織或細胞類型",
+    "link": "https://github.com/bulik/ldsc",
+    "papers": [
+      {
+        "title": "Partitioning heritability by functional annotation using genome-wide association summary statistics",
+        "author": "Finucane et al., 2015",
+        "journal": "Nature Genetics",
+        "doi": "https://doi.org/10.1038/ng.3404",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "SuSiE",
+    "cat": "Fine-mapping",
+    "desc": "Sum of Single Effects 模型，假設每個 credible set 內只有一個因果變異，用迭代貝葉斯方法估計後驗包含機率（PIP），速度快且結果易解釋。",
+    "use": "GWAS locus fine-mapping、產生 credible sets 與 PIP",
+    "link": "https://github.com/stephenslab/susieR",
+    "papers": [
+      {
+        "title": "Fine-mapping from summary data with the Sum of Single Effects model",
+        "author": "Wang et al., 2020",
+        "journal": "PLOS Genetics",
+        "doi": "https://doi.org/10.1371/journal.pgen.1010299",
+        "note": "SuSiE-RSS（summary stats 版本）"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "FINEMAP",
+    "cat": "Fine-mapping",
+    "desc": "使用貝葉斯因子與 shotgun stochastic search 演算法，可同時評估多個因果變異的可能性，輸出每個 SNP 的 PIP 與因果組合的後驗機率。",
+    "use": "多因果變異 fine-mapping、需要個體或 LD 資料",
+    "link": "http://www.christianbenner.com/",
+    "papers": [
+      {
+        "title": "FINEMAP: efficient variable selection using summary data from genome-wide association studies",
+        "author": "Benner et al., 2016",
+        "journal": "Bioinformatics",
+        "doi": "https://doi.org/10.1093/bioinformatics/btw018",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "TwoSampleMR",
+    "cat": "MR",
+    "desc": "R 套件，串接 IEU OpenGWAS 資料庫，自動抓取工具變數並執行多種 MR 方法（IVW、MR-Egger、Weighted Median 等），是 MR 分析的標準流程工具。",
+    "use": "雙樣本孟德爾隨機化、暴露與結果因果推論",
+    "link": "https://mrcieu.github.io/TwoSampleMR/",
+    "papers": [
+      {
+        "title": "The MR-Base platform supports systematic causal inference across the human phenome",
+        "author": "Hemani et al., 2018",
+        "journal": "eLife",
+        "doi": "https://doi.org/10.7554/eLife.34408",
+        "note": "MR-Base / TwoSampleMR 平台論文"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "MR-PRESSO",
+    "cat": "MR",
+    "desc": "偵測並校正 MR 分析中的水平多效性（horizontal pleiotropy），透過 outlier 偵測移除異常工具變數，提供校正後的因果估計值。",
+    "use": "多效性檢測、MR outlier 校正",
+    "link": "https://github.com/rondolab/MR-PRESSO",
+    "papers": [
+      {
+        "title": "Detection of widespread horizontal pleiotropy in causal relationships inferred from Mendelian randomization between complex traits and diseases",
+        "author": "Verbanck et al., 2018",
+        "journal": "Nature Genetics",
+        "doi": "https://doi.org/10.1038/s41588-018-0099-7",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "REGENIE",
+    "cat": "GWAS QC",
+    "desc": "針對大型生物銀行資料設計的全基因組關聯分析工具，使用 whole genome regression 控制族群結構與親緣關係，記憶體效率極高。",
+    "use": "大規模 GWAS（UK Biobank 等）、二元與連續表現型",
+    "link": "https://rgcgithub.github.io/regenie/",
+    "papers": [
+      {
+        "title": "Efficient analysis of large-scale genome-wide data with two-step iterative resampling",
+        "author": "Mbatchou et al., 2021",
+        "journal": "Nature Genetics",
+        "doi": "https://doi.org/10.1038/s41588-021-00870-7",
+        "note": ""
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "PLINK2",
+    "cat": "GWAS QC",
+    "desc": "GWAS 與族群遺傳學的基礎工具，PLINK2 大幅提升計算效率，支援 PGEN 格式、多執行緒，適合從 QC 到關聯分析的完整流程。",
+    "use": "基因型 QC、LD 計算、PCA、關聯分析",
+    "link": "https://www.cog-genomics.org/plink/2.0/",
+    "papers": [
+      {
+        "title": "Second-generation PLINK: rising to the challenge of larger and richer datasets",
+        "author": "Chang et al., 2015",
+        "journal": "GigaScience",
+        "doi": "https://doi.org/10.1186/s13742-015-0047-8",
+        "note": "PLINK 1.9 論文，PLINK2 持續更新中"
+      }
+    ]
+  }
+]

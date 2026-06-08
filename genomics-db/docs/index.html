@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GWAS Methods DB</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0d0f12;
+  --surface: #13161b;
+  --surface2: #1a1e26;
+  --border: #252a35;
+  --border2: #2e3545;
+  --text: #e2e6f0;
+  --muted: #6b7591;
+  --accent: #4a9eff;
+
+  --prs:   #3d9e6e;
+  --ldsc:  #7c6fcd;
+  --fine:  #d4824a;
+  --mr:    #c45c8a;
+  --gwas:  #4a8fc4;
+  --other: #7a8a9a;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  font-size: 14px;
+}
+
+/* ── header ── */
+header {
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 50;
+}
+.logo {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+.header-right { display: flex; align-items: center; gap: 10px; }
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: 6px;
+  padding: 0 12px;
+  height: 34px;
+}
+.search-box svg { color: var(--muted); flex-shrink: 0; }
+.search-box input {
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--text);
+  font-size: 13px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  width: 200px;
+}
+.search-box input::placeholder { color: var(--muted); }
+.btn-add {
+  display: flex; align-items: center; gap: 6px;
+  background: var(--accent);
+  border: none;
+  border-radius: 6px;
+  padding: 0 14px;
+  height: 34px;
+  color: #fff;
+  font-size: 13px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  cursor: pointer;
+  font-weight: 500;
+  transition: opacity 0.15s;
+}
+.btn-add:hover { opacity: 0.88; }
+
+/* ── layout ── */
+.layout { display: flex; height: calc(100vh - 56px); }
+
+/* ── sidebar ── */
+.sidebar {
+  width: 200px;
+  flex-shrink: 0;
+  border-right: 1px solid var(--border);
+  padding: 1.5rem 0;
+  overflow-y: auto;
+}
+.sidebar-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  padding: 0 1.25rem;
+  margin-bottom: 10px;
+}
+.cat-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 1.25rem;
+  cursor: pointer;
+  border-radius: 0;
+  transition: background 0.1s;
+  border-left: 2px solid transparent;
+  font-size: 13px;
+  color: var(--muted);
+}
+.cat-item:hover { background: var(--surface); color: var(--text); }
+.cat-item.active { border-left-color: currentColor; background: var(--surface); color: var(--text); }
+.cat-item .dot {
+  width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0;
+}
+.cat-item .cat-name { flex: 1; margin-left: 10px; }
+.cat-item .cat-count {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: var(--muted);
+}
+.cat-item.active .cat-count { color: inherit; opacity: 0.7; }
+
+/* ── main ── */
+.main { flex: 1; overflow-y: auto; padding: 1.5rem 2rem; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 12px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.1rem 1.25rem;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.card:hover { border-color: var(--border2); background: var(--surface2); }
+.card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+.card-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+  font-family: 'IBM Plex Mono', monospace;
+  line-height: 1.3;
+}
+.badge {
+  font-size: 10px;
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 0.06em;
+  padding: 3px 8px;
+  border-radius: 3px;
+  border: 1px solid;
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-weight: 500;
+}
+.card-desc {
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.65;
+  flex: 1;
+}
+.card-footer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 11px;
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--muted);
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+.empty {
+  grid-column: 1/-1;
+  text-align: center;
+  padding: 4rem;
+  color: var(--muted);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+}
+
+/* ── modal overlay ── */
+.overlay {
+  display: none;
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 100;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem 1rem;
+  overflow-y: auto;
+  backdrop-filter: blur(2px);
+}
+.overlay.open { display: flex; }
+.modal {
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: 10px;
+  width: 100%;
+  max-width: 560px;
+  padding: 1.75rem;
+  position: relative;
+  margin: auto;
+  animation: modalIn 0.18s ease;
+}
+@keyframes modalIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }
+.modal-close {
+  position: absolute; top: 1.1rem; right: 1.1rem;
+  background: none; border: none; cursor: pointer;
+  color: var(--muted); font-size: 18px; line-height: 1;
+  transition: color 0.1s;
+}
+.modal-close:hover { color: var(--text); }
+.modal h2 {
+  font-size: 17px; font-weight: 500;
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--text); margin-bottom: 1.25rem;
+}
+.field { margin-bottom: 1rem; }
+.field label {
+  display: block;
+  font-size: 11px;
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.field input, .field textarea, .field select {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border2);
+  border-radius: 6px;
+  padding: 9px 12px;
+  color: var(--text);
+  font-size: 13px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.field input:focus, .field textarea:focus, .field select:focus {
+  border-color: var(--accent);
+}
+.field textarea { resize: vertical; min-height: 80px; line-height: 1.6; }
+.field select option { background: var(--surface2); }
+.modal-actions { display: flex; gap: 8px; justify-content: flex-end; margin-top: 1.25rem; }
+.btn { padding: 8px 18px; border-radius: 6px; font-size: 13px; font-family: 'IBM Plex Sans', sans-serif; cursor: pointer; border: 1px solid var(--border2); background: var(--surface2); color: var(--muted); transition: all 0.15s; }
+.btn:hover { color: var(--text); border-color: var(--border2); }
+.btn-primary { background: var(--accent); color: #fff; border-color: transparent; }
+.btn-primary:hover { opacity: 0.88; }
+.btn-danger { color: #e06060; border-color: #5a2a2a; background: transparent; margin-right: auto; }
+.btn-danger:hover { background: #2a1010; }
+
+/* ── detail modal ── */
+.detail-modal { max-width: 640px; }
+.detail-modal h2 { font-size: 20px; padding-right: 2rem; }
+.detail-tags { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 1.25rem; }
+.detail-section { margin-bottom: 1.25rem; }
+.detail-label {
+  font-size: 10px;
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.detail-section p { font-size: 13.5px; line-height: 1.75; color: var(--text); }
+.papers { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+.paper-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 12.5px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.paper-icon { color: var(--muted); margin-top: 1px; flex-shrink: 0; font-family: 'IBM Plex Mono', monospace; font-size: 11px; }
+.paper-info { flex: 1; min-width: 0; }
+.paper-title { font-weight: 500; color: var(--text); margin-bottom: 3px; line-height: 1.45; }
+.paper-meta { color: var(--muted); margin-bottom: 3px; }
+.paper-note { color: var(--accent); font-size: 11px; font-family: 'IBM Plex Mono', monospace; }
+.paper-doi { color: var(--accent); font-size: 11px; text-decoration: none; font-family: 'IBM Plex Mono', monospace; }
+.paper-doi:hover { text-decoration: underline; }
+.paper-rm { background: none; border: none; cursor: pointer; color: var(--muted); font-size: 14px; transition: color 0.1s; flex-shrink: 0; margin-top: 1px; }
+.paper-rm:hover { color: #e06060; }
+.btn-add-paper {
+  display: flex; align-items: center; gap: 8px;
+  width: 100%;
+  padding: 9px 14px;
+  border: 1px dashed var(--border2);
+  border-radius: 6px;
+  background: none;
+  color: var(--muted);
+  font-size: 12.5px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  cursor: pointer;
+  transition: all 0.15s;
+  margin-top: 4px;
+}
+.btn-add-paper:hover { border-color: var(--accent); color: var(--accent); }
+.link-chip {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 11px; font-family: 'IBM Plex Mono', monospace;
+  color: var(--accent);
+  text-decoration: none;
+  border: 1px solid #1e3a5c;
+  border-radius: 4px;
+  padding: 3px 9px;
+}
+.link-chip:hover { background: #0a1e33; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <div class="logo-dot"></div>
+    GWAS · METHODS · DB
+  </div>
+  <div class="header-right">
+    <div class="search-box">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input id="search" type="text" placeholder="搜尋方法..." />
+    </div>
+    <button class="btn-add" onclick="openAddModal()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+      新增方法
+    </button>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-label">CATEGORIES</div>
+    <div id="sidebar"></div>
+  </aside>
+  <main class="main">
+    <div class="grid" id="grid"></div>
+  </main>
+</div>
+
+<!-- Add/Edit Modal -->
+<div class="overlay" id="add-modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('add-modal')">✕</button>
+    <h2 id="form-title">新增分析方法</h2>
+    <div class="field"><label>方法名稱</label><input id="f-name" placeholder="例：SuSiE" /></div>
+    <div class="field"><label>分類</label>
+      <select id="f-cat">
+        <option value="PRS">PRS — 多基因風險分數</option>
+        <option value="LDSC">LDSC — 遺傳力 / 相關性</option>
+        <option value="Fine-mapping">Fine-mapping — 因果變異定位</option>
+        <option value="MR">MR — 孟德爾隨機化</option>
+        <option value="GWAS QC">GWAS QC — 關聯分析 / 品質控制</option>
+        <option value="其他">其他</option>
+      </select>
+    </div>
+    <div class="field"><label>簡介</label><textarea id="f-desc" placeholder="方法原理與特色..."></textarea></div>
+    <div class="field"><label>適用場景</label><input id="f-use" placeholder="例：大型生物銀行 GWAS、跨族群分析" /></div>
+    <div class="field"><label>官方連結</label><input id="f-link" placeholder="https://..." /></div>
+    <div class="modal-actions">
+      <button class="btn" onclick="closeModal('add-modal')">取消</button>
+      <button class="btn btn-primary" onclick="saveMethod()">儲存</button>
+    </div>
+  </div>
+</div>
+
+<!-- Detail Modal -->
+<div class="overlay" id="detail-modal">
+  <div class="modal detail-modal">
+    <button class="modal-close" onclick="closeModal('detail-modal')">✕</button>
+    <h2 id="d-name"></h2>
+    <div class="detail-tags" id="d-tags"></div>
+    <div class="detail-section">
+      <div class="detail-label">DESCRIPTION</div>
+      <p id="d-desc"></p>
+    </div>
+    <div class="detail-section" id="d-use-wrap">
+      <div class="detail-label">USE CASE</div>
+      <p id="d-use"></p>
+    </div>
+    <div class="detail-section">
+      <div class="detail-label">PAPERS & UPDATES</div>
+      <div class="papers" id="d-papers"></div>
+      <button class="btn-add-paper" onclick="openPaperModal()">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+        新增論文 / 版本更新
+      </button>
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-danger" onclick="deleteMethod()">刪除</button>
+      <button class="btn" onclick="closeModal('detail-modal')">關閉</button>
+      <button class="btn btn-primary" onclick="openEditModal()">編輯</button>
+    </div>
+  </div>
+</div>
+
+<!-- Paper Modal -->
+<div class="overlay" id="paper-modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('paper-modal')">✕</button>
+    <h2>新增論文 / 更新</h2>
+    <div class="field"><label>論文標題</label><input id="p-title" placeholder="Full paper title..." /></div>
+    <div class="field"><label>作者 & 年份</label><input id="p-author" placeholder="例：Wang et al., 2020" /></div>
+    <div class="field"><label>期刊</label><input id="p-journal" placeholder="例：Nature Genetics" /></div>
+    <div class="field"><label>DOI / URL</label><input id="p-doi" placeholder="https://doi.org/..." /></div>
+    <div class="field"><label>版本說明（選填）</label><input id="p-note" placeholder="例：v2.0 新增 auto 模式" /></div>
+    <div class="modal-actions">
+      <button class="btn" onclick="closeModal('paper-modal')">取消</button>
+      <button class="btn btn-primary" onclick="savePaper()">儲存</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const CATS = {
+  "全部":        { color: "#4a9eff" },
+  "PRS":         { color: "#3d9e6e" },
+  "LDSC":        { color: "#7c6fcd" },
+  "Fine-mapping":{ color: "#d4824a" },
+  "MR":          { color: "#c45c8a" },
+  "GWAS QC":     { color: "#4a8fc4" },
+  "其他":        { color: "#7a8a9a" },
+};
+
+function catColor(cat){ return (CATS[cat]||CATS["其他"]).color; }
+
+let methods = JSON.parse(localStorage.getItem("gwas_methods") || "null");
+let currentId = null;
+let filterCat = "全部";
+
+async function init(){
+  if(!methods){
+    try {
+      const r = await fetch("data/methods.json");
+      methods = await r.json();
+      persist();
+    } catch(e) {
+      methods = [];
+    }
+  }
+  render();
+}
+
+function persist(){ localStorage.setItem("gwas_methods", JSON.stringify(methods)); }
+function save(){ persist(); render(); }
+
+function render(){
+  const q = document.getElementById("search").value.toLowerCase();
+  const cats = ["全部", ...Object.keys(CATS).filter(c => c !== "全部")];
+
+  // sidebar
+  const sidebar = document.getElementById("sidebar");
+  sidebar.innerHTML = cats.map(c => {
+    const count = c === "全部" ? methods.length : methods.filter(m => m.cat === c).length;
+    if(c !== "全部" && count === 0) return "";
+    const color = catColor(c);
+    return `<div class="cat-item${filterCat===c?" active":""}" onclick="setCat('${c}')" style="${filterCat===c?`color:${color}`:""}">
+      <div class="dot" style="background:${color};opacity:${filterCat===c?1:0.4}"></div>
+      <span class="cat-name">${c}</span>
+      <span class="cat-count">${count}</span>
+    </div>`;
+  }).join("");
+
+  // grid
+  const filtered = methods.filter(m => {
+    const matchCat = filterCat === "全部" || m.cat === filterCat;
+    const matchQ = !q || m.name.toLowerCase().includes(q) || m.desc.toLowerCase().includes(q) || (m.use||"").toLowerCase().includes(q);
+    return matchCat && matchQ;
+  });
+
+  const grid = document.getElementById("grid");
+  if(!filtered.length){
+    grid.innerHTML = `<div class="empty">// no methods found</div>`;
+    return;
+  }
+  grid.innerHTML = filtered.map(m => {
+    const color = catColor(m.cat);
+    const pCount = (m.papers||[]).length;
+    return `<div class="card" onclick="openDetail(${m.id})">
+      <div class="card-top">
+        <div class="card-name">${m.name}</div>
+        <div class="badge" style="color:${color};border-color:${color}22;background:${color}11">${m.cat}</div>
+      </div>
+      <div class="card-desc">${m.desc.slice(0,100)}${m.desc.length>100?"…":""}</div>
+      <div class="card-footer">
+        <span>📄 ${pCount} paper${pCount!==1?"s":""}</span>
+        ${m.link ? `<span>🔗 docs</span>` : ""}
+      </div>
+    </div>`;
+  }).join("");
+}
+
+function setCat(c){ filterCat = c; render(); }
+
+function openDetail(id){
+  currentId = id;
+  const m = methods.find(x => x.id === id);
+  const color = catColor(m.cat);
+  document.getElementById("d-name").textContent = m.name;
+  document.getElementById("d-tags").innerHTML =
+    `<div class="badge" style="color:${color};border-color:${color}33;background:${color}15;font-size:12px;padding:4px 10px">${m.cat}</div>` +
+    (m.link ? `<a href="${m.link}" target="_blank" class="link-chip">↗ 官方連結</a>` : "");
+  document.getElementById("d-desc").textContent = m.desc;
+  const uw = document.getElementById("d-use-wrap");
+  if(m.use){ uw.style.display=""; document.getElementById("d-use").textContent = m.use; }
+  else { uw.style.display="none"; }
+  renderPapers(m);
+  document.getElementById("detail-modal").classList.add("open");
+}
+
+function renderPapers(m){
+  const list = document.getElementById("d-papers");
+  if(!m.papers || !m.papers.length){
+    list.innerHTML = `<p style="font-size:12px;color:var(--muted);font-family:'IBM Plex Mono',monospace">// no papers yet</p>`;
+    return;
+  }
+  list.innerHTML = m.papers.map((p,i) => `
+    <div class="paper-card">
+      <div class="paper-icon">[${String(i+1).padStart(2,"0")}]</div>
+      <div class="paper-info">
+        <div class="paper-title">${p.title}</div>
+        <div class="paper-meta">${p.author}${p.journal?" · "+p.journal:""}</div>
+        ${p.note ? `<div class="paper-note"># ${p.note}</div>` : ""}
+        ${p.doi ? `<a href="${p.doi}" target="_blank" class="paper-doi">↗ ${p.doi.replace("https://","")}</a>` : ""}
+      </div>
+      <button class="paper-rm" onclick="removePaper(${i})" title="移除">✕</button>
+    </div>`).join("");
+}
+
+function removePaper(idx){
+  const m = methods.find(x => x.id === currentId);
+  m.papers.splice(idx,1);
+  save(); renderPapers(m);
+}
+
+function openAddModal(){
+  currentId = null;
+  document.getElementById("form-title").textContent = "新增分析方法";
+  ["f-name","f-desc","f-use","f-link"].forEach(id => document.getElementById(id).value="");
+  document.getElementById("f-cat").value = "PRS";
+  document.getElementById("add-modal").classList.add("open");
+}
+
+function openEditModal(){
+  const m = methods.find(x => x.id === currentId);
+  document.getElementById("form-title").textContent = "編輯方法";
+  document.getElementById("f-name").value = m.name;
+  document.getElementById("f-cat").value = m.cat;
+  document.getElementById("f-desc").value = m.desc;
+  document.getElementById("f-use").value = m.use||"";
+  document.getElementById("f-link").value = m.link||"";
+  document.getElementById("detail-modal").classList.remove("open");
+  document.getElementById("add-modal").classList.add("open");
+}
+
+function saveMethod(){
+  const name = document.getElementById("f-name").value.trim();
+  if(!name){ alert("請填入方法名稱"); return; }
+  if(currentId){
+    const m = methods.find(x => x.id === currentId);
+    m.name = name;
+    m.cat  = document.getElementById("f-cat").value;
+    m.desc = document.getElementById("f-desc").value;
+    m.use  = document.getElementById("f-use").value;
+    m.link = document.getElementById("f-link").value;
+  } else {
+    methods.push({ id: Date.now(), name,
+      cat:  document.getElementById("f-cat").value,
+      desc: document.getElementById("f-desc").value,
+      use:  document.getElementById("f-use").value,
+      link: document.getElementById("f-link").value,
+      papers: []
+    });
+  }
+  save(); closeModal("add-modal");
+}
+
+function openPaperModal(){
+  ["p-title","p-author","p-journal","p-doi","p-note"].forEach(id => document.getElementById(id).value="");
+  document.getElementById("paper-modal").classList.add("open");
+}
+
+function savePaper(){
+  const title = document.getElementById("p-title").value.trim();
+  if(!title){ alert("請填入論文標題"); return; }
+  const m = methods.find(x => x.id === currentId);
+  if(!m.papers) m.papers = [];
+  m.papers.push({
+    title,
+    author:  document.getElementById("p-author").value,
+    journal: document.getElementById("p-journal").value,
+    doi:     document.getElementById("p-doi").value,
+    note:    document.getElementById("p-note").value,
+  });
+  save(); closeModal("paper-modal"); renderPapers(m);
+}
+
+function deleteMethod(){
+  if(!confirm("確定要刪除這個方法？")) return;
+  methods = methods.filter(x => x.id !== currentId);
+  save(); closeModal("detail-modal");
+}
+
+function closeModal(id){ document.getElementById(id).classList.remove("open"); }
+
+document.getElementById("search").addEventListener("input", render);
+
+document.querySelectorAll(".overlay").forEach(el => {
+  el.addEventListener("click", e => { if(e.target === el) el.classList.remove("open"); });
+});
+
+init();
+</script>
+</body>
+</html>
