@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-GWAS Methods DB — 管理腳本（含自動分析方法擷取）
+GWAS Methods DB — 管理腳本（關鍵字比對版，不需 API Key）
 用法：
   python add_method.py add                    新增方法
   python add_method.py paper                  對一個方法新增論文（可自動查 PubMed）
@@ -12,20 +12,96 @@ GWAS Methods DB — 管理腳本（含自動分析方法擷取）
 
 import json
 import sys
-import os
 import urllib.request
 import urllib.parse
 import xml.etree.ElementTree as ET
 from pathlib import Path
-from datetime import datetime
 
 # ── 路徑設定 ──────────────────────────────────────────────
-BASE_DIR   = Path(__file__).parent.parent
-DATA_FILE  = BASE_DIR / "docs" / "data" / "methods.json"
+BASE_DIR  = Path(__file__).parent.parent
+DATA_FILE = BASE_DIR / "docs" / "data" / "methods.json"
 # ─────────────────────────────────────────────────────────
 
 CATS = ["PRS", "LDSC", "Fine-mapping", "MR", "GWAS QC", "其他"]
 
+# ── 關鍵字對照表 ──────────────────────────────────────────
+# 格式：{ "顯示名稱": ["關鍵字1", "關鍵字2", ...] }
+STAT_KEYWORDS = {
+    "Bayesian regression":        ["bayesian regression", "bayesian method"],
+    "Linear regression":          ["linear regression", "ordinary least squares", "ols"],
+    "Logistic regression":        ["logistic regression"],
+    "Meta-analysis":              ["meta-analysis", "meta analysis"],
+    "LD score regression":        ["ld score regression", "ldsc"],
+    "Mendelian randomization":    ["mendelian randomization", "instrumental variable"],
+    "IVW":                        ["inverse variance weighted", "ivw"],
+    "MR-Egger":                   ["mr-egger", "egger regression"],
+    "Weighted median":            ["weighted median"],
+    "Fine-mapping":               ["fine-mapping", "finemapping", "credible set", "pip"],
+    "PRS / C+T":                  ["polygenic risk score", "p-value thresholding", "clumping", "c+t"],
+    "Heritability estimation":    ["heritability", "snp heritability", "h2"],
+    "Genetic correlation":        ["genetic correlation", "rg"],
+    "GWAS":                       ["genome-wide association", "gwas"],
+    "PCA":                        ["principal component", "pca", "population stratification"],
+    "Mixed model":                ["mixed model", "lmm", "linear mixed model", "bolt-lmm", "saige"],
+    "Shrinkage / regularization": ["shrinkage", "lasso", "ridge", "elastic net", "regularization"],
+    "Simulation":                 ["simulation study", "monte carlo"],
+    "Cross-validation":           ["cross-validation", "cross validation"],
+}
+
+SOFTWARE_KEYWORDS = {
+    "PLINK / PLINK2":   ["plink"],
+    "PRSice-2":         ["prsice"],
+    "LDpred2":          ["ldpred2", "ldpred-2"],
+    "PRS-CS":           ["prs-cs", "prscs"],
+    "LDSC":             ["ldsc"],
+    "SuSiE":            ["susie"],
+    "FINEMAP":          ["finemap"],
+    "REGENIE":          ["regenie"],
+    "BOLT-LMM":         ["bolt-lmm", "bolt lmm"],
+    "SAIGE":            ["saige"],
+    "TwoSampleMR":      ["twosamplemr", "mr-base"],
+    "MR-PRESSO":        ["mr-presso"],
+    "R":                [" in r ", "r package", "r software", "cran"],
+    "Python":           ["python"],
+    "GCTA":             ["gcta"],
+    "METAL":            ["metal software", "metal tool"],
+}
+
+def extract_by_keywords(text: str) -> dict:
+    """從純文字中用關鍵字比對擷取分析方法資訊"""
+    t = text.lower()
+
+    stat_methods = [
+        name for name, kws in STAT_KEYWORDS.items()
+        if any(kw in t for kw in kws)
+    ]
+    software = [
+        name for name, kws in SOFTWARE_KEYWORDS.items()
+        if any(kw in t for kw in kws)
+    ]
+
+    # 樣本數：尋找常見模式，例如 "n = 10,000" 或 "100,000 individuals"
+    import re
+    sample_size = "不明"
+    patterns = [
+        r'n\s*[=≈]\s*([\d,]+)',
+        r'([\d,]+)\s+(?:individuals?|participants?|samples?|subjects?)',
+        r'([\d,]+)\s+(?:cases?.*controls?|controls?.*cases?)',
+    ]
+    for pat in patterns:
+        m = re.search(pat, t)
+        if m:
+            sample_size = m.group(1).replace(",", "") + " 人"
+            break
+
+    return {
+        "statistical_methods": stat_methods,
+        "software": software,
+        "sample_size": sample_size,
+        "data_type": "GWAS summary statistics"  # 預設值，可手動修改
+    }
+
+# ── 基本工具函式 ──────────────────────────────────────────
 def load():
     if DATA_FILE.exists():
         with open(DATA_FILE, encoding="utf-8") as f:
@@ -71,12 +147,10 @@ def search_pubmed(query, max_results=5):
             data = json.loads(r.read())
         ids = data.get("esearchresult", {}).get("idlist", [])
     except Exception as e:
-        print(f"  ✗ PubMed 搜尋失敗：{e}")
-        return []
+        print(f"  ✗ PubMed 搜尋失敗：{e}"); return []
 
     if not ids:
-        print("  找不到相關論文")
-        return []
+        print("  找不到相關論文"); return []
 
     id_str = ",".join(ids)
     params2 = urllib.parse.urlencode({"db": "pubmed", "id": id_str, "retmode": "xml"})
@@ -85,8 +159,7 @@ def search_pubmed(query, max_results=5):
             xml_data = r.read()
         root = ET.fromstring(xml_data)
     except Exception as e:
-        print(f"  ✗ 抓取詳細資料失敗：{e}")
-        return []
+        print(f"  ✗ 抓取詳細資料失敗：{e}"); return []
 
     results = []
     for article in root.findall(".//PubmedArticle"):
@@ -112,7 +185,6 @@ def search_pubmed(query, max_results=5):
             pmid = pmid_el.text if pmid_el is not None else ""
             doi = f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/" if pmid else ""
 
-            # ★ 新增：抓摘要
             abstract_texts = article.findall(".//AbstractText")
             abstract = " ".join(
                 (el.text or "") for el in abstract_texts if el.text
@@ -124,71 +196,12 @@ def search_pubmed(query, max_results=5):
                 "journal": journal,
                 "doi": doi,
                 "note": "",
-                "abstract": abstract,   # 暫存用，存檔時移除
+                "abstract": abstract,
             })
         except Exception:
             continue
 
     return results
-
-# ── Claude API：擷取分析方法 ──────────────────────────────
-def extract_analysis_methods(title: str, abstract: str) -> dict:
-    """
-    呼叫 Claude API，從論文標題與摘要擷取分析方法資訊。
-    回傳 dict，key 為 statistical_methods / software / sample_size / data_type。
-    若 API 呼叫失敗，回傳空 dict。
-    """
-    api_key = os.environ.get("ANTHROPIC_API_KEY", "")
-    if not api_key:
-        print("  ⚠ 找不到 ANTHROPIC_API_KEY，跳過自動擷取")
-        return {}
-
-    prompt = f"""你是一位生物統計與基因體學的專家。
-請從以下論文的標題與摘要中，擷取分析方法相關資訊。
-
-標題：{title}
-
-摘要：{abstract if abstract else "（無摘要）"}
-
-請以 JSON 格式回答，只輸出 JSON，不要加任何說明文字或 markdown：
-{{
-  "statistical_methods": ["方法1", "方法2"],
-  "software": ["軟體1", "軟體2"],
-  "sample_size": "樣本數描述或不明",
-  "data_type": "資料類型描述"
-}}
-
-若資訊不足，該欄位填空陣列 [] 或「不明」。"""
-
-    payload = json.dumps({
-        "model": "claude-sonnet-4-20250514",
-        "max_tokens": 500,
-        "messages": [{"role": "user", "content": prompt}]
-    }).encode("utf-8")
-
-    req = urllib.request.Request(
-        "https://api.anthropic.com/v1/messages",
-        data=payload,
-        headers={
-            "Content-Type": "application/json",
-            "x-api-key": api_key,
-            "anthropic-version": "2023-06-01",
-        },
-        method="POST"
-    )
-
-    try:
-        with urllib.request.urlopen(req, timeout=30) as r:
-            resp = json.loads(r.read())
-        text = resp["content"][0]["text"].strip()
-        # 去除可能的 markdown 包裹
-        text = text.strip("` \n")
-        if text.startswith("json"):
-            text = text[4:].strip()
-        return json.loads(text)
-    except Exception as e:
-        print(f"  ⚠ Claude API 擷取失敗：{e}")
-        return {}
 
 # ── 指令：add ─────────────────────────────────────────────
 def cmd_add():
@@ -226,37 +239,30 @@ def cmd_paper():
     mode = pick("方式", ["自動查詢 PubMed", "手動輸入"])
 
     if mode == "自動查詢 PubMed":
-        query = ask(f"搜尋關鍵字（例：{m['name']} GWAS method）", m['name'])
+        query = ask(f"搜尋關鍵字", m['name'])
         results = search_pubmed(query)
         if not results:
             print("沒有找到結果，改為手動輸入"); mode = "手動輸入"
         else:
-            print(f"\n找到 {len(results)} 篇，選擇要加入的：")
+            print(f"\n找到 {len(results)} 篇：")
             for i, p in enumerate(results, 1):
                 print(f"  {i}. {p['title'][:70]}")
                 print(f"     {p['author']} | {p['journal']}")
             choices = input("輸入編號（多個用逗號，例：1,3）或 Enter 跳過：").strip()
             if choices:
-                # 是否自動擷取分析方法
-                do_extract = input("\n是否用 Claude API 自動擷取分析方法？(y/n) [y]：").strip().lower()
-                do_extract = (do_extract != "n")
-
                 for n in choices.split(","):
                     try:
                         p = results[int(n.strip()) - 1].copy()
-                        abstract = p.pop("abstract", "")  # 取出摘要，不存入 JSON
-                        note = ask(f"  版本說明（{p['title'][:30]}…）", "")
+                        abstract = p.pop("abstract", "")
+                        note = ask(f"  版本說明（選填）", "")
                         p["note"] = note
 
-                        # ★ 自動擷取分析方法
-                        if do_extract:
-                            print(f"  🤖 分析中：{p['title'][:50]}…")
-                            methods_info = extract_analysis_methods(p["title"], abstract)
-                            if methods_info:
-                                p["analysis_methods"] = methods_info
-                                print(f"  ✓ 擷取成功：{methods_info.get('statistical_methods', [])}")
-                            else:
-                                p["analysis_methods"] = {}
+                        # ★ 關鍵字比對擷取
+                        print(f"  🔎 關鍵字比對分析中…")
+                        info = extract_by_keywords(p["title"] + " " + abstract)
+                        p["analysis_methods"] = info
+                        print(f"  ✓ 統計方法：{info['statistical_methods']}")
+                        print(f"  ✓ 軟體工具：{info['software']}")
 
                         if "papers" not in m: m["papers"] = []
                         m["papers"].append(p)
@@ -271,20 +277,15 @@ def cmd_paper():
         journal = ask("期刊")
         doi     = ask("DOI / URL")
         note    = ask("版本說明（選填）")
+        abstract = ask("論文摘要（選填，貼入可提高比對準確度）")
 
         paper = {"title": title, "author": author, "journal": journal, "doi": doi, "note": note}
 
-        # 手動輸入也可選擇自動擷取（需要有摘要）
-        do_extract = input("\n是否用 Claude API 自動擷取分析方法？需貼入摘要 (y/n) [n]：").strip().lower()
-        if do_extract == "y":
-            abstract = ask("請貼入論文摘要（可留空）")
-            print(f"  🤖 分析中…")
-            methods_info = extract_analysis_methods(title, abstract)
-            if methods_info:
-                paper["analysis_methods"] = methods_info
-                print(f"  ✓ 擷取成功：{methods_info.get('statistical_methods', [])}")
-            else:
-                paper["analysis_methods"] = {}
+        print(f"  🔎 關鍵字比對分析中…")
+        info = extract_by_keywords(title + " " + abstract)
+        paper["analysis_methods"] = info
+        print(f"  ✓ 統計方法：{info['statistical_methods']}")
+        print(f"  ✓ 軟體工具：{info['software']}")
 
         if "papers" not in m: m["papers"] = []
         m["papers"].append(paper)
@@ -294,16 +295,12 @@ def cmd_paper():
 
 # ── 指令：analyze（對已有論文補充擷取）───────────────────
 def cmd_analyze():
-    """
-    對資料庫中已有的論文，若尚未有 analysis_methods 欄位，
-    重新從 PubMed 抓摘要並用 Claude API 補充擷取。
-    """
+    """對資料庫中尚未有 analysis_methods 的論文，從 PubMed 抓摘要並關鍵字比對"""
     methods = load()
     if not methods:
         print("資料庫是空的"); return
 
-    total = 0
-    updated = 0
+    total = updated = 0
 
     for m in methods:
         for p in m.get("papers", []):
@@ -314,7 +311,6 @@ def cmd_analyze():
             title = p.get("title", "")
             print(f"\n處理：{title[:60]}…")
 
-            # 先嘗試從 PubMed 抓摘要
             abstract = ""
             if title:
                 results = search_pubmed(title, max_results=1)
@@ -323,19 +319,14 @@ def cmd_analyze():
                     if abstract:
                         print(f"  ✓ 取得摘要（{len(abstract)} 字元）")
 
-            print(f"  🤖 Claude API 分析中…")
-            methods_info = extract_analysis_methods(title, abstract)
-            if methods_info:
-                p["analysis_methods"] = methods_info
-                print(f"  ✓ 統計方法：{methods_info.get('statistical_methods', [])}")
-                print(f"  ✓ 軟體工具：{methods_info.get('software', [])}")
-                updated += 1
-            else:
-                p["analysis_methods"] = {}
+            info = extract_by_keywords(title + " " + abstract)
+            p["analysis_methods"] = info
+            print(f"  ✓ 統計方法：{info['statistical_methods']}")
+            print(f"  ✓ 軟體工具：{info['software']}")
+            updated += 1
 
     dump(methods)
-    print(f"\n── 完成 ──")
-    print(f"  共處理 {total} 篇，成功擷取 {updated} 篇")
+    print(f"\n── 完成 ── 共處理 {total} 篇，已分析 {updated} 篇")
 
 # ── 指令：list ────────────────────────────────────────────
 def cmd_list():
@@ -374,11 +365,11 @@ def main():
     if not args or args[0] == "help":
         print(__doc__); return
     cmd = args[0]
-    if cmd == "add":          cmd_add()
-    elif cmd == "paper":      cmd_paper()
-    elif cmd == "analyze":    cmd_analyze()
-    elif cmd == "list":       cmd_list()
-    elif cmd == "export":     cmd_export()
+    if cmd == "add":        cmd_add()
+    elif cmd == "paper":    cmd_paper()
+    elif cmd == "analyze":  cmd_analyze()
+    elif cmd == "list":     cmd_list()
+    elif cmd == "export":   cmd_export()
     elif cmd == "search":
         if len(args) < 2: print("用法：python add_method.py search <關鍵字>")
         else: cmd_search(args[1])
