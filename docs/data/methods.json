@@ -12,7 +12,19 @@
         "author": "Choi et al., 2019",
         "journal": "GigaScience",
         "doi": "https://doi.org/10.1093/gigascience/giz082",
-        "note": "主要工具論文"
+        "note": "主要工具論文",
+        "analysis_methods": {
+          "statistical_methods": [
+            "PRS / C+T",
+            "Genetic correlation",
+            "Shrinkage / regularization"
+          ],
+          "software": [
+            "PRSice-2"
+          ],
+          "sample_size": "不明",
+          "data_type": "GWAS summary statistics"
+        }
       }
     ]
   },
@@ -29,7 +41,19 @@
         "author": "Privé et al., 2020",
         "journal": "Bioinformatics",
         "doi": "https://doi.org/10.1093/bioinformatics/btaa1029",
-        "note": "LDpred2 方法論文"
+        "note": "LDpred2 方法論文",
+        "analysis_methods": {
+          "statistical_methods": [
+            "Shrinkage / regularization"
+          ],
+          "software": [
+            "LDpred2",
+            "PRS-CS",
+            "R"
+          ],
+          "sample_size": "不明",
+          "data_type": "GWAS summary statistics"
+        }
       }
     ]
   },
@@ -46,7 +70,19 @@
         "author": "Ge et al., 2019",
         "journal": "Nature Communications",
         "doi": "https://doi.org/10.1038/s41467-019-09718-5",
-        "note": ""
+        "note": "",
+        "analysis_methods": {
+          "statistical_methods": [
+            "Bayesian regression",
+            "PRS / C+T",
+            "Shrinkage / regularization"
+          ],
+          "software": [
+            "PRS-CS"
+          ],
+          "sample_size": "332154 人",
+          "data_type": "GWAS summary statistics"
+        }
       }
     ]
   },
@@ -63,14 +99,35 @@
         "author": "Bulik-Sullivan et al., 2015",
         "journal": "Nature Genetics",
         "doi": "https://doi.org/10.1038/ng.3211",
-        "note": "LDSC 基礎論文"
+        "note": "LDSC 基礎論文",
+        "analysis_methods": {
+          "statistical_methods": [
+            "LD score regression",
+            "Heritability estimation",
+            "GWAS",
+            "PCA"
+          ],
+          "software": [
+            "LDSC"
+          ],
+          "sample_size": "不明",
+          "data_type": "GWAS summary statistics"
+        }
       },
       {
         "title": "An atlas of genetic correlations across human diseases and traits",
         "author": "Bulik-Sullivan et al., 2015",
         "journal": "Nature Genetics",
         "doi": "https://doi.org/10.1038/ng.3406",
-        "note": "遺傳相關性應用"
+        "note": "遺傳相關性應用",
+        "analysis_methods": {
+          "statistical_methods": [
+            "Genetic correlation"
+          ],
+          "software": [],
+          "sample_size": "不明",
+          "data_type": "GWAS summary statistics"
+        }
       }
     ]
   },
@@ -87,7 +144,17 @@
         "author": "Finucane et al., 2015",
         "journal": "Nature Genetics",
         "doi": "https://doi.org/10.1038/ng.3404",
-        "note": ""
+        "note": "",
+        "analysis_methods": {
+          "statistical_methods": [
+            "Heritability estimation",
+            "Genetic correlation",
+            "GWAS"
+          ],
+          "software": [],
+          "sample_size": "不明",
+          "data_type": "GWAS summary statistics"
+        }
       }
     ]
   },
@@ -104,7 +171,20 @@
         "author": "Wang et al., 2020",
         "journal": "PLOS Genetics",
         "doi": "https://doi.org/10.1371/journal.pgen.1010299",
-        "note": "SuSiE-RSS（summary stats 版本）"
+        "note": "SuSiE-RSS（summary stats 版本）",
+        "analysis_methods": {
+          "statistical_methods": [
+            "Mendelian randomization",
+            "Fine-mapping",
+            "Genetic correlation",
+            "GWAS"
+          ],
+          "software": [
+            "R"
+          ],
+          "sample_size": "不明",
+          "data_type": "GWAS summary statistics"
+        }
       }
     ]
   },
@@ -121,7 +201,19 @@
         "author": "Benner et al., 2016",
         "journal": "Bioinformatics",
         "doi": "https://doi.org/10.1093/bioinformatics/btw018",
-        "note": ""
+        "note": "",
+        "analysis_methods": {
+          "statistical_methods": [
+            "Fine-mapping",
+            "Genetic correlation",
+            "GWAS"
+          ],
+          "software": [
+            "FINEMAP"
+          ],
+          "sample_size": "不明",
+          "data_type": "GWAS summary statistics"
+        }
       }
     ]
   },
@@ -138,7 +230,20 @@
         "author": "Hemani et al., 2018",
         "journal": "eLife",
         "doi": "https://doi.org/10.7554/eLife.34408",
-        "note": "MR-Base / TwoSampleMR 平台論文"
+        "note": "MR-Base / TwoSampleMR 平台論文",
+        "analysis_methods": {
+          "statistical_methods": [
+            "Mendelian randomization",
+            "Genetic correlation",
+            "GWAS"
+          ],
+          "software": [
+            "TwoSampleMR",
+            "R"
+          ],
+          "sample_size": "不明",
+          "data_type": "GWAS summary statistics"
+        }
       }
     ]
   },
@@ -155,7 +260,15 @@
         "author": "Verbanck et al., 2018",
         "journal": "Nature Genetics",
         "doi": "https://doi.org/10.1038/s41588-018-0099-7",
-        "note": ""
+        "note": "",
+        "analysis_methods": {
+          "statistical_methods": [
+            "Mendelian randomization"
+          ],
+          "software": [],
+          "sample_size": "不明",
+          "data_type": "GWAS summary statistics"
+        }
       }
     ]
   },
@@ -172,7 +285,15 @@
         "author": "Mbatchou et al., 2021",
         "journal": "Nature Genetics",
         "doi": "https://doi.org/10.1038/s41588-021-00870-7",
-        "note": ""
+        "note": "",
+        "analysis_methods": {
+          "statistical_methods": [
+            "Genetic correlation"
+          ],
+          "software": [],
+          "sample_size": "不明",
+          "data_type": "GWAS summary statistics"
+        }
       }
     ]
   },
@@ -189,7 +310,17 @@
         "author": "Chang et al., 2015",
         "journal": "GigaScience",
         "doi": "https://doi.org/10.1186/s13742-015-0047-8",
-        "note": "PLINK 1.9 論文，PLINK2 持續更新中"
+        "note": "PLINK 1.9 論文，PLINK2 持續更新中",
+        "analysis_methods": {
+          "statistical_methods": [
+            "Genetic correlation"
+          ],
+          "software": [
+            "PLINK / PLINK2"
+          ],
+          "sample_size": "不明",
+          "data_type": "GWAS summary statistics"
+        }
       }
     ]
   }
