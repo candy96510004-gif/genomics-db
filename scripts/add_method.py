@@ -6,6 +6,7 @@ GWAS Methods DB — 管理腳本（含 discover 自動探索新方法）
   python add_method.py paper                  對一個方法新增論文
   python add_method.py analyze                對已有論文自動擷取分析方法
   python add_method.py discover               自動探索新分析方法
+  python add_method.py delete                 刪除一個方法
   python add_method.py list                   列出所有方法
   python add_method.py search <關鍵字>        搜尋
   python add_method.py export                 匯出 JSON
@@ -24,7 +25,6 @@ DATA_FILE = BASE_DIR / "docs" / "data" / "methods.json"
 
 CATS = ["PRS", "LDSC", "Fine-mapping", "MR", "GWAS QC", "其他"]
 
-# ── 自動分類規則 ──────────────────────────────────────────
 CAT_RULES = {
     "PRS": [
         "polygenic risk score", "polygenic score", "prs", "p-value thresholding",
@@ -50,7 +50,6 @@ CAT_RULES = {
     ],
 }
 
-# ★ 精準搜尋關鍵字：專門找「方法開發論文」
 DISCOVER_QUERIES = [
     "GWAS statistical method novel algorithm",
     "polygenic score new method development",
@@ -62,7 +61,6 @@ DISCOVER_QUERIES = [
     "summary statistics method GWAS tool",
 ]
 
-# ★ 過濾掉應用論文的關鍵字（標題含這些字就跳過）
 SKIP_KEYWORDS = [
     "risk prediction", "clinical trial", "systematic review",
     "meta-analysis of", "prevalence", "incidence", "therapy",
@@ -129,12 +127,9 @@ def auto_classify(title, abstract):
     return best if scores[best] > 0 else "其他"
 
 def is_method_paper(title, abstract):
-    """判斷是否為方法開發論文（True=方法論文，False=應用論文）"""
     t = (title + " " + abstract).lower()
-    # 含應用論文關鍵字就跳過
     if any(kw in t for kw in SKIP_KEYWORDS):
         return False
-    # 含方法開發關鍵字才保留
     method_signals = [
         "new method", "novel method", "new approach", "novel approach",
         "we develop", "we propose", "we introduce", "we present",
@@ -157,7 +152,6 @@ def dump(methods):
     print(f"✓ 已儲存到 {DATA_FILE}")
 
 def pick(prompt, options):
-    """選單，支援 q 離開"""
     print(f"\n{prompt}")
     for i, o in enumerate(options, 1):
         print(f"  {i}. {o}")
@@ -275,7 +269,6 @@ def cmd_discover():
             print(f"  → {label}... {len(results)} 篇")
             all_candidates.extend(results)
 
-    # 去重 + 過濾已知 + 過濾應用論文
     unique = []
     skipped_app = 0
     for p in all_candidates:
@@ -284,7 +277,6 @@ def cmd_discover():
         if t in seen_titles: continue
         if any(t in k or k in t for k in known): continue
         seen_titles.add(t)
-        # ★ 過濾應用論文
         if not is_method_paper(p["title"], p.get("abstract","")):
             skipped_app += 1
             continue
@@ -375,6 +367,23 @@ def cmd_discover():
     print("  git add .")
     print('  git commit -m "discover: 自動探索新方法"')
     print("  git push")
+
+# ── delete ────────────────────────────────────────────────
+def cmd_delete():
+    methods = load()
+    if not methods: print("資料庫是空的"); return
+    names = [f"{m['name']} [{m['cat']}]" for m in methods]
+    choice = pick("選擇要刪除的方法", names)
+    if choice is None: return
+    idx = names.index(choice)
+    name = methods[idx]["name"]
+    confirm = input(f"確定刪除「{name}」？(y/n) [n]：").strip().lower()
+    if confirm == "y":
+        methods.pop(idx)
+        dump(methods)
+        print(f"✓ 已刪除「{name}」")
+    else:
+        print("取消刪除")
 
 # ── add ───────────────────────────────────────────────────
 def cmd_add():
@@ -497,6 +506,7 @@ def main():
     elif cmd == "paper":    cmd_paper()
     elif cmd == "analyze":  cmd_analyze()
     elif cmd == "discover": cmd_discover()
+    elif cmd == "delete":   cmd_delete()
     elif cmd == "list":     cmd_list()
     elif cmd == "export":   cmd_export()
     elif cmd == "search":
