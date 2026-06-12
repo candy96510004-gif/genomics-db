@@ -323,5 +323,193 @@
         }
       }
     ]
+  },
+  {
+    "id": 12,
+    "name": "Fine-mapping for Related Samples",
+    "cat": "Fine-mapping",
+    "desc": "針對親緣相關樣本改良的 fine-mapping 方法，適用於畜牧業或家族研究資料",
+    "use": "",
+    "link": "",
+    "papers": [
+      {
+        "title": "Fine-mapping methods for complex traits: essential adaptations for samples of related individuals.",
+        "author": "Wang et al., 2025",
+        "journal": "Briefings in bioinformatics",
+        "doi": "https://pubmed.ncbi.nlm.nih.gov/41269279/",
+        "note": "由 discover 從 PubMed 自動加入",
+        "analysis_methods": {
+          "statistical_methods": [
+            "Fine-mapping",
+            "Heritability estimation",
+            "GWAS",
+            "Mixed model"
+          ],
+          "software": [
+            "SuSiE",
+            "FINEMAP",
+            "GCTA"
+          ],
+          "sample_size": "不明",
+          "data_type": "GWAS summary statistics"
+        }
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Fine-mapping Stability Analysis",
+    "cat": "Fine-mapping",
+    "desc": "探討遺傳 fine-mapping 方法的統計穩定性問題，分析不同方法在樣本或資料變動下的結果一致性。",
+    "use": "",
+    "link": "",
+    "papers": [
+      {
+        "title": "The impact of stability considerations on genetic fine-mapping.",
+        "author": "Aw et al., 2026",
+        "journal": "eLife",
+        "doi": "https://pubmed.ncbi.nlm.nih.gov/41838038/",
+        "note": "由 discover 從 PubMed 自動加入",
+        "analysis_methods": {
+          "statistical_methods": [
+            "Fine-mapping",
+            "PCA"
+          ],
+          "software": [],
+          "sample_size": "不明",
+          "data_type": "GWAS summary statistics"
+        }
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "MR2G",
+    "cat": "MR",
+    "desc": "基於 GWAS summary data 推論多個性狀間因果網路的新框架",
+    "use": "",
+    "link": "",
+    "papers": [
+      {
+        "title": "MR2G: A novel framework for causal network inference using GWAS summary data.",
+        "author": "Lin et al., 2026",
+        "journal": "PLoS genetics",
+        "doi": "https://pubmed.ncbi.nlm.nih.gov/42189912/",
+        "note": "由 discover 從 PubMed 自動加入",
+        "analysis_methods": {
+          "statistical_methods": [
+            "Mendelian randomization",
+            "GWAS"
+          ],
+          "software": [],
+          "sample_size": "不明",
+          "data_type": "GWAS summary statistics"
+        }
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "SNP-Heritability Ancestral Method",
+    "cat": "LDSC",
+    "desc": "改良 SNP 遺傳力估計方法，整合祖先與環境多樣性的條件式與邊際遺傳力分析",
+    "use": "",
+    "link": "",
+    "papers": [
+      {
+        "title": "Conditional and marginal SNP-heritability to leverage ancestral and environmental diversity.",
+        "author": "Singh Sachan et al., 2026",
+        "journal": "bioRxiv : the preprint server for biology",
+        "doi": "https://pubmed.ncbi.nlm.nih.gov/42244626/",
+        "note": "由 discover 從 PubMed 自動加入",
+        "analysis_methods": {
+          "statistical_methods": [
+            "Heritability estimation",
+            "GWAS"
+          ],
+          "software": [],
+          "sample_size": "不明",
+          "data_type": "GWAS summary statistics"
+        }
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Kernel-smoothed Permutation",
+    "cat": "GWAS QC",
+    "desc": "使用核平滑置換法估計遺傳關聯研究中的極端 p-value，提升小樣本或罕見變異的統計檢定準確度",
+    "use": "",
+    "link": "",
+    "papers": [
+      {
+        "title": "Kernel-smoothed permutation for extreme p-value estimation in genetic association studies.",
+        "author": "Bian et al., 2026",
+        "journal": "Genetics",
+        "doi": "https://pubmed.ncbi.nlm.nih.gov/42114112/",
+        "note": "由 discover 從 PubMed 自動加入",
+        "analysis_methods": {
+          "statistical_methods": [
+            "GWAS"
+          ],
+          "software": [],
+          "sample_size": "不明",
+          "data_type": "GWAS summary statistics"
+        }
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "GAPIT4",
+    "cat": "GWAS QC",
+    "desc": "GAPIT 第四版，整合 GWAS 與基因組預測的 R 套件，支援多種混合模型與視覺化功能",
+    "use": "",
+    "link": "",
+    "papers": [
+      {
+        "title": "GAPIT version 4: integration of GWAS into genomic prediction.",
+        "author": "Wang et al., 2026",
+        "journal": "Molecular biology and evolution",
+        "doi": "https://pubmed.ncbi.nlm.nih.gov/42047095/",
+        "note": "由 discover 從 PubMed 自動加入",
+        "analysis_methods": {
+          "statistical_methods": [
+            "GWAS",
+            "Simulation"
+          ],
+          "software": [],
+          "sample_size": " 人",
+          "data_type": "GWAS summary statistics"
+        }
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Causal Gene Identification",
+    "cat": "Fine-mapping",
+    "desc": "簡化 GWAS loci 中因果基因鑑定流程的方法，整合多種功能性注釋資料提升定位準確度",
+    "use": "",
+    "link": "",
+    "papers": [
+      {
+        "title": "Simplifying causal gene identification in GWAS loci.",
+        "author": "Schipper et al., 2026",
+        "journal": "PLoS genetics",
+        "doi": "https://pubmed.ncbi.nlm.nih.gov/41843578/",
+        "note": "由 discover 從 PubMed 自動加入",
+        "analysis_methods": {
+          "statistical_methods": [
+            "Logistic regression",
+            "Mendelian randomization",
+            "GWAS"
+          ],
+          "software": [],
+          "sample_size": "不明",
+          "data_type": "GWAS summary statistics"
+        }
+      }
+    ]
   }
 ]
