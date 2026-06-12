@@ -309,6 +309,35 @@ header {
 .paper-doi:hover { text-decoration: underline; }
 .paper-rm { background: none; border: none; cursor: pointer; color: var(--muted); font-size: 14px; transition: color 0.1s; flex-shrink: 0; margin-top: 1px; }
 .paper-rm:hover { color: #e06060; }
+
+/* ── ★ 分析方法標籤 ── */
+.analysis-block {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin-top: 6px;
+}
+.analysis-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+.analysis-row + .detail-label { margin-top: 10px; }
+.tag {
+  font-size: 11px;
+  font-family: 'IBM Plex Mono', monospace;
+  padding: 3px 9px;
+  border-radius: 3px;
+  border: 1px solid var(--border2);
+  color: var(--muted);
+  background: var(--surface2);
+}
+.tag.stat { color: #7ecfb3; border-color: #1e4a3a; background: #0d2820; }
+.tag.soft { color: #a89cf7; border-color: #3a3060; background: #1a1530; }
+.tag.info { color: var(--muted); font-style: italic; }
+
 .btn-add-paper {
   display: flex; align-items: center; gap: 8px;
   width: 100%;
@@ -405,6 +434,13 @@ header {
       <div class="detail-label">USE CASE</div>
       <p id="d-use"></p>
     </div>
+
+    <!-- ★ 新增：分析方法區塊 -->
+    <div class="detail-section" id="d-analysis-wrap">
+      <div class="detail-label">ANALYSIS METHODS</div>
+      <div id="d-analysis"></div>
+    </div>
+
     <div class="detail-section">
       <div class="detail-label">PAPERS & UPDATES</div>
       <div class="papers" id="d-papers"></div>
@@ -451,25 +487,24 @@ const CATS = {
 
 function catColor(cat){ return (CATS[cat]||CATS["其他"]).color; }
 
-let methods = JSON.parse(localStorage.getItem("gwas_methods") || "null");
+let methods = null;
 let currentId = null;
 let filterCat = "全部";
 
 async function init(){
-  if(!methods){
-    try {
-      const r = await fetch("data/methods.json");
-      methods = await r.json();
-      persist();
-    } catch(e) {
-      methods = [];
-    }
+  try {
+    const r = await fetch("data/methods.json?t=" + Date.now());
+    methods = await r.json();
+  } catch(e) {
+    methods = [];
   }
   render();
 }
 
-function persist(){ localStorage.setItem("gwas_methods", JSON.stringify(methods)); }
-function save(){ persist(); render(); }
+function save(){
+  // 將更新後的資料存回（本地預覽用），正式資料由 Python 管理
+  render();
+}
 
 function render(){
   const q = document.getElementById("search").value.toLowerCase();
@@ -503,12 +538,17 @@ function render(){
   grid.innerHTML = filtered.map(m => {
     const color = catColor(m.cat);
     const pCount = (m.papers||[]).length;
+    // 收集所有論文的統計方法標籤（最多3個）
+    const allMethods = [...new Set(
+      (m.papers||[]).flatMap(p => (p.analysis_methods||{}).statistical_methods||[])
+    )].slice(0, 3);
     return `<div class="card" onclick="openDetail(${m.id})">
       <div class="card-top">
         <div class="card-name">${m.name}</div>
         <div class="badge" style="color:${color};border-color:${color}22;background:${color}11">${m.cat}</div>
       </div>
       <div class="card-desc">${m.desc.slice(0,100)}${m.desc.length>100?"…":""}</div>
+      ${allMethods.length ? `<div style="display:flex;flex-wrap:wrap;gap:4px">${allMethods.map(t=>`<span class="tag stat" style="font-size:10px;padding:2px 6px">${t}</span>`).join("")}</div>` : ""}
       <div class="card-footer">
         <span>📄 ${pCount} paper${pCount!==1?"s":""}</span>
         ${m.link ? `<span>🔗 docs</span>` : ""}
@@ -531,8 +571,64 @@ function openDetail(id){
   const uw = document.getElementById("d-use-wrap");
   if(m.use){ uw.style.display=""; document.getElementById("d-use").textContent = m.use; }
   else { uw.style.display="none"; }
+
+  // ★ 渲染分析方法區塊
+  renderAnalysis(m);
   renderPapers(m);
   document.getElementById("detail-modal").classList.add("open");
+}
+
+function renderAnalysis(m){
+  const wrap = document.getElementById("d-analysis-wrap");
+  const container = document.getElementById("d-analysis");
+
+  // 彙整所有論文的分析方法
+  const allStat = [...new Set(
+    (m.papers||[]).flatMap(p => (p.analysis_methods||{}).statistical_methods||[])
+  )];
+  const allSoft = [...new Set(
+    (m.papers||[]).flatMap(p => (p.analysis_methods||{}).software||[])
+  )];
+
+  if(!allStat.length && !allSoft.length){
+    wrap.style.display = "none";
+    return;
+  }
+  wrap.style.display = "";
+
+  let html = '<div class="analysis-block">';
+  if(allStat.length){
+    html += `<div class="detail-label">統計方法</div>
+    <div class="analysis-row">${allStat.map(t=>`<span class="tag stat">${t}</span>`).join("")}</div>`;
+  }
+  if(allSoft.length){
+    html += `<div class="detail-label" style="margin-top:10px">軟體工具</div>
+    <div class="analysis-row">${allSoft.map(t=>`<span class="tag soft">${t}</span>`).join("")}</div>`;
+  }
+  html += '</div>';
+
+  // 每篇論文各自的分析方法
+  const papersWithInfo = (m.papers||[]).filter(p =>
+    (p.analysis_methods||{}).statistical_methods?.length ||
+    (p.analysis_methods||{}).software?.length ||
+    (p.analysis_methods||{}).sample_size
+  );
+  if(papersWithInfo.length){
+    html += `<div style="margin-top:10px;display:flex;flex-direction:column;gap:6px">`;
+    papersWithInfo.forEach(p => {
+      const am = p.analysis_methods || {};
+      html += `<div style="font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--muted);padding:6px 10px;background:var(--bg);border:1px solid var(--border);border-radius:4px">
+        <div style="color:var(--text);margin-bottom:4px">${p.title.slice(0,55)}${p.title.length>55?"…":""}</div>`;
+      if(am.sample_size && am.sample_size !== "不明")
+        html += `<div>樣本數：${am.sample_size}</div>`;
+      if(am.data_type && am.data_type !== "不明")
+        html += `<div>資料類型：${am.data_type}</div>`;
+      html += `</div>`;
+    });
+    html += `</div>`;
+  }
+
+  container.innerHTML = html;
 }
 
 function renderPapers(m){
@@ -557,7 +653,7 @@ function renderPapers(m){
 function removePaper(idx){
   const m = methods.find(x => x.id === currentId);
   m.papers.splice(idx,1);
-  save(); renderPapers(m);
+  save(); renderPapers(m); renderAnalysis(m);
 }
 
 function openAddModal(){
@@ -619,7 +715,7 @@ function savePaper(){
     doi:     document.getElementById("p-doi").value,
     note:    document.getElementById("p-note").value,
   });
-  save(); closeModal("paper-modal"); renderPapers(m);
+  save(); closeModal("paper-modal"); renderPapers(m); renderAnalysis(m);
 }
 
 function deleteMethod(){
