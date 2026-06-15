@@ -402,11 +402,15 @@ header {
     <div class="field"><label>方法名稱</label><input id="f-name" placeholder="例：SuSiE" /></div>
     <div class="field"><label>分類</label>
       <select id="f-cat">
-        <option value="PRS">PRS — 多基因風險分數</option>
-        <option value="LDSC">LDSC — 遺傳力 / 相關性</option>
+        <option value="GWAS">GWAS — 全基因組關聯分析</option>
+        <option value="Meta-analysis">Meta-analysis — 統合分析</option>
+        <option value="Heritability">Heritability — 遺傳力估計</option>
         <option value="Fine-mapping">Fine-mapping — 因果變異定位</option>
+        <option value="Colocalization">Colocalization — 共定位分析</option>
+        <option value="PRS">PRS — 多基因風險分數</option>
         <option value="MR">MR — 孟德爾隨機化</option>
-        <option value="GWAS QC">GWAS QC — 關聯分析 / 品質控制</option>
+        <option value="TWAS">TWAS — 轉錄組關聯分析</option>
+        <option value="Functional Annotation">Functional Annotation — 功能性注釋</option>
         <option value="其他">其他</option>
       </select>
     </div>
@@ -477,12 +481,16 @@ header {
 <script>
 const CATS = {
   "全部":        { color: "#4a9eff" },
-  "PRS":         { color: "#3d9e6e" },
-  "LDSC":        { color: "#7c6fcd" },
-  "Fine-mapping":{ color: "#d4824a" },
-  "MR":          { color: "#c45c8a" },
-  "GWAS QC":     { color: "#4a8fc4" },
-  "其他":        { color: "#7a8a9a" },
+  "GWAS":                { color: "#4a8fc4" },
+  "Meta-analysis":       { color: "#5ba3a0" },
+  "Heritability":        { color: "#7c6fcd" },
+  "Fine-mapping":        { color: "#d4824a" },
+  "Colocalization":      { color: "#c47a3a" },
+  "PRS":                 { color: "#3d9e6e" },
+  "MR":                  { color: "#c45c8a" },
+  "TWAS":                { color: "#9e6e3d" },
+  "Functional Annotation":{ color: "#6e9e3d" },
+  "其他":                { color: "#7a8a9a" },
 };
 
 function catColor(cat){ return (CATS[cat]||CATS["其他"]).color; }
