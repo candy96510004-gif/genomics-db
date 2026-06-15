@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-GWAS Methods DB — 管理腳本（含 discover 自動探索新方法）
+GWAS Methods DB — 管理腳本
 用法：
   python add_method.py add                    新增方法
   python add_method.py paper                  對一個方法新增論文
@@ -23,30 +23,56 @@ from pathlib import Path
 BASE_DIR  = Path(__file__).parent.parent
 DATA_FILE = BASE_DIR / "docs" / "data" / "methods.json"
 
-CATS = ["PRS", "LDSC", "Fine-mapping", "MR", "GWAS QC", "其他"]
+CATS = [
+    "GWAS",
+    "Meta-analysis",
+    "Heritability",
+    "Fine-mapping",
+    "Colocalization",
+    "PRS",
+    "MR",
+    "TWAS",
+    "Functional Annotation",
+    "其他",
+]
 
 CAT_RULES = {
-    "PRS": [
-        "polygenic risk score", "polygenic score", "prs", "p-value thresholding",
-        "clumping", "c+t", "ldpred", "prsice", "prs-cs", "lassosum",
+    "GWAS": [
+        "genome-wide association", "gwas", "quality control", "population stratification",
+        "principal component", "mixed model", "bolt-lmm", "saige", "regenie",
+        "whole genome regression", "fastgwa", "plink",
     ],
-    "LDSC": [
+    "Meta-analysis": [
+        "meta-analysis", "meta analysis", "metal", "cross-cohort", "multi-cohort",
+    ],
+    "Heritability": [
         "ld score regression", "ldsc", "snp heritability", "genetic correlation",
-        "heritability estimation", "partitioned heritability", "s-ldsc",
+        "heritability estimation", "partitioned heritability", "s-ldsc", "greml",
     ],
     "Fine-mapping": [
         "fine-mapping", "finemapping", "credible set", "posterior inclusion probability",
-        "pip", "susie", "finemap", "causal variant", "colocalisation", "coloc",
+        "pip", "susie", "finemap", "causal variant",
+    ],
+    "Colocalization": [
+        "colocalisation", "colocalization", "coloc", "ecaviar", "clpp",
+        "eqtl gwas overlap",
+    ],
+    "PRS": [
+        "polygenic risk score", "polygenic score", "prs", "p-value thresholding",
+        "clumping", "c+t", "ldpred", "prsice", "prs-cs", "lassosum",
     ],
     "MR": [
         "mendelian randomization", "mendelian randomisation", "instrumental variable",
         "ivw", "mr-egger", "weighted median", "mr-presso", "twosamplemr",
         "causal inference", "pleiotropy",
     ],
-    "GWAS QC": [
-        "genome-wide association", "gwas", "quality control", "population stratification",
-        "principal component", "mixed model", "bolt-lmm", "saige", "regenie",
-        "whole genome regression", "fastgwa",
+    "TWAS": [
+        "transcriptome-wide", "twas", "predixcan", "fusion twas", "eqtl prediction",
+        "gene expression prediction", "s-predixcan",
+    ],
+    "Functional Annotation": [
+        "functional annotation", "gene set", "pathway analysis", "magma",
+        "fuma", "enrichment analysis", "tissue expression",
     ],
 }
 
@@ -59,6 +85,8 @@ DISCOVER_QUERIES = [
     "genome-wide association tool software",
     "causal variant fine-mapping new approach",
     "summary statistics method GWAS tool",
+    "TWAS transcriptome-wide association method",
+    "colocalization GWAS eQTL method",
 ]
 
 SKIP_KEYWORDS = [
@@ -89,6 +117,8 @@ STAT_KEYWORDS = {
     "Shrinkage / regularization": ["shrinkage", "lasso", "ridge", "regularization"],
     "Simulation":                 ["simulation study", "monte carlo"],
     "Cross-validation":           ["cross-validation"],
+    "TWAS":                       ["transcriptome-wide", "twas", "gene expression prediction"],
+    "Colocalization":             ["colocalisation", "colocalization", "coloc", "clpp"],
 }
 SOFTWARE_KEYWORDS = {
     "PLINK / PLINK2": ["plink"],
@@ -103,9 +133,15 @@ SOFTWARE_KEYWORDS = {
     "SAIGE":          ["saige"],
     "TwoSampleMR":    ["twosamplemr", "mr-base"],
     "MR-PRESSO":      ["mr-presso"],
+    "COLOC":          ["coloc"],
+    "eCAVIAR":        ["ecaviar"],
+    "PrediXcan":      ["predixcan", "metaxcan"],
+    "FUSION":         ["fusion twas"],
+    "MAGMA":          ["magma"],
+    "FUMA":           ["fuma"],
+    "GCTA":           ["gcta"],
     "R":              [" in r ", "r package", "r software", "cran"],
     "Python":         ["python"],
-    "GCTA":           ["gcta"],
 }
 
 def extract_by_keywords(text):
@@ -157,14 +193,11 @@ def pick(prompt, options):
         print(f"  {i}. {o}")
     while True:
         raw = input("選擇編號（或 q 取消）：").strip().lower()
-        if raw == "q":
-            return None
+        if raw == "q": return None
         try:
             n = int(raw)
-            if 1 <= n <= len(options):
-                return options[n-1]
-        except ValueError:
-            pass
+            if 1 <= n <= len(options): return options[n-1]
+        except ValueError: pass
         print("請輸入有效編號")
 
 def ask(prompt, default=""):
@@ -180,7 +213,6 @@ def existing_titles(methods):
             titles.add(p.get("title","").lower())
     return titles
 
-# ── PubMed ────────────────────────────────────────────────
 def search_pubmed(query, max_results=5, year_from=None):
     base = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"
     term = query + (f" {year_from}:3000[pdat]" if year_from else "")
@@ -214,7 +246,6 @@ def search_pubmed(query, max_results=5, year_from=None):
         except: continue
     return results
 
-# ── Semantic Scholar ──────────────────────────────────────
 def search_semantic_scholar(query, max_results=5):
     params = urllib.parse.urlencode({"query":query,"limit":max_results,
         "fields":"title,authors,year,venue,externalIds,abstract"})
@@ -243,23 +274,18 @@ def search_semantic_scholar(query, max_results=5):
         except: continue
     return results
 
-# ── discover ──────────────────────────────────────────────
 def cmd_discover():
     methods = load()
     known = existing_titles(methods)
-
     print("\n══════════════════════════════════════")
     print("  🔭 探索新分析方法")
     print("══════════════════════════════════════")
-
     year_choice = pick("搜尋年份範圍", ["2024 以後（最新）", "2023 以後", "所有年份"])
     if year_choice is None: return
     year_map = {"2024 以後（最新）": 2024, "2023 以後": 2023, "所有年份": None}
     year_from = year_map[year_choice]
-
     all_candidates = []
     seen_titles = set()
-
     for query in DISCOVER_QUERIES:
         print(f"\n🔍 {query}")
         for label, results in [
@@ -268,7 +294,6 @@ def cmd_discover():
         ]:
             print(f"  → {label}... {len(results)} 篇")
             all_candidates.extend(results)
-
     unique = []
     skipped_app = 0
     for p in all_candidates:
@@ -278,97 +303,54 @@ def cmd_discover():
         if any(t in k or k in t for k in known): continue
         seen_titles.add(t)
         if not is_method_paper(p["title"], p.get("abstract","")):
-            skipped_app += 1
-            continue
+            skipped_app += 1; continue
         p["suggested_cat"] = auto_classify(p["title"], p.get("abstract",""))
         unique.append(p)
-
     unique.sort(key=lambda x: CATS.index(x["suggested_cat"]) if x["suggested_cat"] in CATS else 99)
-
-    print(f"\n══════════════════════════════════════")
-    print(f"  找到 {len(unique)} 篇方法論文候選（已過濾 {skipped_app} 篇應用論文）")
-    print(f"══════════════════════════════════════")
-
+    print(f"\n找到 {len(unique)} 篇方法論文候選（已過濾 {skipped_app} 篇應用論文）")
     if not unique:
-        print("  沒有找到新方法論文，資料庫已是最新！")
-        return
-
+        print("  沒有找到新方法論文！"); return
     to_add = []
     for i, p in enumerate(unique, 1):
         print(f"\n[{i}/{len(unique)}] {'─'*50}")
         print(f"  標題：{p['title']}")
         print(f"  作者：{p['author']} | {p['source']}")
         print(f"  建議分類：【{p['suggested_cat']}】")
-        if p.get("abstract"):
-            print(f"  摘要：{p['abstract'][:160]}…")
-
-        choice = input("\n  加入？(y=加入 / n=跳過 / c=改分類 / q=結束) [n]：").strip().lower()
+        if p.get("abstract"): print(f"  摘要：{p['abstract'][:160]}…")
+        choice = input("\n  加入？(y/n/c=改分類/q=結束) [n]：").strip().lower()
         if choice == "q": break
-        elif choice == "y":
-            to_add.append(p)
-            print("  ✓ 加入待處理清單")
+        elif choice == "y": to_add.append(p); print("  ✓ 加入")
         elif choice == "c":
-            new_cat = pick("  選擇分類", CATS)
-            if new_cat:
-                p["suggested_cat"] = new_cat
-                to_add.append(p)
-                print(f"  ✓ 已改為【{new_cat}】並加入")
-
-    if not to_add:
-        print("\n沒有選擇任何論文，結束。")
-        return
-
-    print(f"\n══════════════════════════════════════")
-    print(f"  處理 {len(to_add)} 篇論文")
-    print(f"══════════════════════════════════════")
-
+            new_cat = pick("選擇分類", CATS)
+            if new_cat: p["suggested_cat"] = new_cat; to_add.append(p); print(f"  ✓ 改為【{new_cat}】")
+    if not to_add: print("\n沒有選擇任何論文。"); return
     for p in to_add:
         cat = p["suggested_cat"]
-        title = p["title"]
-        abstract = p.get("abstract","")
-        analysis = extract_by_keywords(title + " " + abstract)
-
-        paper_entry = {
-            "title": title, "author": p["author"],
-            "journal": p["journal"], "doi": p.get("doi",""),
-            "note": f"由 discover 從 {p['source']} 自動加入",
-            "analysis_methods": analysis,
-        }
-
-        print(f"\n📄 {title[:55]}…")
-        print(f"   分類：{cat}")
-
+        analysis = extract_by_keywords(p["title"] + " " + p.get("abstract",""))
+        paper_entry = {"title":p["title"],"author":p["author"],"journal":p["journal"],
+                       "doi":p.get("doi",""),"note":f"discover 從 {p['source']} 加入",
+                       "analysis_methods":analysis}
         same_cat = [m for m in methods if m["cat"] == cat]
         if same_cat:
             opts = [m["name"] for m in same_cat] + ["★ 新增為全新方法"]
-            print("   同分類已有方法：")
-            for m in same_cat: print(f"     • {m['name']}")
-            choice = pick("   這篇論文屬於哪個方法？", opts)
+            choice = pick(f"【{p['title'][:40]}…】屬於？", opts)
             if choice is None: choice = "★ 新增為全新方法"
         else:
             choice = "★ 新增為全新方法"
-
         if choice == "★ 新增為全新方法":
-            method_name = input(f"   方法名稱（Enter 用論文前30字）：").strip() or title[:30].strip()
-            desc = input("   簡介（可留空後補）：").strip()
+            name = input("方法名稱：").strip() or p["title"][:30]
+            desc = input("簡介：").strip()
             new_id = max((m["id"] for m in methods), default=0) + 1
-            methods.append({"id": new_id, "name": method_name, "cat": cat,
-                            "desc": desc, "use": "", "link": "", "papers": [paper_entry]})
-            print(f"   ✓ 新方法「{method_name}」已建立")
+            methods.append({"id":new_id,"name":name,"cat":cat,"desc":desc,"use":"","link":"","papers":[paper_entry]})
+            print(f"✓ 新方法「{name}」已建立")
         else:
             m = next(x for x in methods if x["name"] == choice)
-            if "papers" not in m: m["papers"] = []
-            m["papers"].append(paper_entry)
-            print(f"   ✓ 已加入「{choice}」")
-
+            m.setdefault("papers",[]).append(paper_entry)
+            print(f"✓ 已加入「{choice}」")
     dump(methods)
     print(f"\n✓ 完成！共新增 {len(to_add)} 筆")
-    print("\n記得執行：")
-    print("  git add .")
-    print('  git commit -m "discover: 自動探索新方法"')
-    print("  git push")
+    print("記得 git add . / commit / push")
 
-# ── delete ────────────────────────────────────────────────
 def cmd_delete():
     methods = load()
     if not methods: print("資料庫是空的"); return
@@ -377,20 +359,14 @@ def cmd_delete():
     if choice is None: return
     idx = names.index(choice)
     name = methods[idx]["name"]
-    confirm = input(f"確定刪除「{name}」？(y/n) [n]：").strip().lower()
-    if confirm == "y":
-        methods.pop(idx)
-        dump(methods)
-        print(f"✓ 已刪除「{name}」")
-    else:
-        print("取消刪除")
+    if input(f"確定刪除「{name}」？(y/n)：").strip().lower() == "y":
+        methods.pop(idx); dump(methods); print(f"✓ 已刪除「{name}」")
+    else: print("取消")
 
-# ── add ───────────────────────────────────────────────────
 def cmd_add():
     methods = load()
-    print("\n── 新增分析方法 ──")
     name = ask("方法名稱")
-    if not name: print("名稱不能為空"); return
+    if not name: return
     cat = pick("分類", CATS)
     if cat is None: return
     desc = ask("簡介")
@@ -398,25 +374,19 @@ def cmd_add():
     link = ask("官方連結（選填）")
     new_id = max((m["id"] for m in methods), default=0) + 1
     methods.append({"id":new_id,"name":name,"cat":cat,"desc":desc,"use":use,"link":link,"papers":[]})
-    dump(methods)
-    print(f"✓ 已新增：{name} [{cat}]")
+    dump(methods); print(f"✓ 已新增：{name} [{cat}]")
 
-# ── paper ─────────────────────────────────────────────────
 def cmd_paper():
     methods = load()
     if not methods: print("資料庫是空的"); return
     names = [f"{m['name']} [{m['cat']}]" for m in methods]
     choice = pick("選擇方法", names)
     if choice is None: return
-    idx = names.index(choice)
-    m = methods[idx]
-
+    idx = names.index(choice); m = methods[idx]
     mode = pick("新增方式", ["自動查詢 PubMed", "手動輸入"])
     if mode is None: return
-
     if mode == "自動查詢 PubMed":
-        query = ask("搜尋關鍵字", m['name'])
-        results = search_pubmed(query)
+        results = search_pubmed(ask("搜尋關鍵字", m['name']))
         if not results: print("找不到結果"); mode = "手動輸入"
         else:
             for i, p in enumerate(results, 1):
@@ -427,80 +397,55 @@ def cmd_paper():
                     try:
                         p = results[int(n.strip())-1].copy()
                         abstract = p.pop("abstract",""); p.pop("source","")
-                        p["note"] = ask("版本說明", "")
+                        p["note"] = ask("版本說明","")
                         p["analysis_methods"] = extract_by_keywords(p["title"]+" "+abstract)
-                        if "papers" not in m: m["papers"] = []
-                        m["papers"].append(p)
-                        print("  ✓ 已加入")
-                    except (ValueError, IndexError): pass
-
+                        m.setdefault("papers",[]).append(p); print("  ✓ 已加入")
+                    except (ValueError,IndexError): pass
     if mode == "手動輸入":
         title = ask("論文標題")
         if not title: return
-        author  = ask("作者 & 年份")
-        journal = ask("期刊")
-        doi     = ask("DOI / URL")
-        note    = ask("版本說明（選填）")
         abstract = ask("摘要（選填）")
-        paper = {"title":title,"author":author,"journal":journal,"doi":doi,"note":note,
-                 "analysis_methods":extract_by_keywords(title+" "+abstract)}
-        if "papers" not in m: m["papers"] = []
-        m["papers"].append(paper)
+        m.setdefault("papers",[]).append({
+            "title":title,"author":ask("作者 & 年份"),
+            "journal":ask("期刊"),"doi":ask("DOI / URL"),
+            "note":ask("版本說明（選填）"),
+            "analysis_methods":extract_by_keywords(title+" "+abstract)})
+    methods[idx] = m; dump(methods)
 
-    methods[idx] = m
-    dump(methods)
-
-# ── analyze ───────────────────────────────────────────────
 def cmd_analyze():
-    methods = load()
-    total = updated = 0
+    methods = load(); total = updated = 0
     for m in methods:
         for p in m.get("papers",[]):
             if p.get("analysis_methods"): continue
-            total += 1
-            title = p.get("title","")
-            abstract = ""
+            total += 1; title = p.get("title",""); abstract = ""
             results = search_pubmed(title, max_results=1)
             if results: abstract = results[0].get("abstract","")
             p["analysis_methods"] = extract_by_keywords(title+" "+abstract)
-            updated += 1
-            print(f"✓ {title[:50]}…")
-    dump(methods)
-    print(f"\n完成：共處理 {total} 篇，已分析 {updated} 篇")
+            updated += 1; print(f"✓ {title[:50]}…")
+    dump(methods); print(f"\n完成：{total} 篇，已分析 {updated} 篇")
 
-# ── list ──────────────────────────────────────────────────
 def cmd_list():
     methods = load()
     if not methods: print("資料庫是空的"); return
     current_cat = None
-    for m in sorted(methods, key=lambda x:(x["cat"],x["name"])):
+    for m in sorted(methods, key=lambda x:(CATS.index(x["cat"]) if x["cat"] in CATS else 99, x["name"])):
         if m["cat"] != current_cat:
-            current_cat = m["cat"]
-            print(f"\n── {current_cat} ──")
-        papers = len(m.get("papers",[]))
-        analyzed = sum(1 for p in m.get("papers",[]) if p.get("analysis_methods"))
-        print(f"  • {m['name']:<22} {papers} papers（{analyzed} 已分析）")
+            current_cat = m["cat"]; print(f"\n── {current_cat} ──")
+        papers = len(m.get("papers",[])); analyzed = sum(1 for p in m.get("papers",[]) if p.get("analysis_methods"))
+        print(f"  • {m['name']:<25} {papers} papers（{analyzed} 已分析）")
 
-# ── search ────────────────────────────────────────────────
 def cmd_search(keyword):
-    methods = load()
-    kw = keyword.lower()
+    methods = load(); kw = keyword.lower()
     results = [m for m in methods if kw in m["name"].lower() or kw in m["desc"].lower()]
     if not results: print(f"找不到「{keyword}」"); return
-    for m in results:
-        print(f"\n{m['name']} [{m['cat']}]\n  {m['desc'][:120]}")
+    for m in results: print(f"\n{m['name']} [{m['cat']}]\n  {m['desc'][:120]}")
 
-# ── export ────────────────────────────────────────────────
 def cmd_export():
-    methods = load()
-    dump(methods)
-    print(f"✓ 共 {len(methods)} 個方法已匯出")
+    methods = load(); dump(methods); print(f"✓ 共 {len(methods)} 個方法已匯出")
 
-# ── main ──────────────────────────────────────────────────
 def main():
     args = sys.argv[1:]
-    if not args or args[0] == "help":
-        print(__doc__); return
+    if not args or args[0] == "help": print(__doc__); return
     cmd = args[0]
     if   cmd == "add":      cmd_add()
     elif cmd == "paper":    cmd_paper()
