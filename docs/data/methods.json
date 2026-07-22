@@ -244,6 +244,22 @@
           "sample_size": "不明",
           "data_type": "GWAS summary statistics"
         }
+      },
+      {
+        "title": "Checking Genetic Homogeneity Between Two Samples Using Summary Statistics With Application to Mendelian Randomization.",
+        "author": "Wang et al., 2026",
+        "journal": "Statistics in medicine",
+        "doi": "https://pubmed.ncbi.nlm.nih.gov/42415357/",
+        "note": "discover 從 PubMed 加入",
+        "analysis_methods": {
+          "statistical_methods": [
+            "Mendelian randomization",
+            "GWAS"
+          ],
+          "software": [],
+          "sample_size": "不明",
+          "data_type": "GWAS summary statistics"
+        }
       }
     ]
   },
@@ -1113,5 +1129,68 @@
       }
     ],
     "id": 40
+  },
+  {
+    "id": 42,
+    "name": "CIT-Lasso",
+    "cat": "Fine-mapping",
+    "desc": "使用 summary statistics 識別因果變異的可擴展 fine-mapping 框架，透過 Lasso 正則化找出攜帶非冗餘資訊的變異組合，支援全基因組規模分析。",
+    "use": "",
+    "link": "",
+    "papers": [
+      {
+        "title": "CIT-Lasso: a scalable approach beyond guilty by association for identifying causal variants from genome-wide summary statistics.",
+        "author": "He et al., 2026",
+        "journal": "Genome biology",
+        "doi": "https://pubmed.ncbi.nlm.nih.gov/42443949/",
+        "note": "discover 從 PubMed 加入",
+        "analysis_methods": {
+          "statistical_methods": [
+            "Meta-analysis",
+            "Fine-mapping",
+            "GWAS",
+            "Shrinkage / regularization"
+          ],
+          "software": [],
+          "sample_size": "不明",
+          "data_type": "GWAS summary statistics"
+        }
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "name": "BayesBiMR",
+    "cat": "MR",
+    "desc": "貝葉斯雙向孟德爾隨機化方法，同時處理 correlated 和 uncorrelated 水平多效性，使用 GWAS summary statistics 估計雙向因果效應，比傳統單向 MR 更穩健。",
+    "use": "",
+    "link": "",
+    "papers": [
+      {
+        "title": "Bayesian Bidirectional Mendelian Randomization Under Correlated and Uncorrelated Pleiotropy Using GWAS Summary Statistics.",
+        "author": "Chen, 2026",
+        "journal": "Statistics in medicine",
+        "doi": "https://pubmed.ncbi.nlm.nih.gov/42433205/",
+        "note": "discover 從 PubMed 加入",
+        "analysis_methods": {
+          "statistical_methods": [
+            "Mendelian randomization",
+            "GWAS"
+          ],
+          "software": [],
+          "sample_size": "不明",
+          "data_type": "GWAS summary statistics"
+        }
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "name": "PRS-PSS",
+    "cat": "PRS",
+    "desc": "基於 Projected Summary Statistics 的穩健貝葉斯 PRS 方法，使用彈性收縮先驗，提升跨族群預測準確度。",
+    "use": "跨族群 PRS 計算、處理 summary statistics 中的雜訊與異質性",
+    "link": "",
+    "papers": []
   }
 ]

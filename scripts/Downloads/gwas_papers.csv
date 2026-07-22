@@ -1,0 +1,41 @@
+﻿method,category,title,author,journal,year,doi
+PRSice-2,PRS,PRSice-2: Polygenic Risk Score software for biobank-scale data,"Choi et al., 2019",GigaScience,,https://doi.org/10.1093/gigascience/giz082
+LDpred2,PRS,"LDpred2: better, faster, stronger","Privé et al., 2020",Bioinformatics,,https://doi.org/10.1093/bioinformatics/btaa1029
+PRS-CS,PRS,Polygenic prediction via Bayesian regression and continuous shrinkage priors,"Ge et al., 2019",Nature Communications,,https://doi.org/10.1038/s41467-019-09718-5
+LDSC,Heritability,LD Score regression distinguishes confounding from polygenicity in genome-wide association studies,"Bulik-Sullivan et al., 2015",Nature Genetics,,https://doi.org/10.1038/ng.3211
+LDSC,Heritability,An atlas of genetic correlations across human diseases and traits,"Bulik-Sullivan et al., 2015",Nature Genetics,,https://doi.org/10.1038/ng.3406
+Partitioned LDSC,Heritability,Partitioning heritability by functional annotation using genome-wide association summary statistics,"Finucane et al., 2015",Nature Genetics,,https://doi.org/10.1038/ng.3404
+SuSiE,Fine-mapping,Fine-mapping from summary data with the Sum of Single Effects model,"Wang et al., 2020",PLOS Genetics,,https://doi.org/10.1371/journal.pgen.1010299
+FINEMAP,Fine-mapping,FINEMAP: efficient variable selection using summary data from genome-wide association studies,"Benner et al., 2016",Bioinformatics,,https://doi.org/10.1093/bioinformatics/btw018
+TwoSampleMR,MR,The MR-Base platform supports systematic causal inference across the human phenome,"Hemani et al., 2018",eLife,,https://doi.org/10.7554/eLife.34408
+MR-PRESSO,MR,Detection of widespread horizontal pleiotropy in causal relationships inferred from Mendelian randomization between complex traits and diseases,"Verbanck et al., 2018",Nature Genetics,,https://doi.org/10.1038/s41588-018-0099-7
+REGENIE,GWAS,Efficient analysis of large-scale genome-wide data with two-step iterative resampling,"Mbatchou et al., 2021",Nature Genetics,,https://doi.org/10.1038/s41588-021-00870-7
+PLINK2,GWAS,Second-generation PLINK: rising to the challenge of larger and richer datasets,"Chang et al., 2015",GigaScience,,https://doi.org/10.1186/s13742-015-0047-8
+Fine-mapping for Related Samples,Fine-mapping,Fine-mapping methods for complex traits: essential adaptations for samples of related individuals.,"Wang et al., 2025",Briefings in bioinformatics,,https://pubmed.ncbi.nlm.nih.gov/41269279/
+Fine-mapping Stability Analysis,Fine-mapping,The impact of stability considerations on genetic fine-mapping.,"Aw et al., 2026",eLife,,https://pubmed.ncbi.nlm.nih.gov/41838038/
+MR2G,MR,MR2G: A novel framework for causal network inference using GWAS summary data.,"Lin et al., 2026",PLoS genetics,,https://pubmed.ncbi.nlm.nih.gov/42189912/
+SNP-Heritability Ancestral Method,Heritability,Conditional and marginal SNP-heritability to leverage ancestral and environmental diversity.,"Singh Sachan et al., 2026",bioRxiv : the preprint server for biology,,https://pubmed.ncbi.nlm.nih.gov/42244626/
+Kernel-smoothed Permutation,GWAS,Kernel-smoothed permutation for extreme p-value estimation in genetic association studies.,"Bian et al., 2026",Genetics,,https://pubmed.ncbi.nlm.nih.gov/42114112/
+GAPIT4,GWAS,GAPIT version 4: integration of GWAS into genomic prediction.,"Wang et al., 2026",Molecular biology and evolution,,https://pubmed.ncbi.nlm.nih.gov/42047095/
+Causal Gene Identification,Fine-mapping,Simplifying causal gene identification in GWAS loci.,"Schipper et al., 2026",PLoS genetics,,https://pubmed.ncbi.nlm.nih.gov/41843578/
+lassosum,PRS,Polygenic scores via penalized regression on summary statistics,"Mak et al., 2017",Genetic Epidemiology,,https://doi.org/10.1002/gepi.22050
+megaPRS,PRS,New and improved methods for estimating polygenic score accuracy in polygenic score analyses,"Lloyd-Jones et al., 2019",Nature Genetics,,https://doi.org/10.1038/s41588-021-00870-7
+GCTA-GREML,Heritability,A mixed model approach for genome-wide association studies of complex traits in population samples,"Yang et al., 2011",Nature Genetics,,https://doi.org/10.1038/ng.2310
+SumHer,Heritability,Summing the parts: contributions of heritability tools to understanding the genetic architecture of complex traits,"Speed et al., 2019",Nature Genetics,,https://doi.org/10.1038/s41588-018-0295-5
+COLOC,Colocalization,Genetic colocalisation analysis: a unified framework for molecular biology and GWAS,"Giambartolomei et al., 2014",PLOS Genetics,,https://doi.org/10.1371/journal.pgen.1004383
+CAVIAR,Fine-mapping,Identifying causal variants at loci with multiple signals of association,"Hormozdiari et al., 2014",Genetics,,https://doi.org/10.1534/genetics.114.167908
+PAINTOR,Fine-mapping,Probabilistic fine-mapping of complex trait loci using functional annotation data,"Kichaev et al., 2014",PLOS Genetics,,https://doi.org/10.1371/journal.pgen.1004722
+GSMR,MR,Integrating summary data from GWAS and eQTL studies predicts complex trait gene targets,"Zhu et al., 2018",Nature Genetics,,https://doi.org/10.1038/s41588-017-0010-x
+Steiger Filtering,MR,Orienting the causal relationship between imprecisely measured traits using GWAS summary data,"Hemani et al., 2017",PLOS Genetics,,https://doi.org/10.1371/journal.pgen.1007081
+CAUSE,MR,Causal analysis using summary effect estimates for accurate interpretation of Mendelian randomization,"Morrison et al., 2020",Nature Genetics,,https://doi.org/10.1038/s41588-020-0631-4
+BOLT-LMM,GWAS,Efficient Bayesian mixed-model analysis increases association power in large cohorts,"Loh et al., 2015",Nature Genetics,,https://doi.org/10.1038/ng.3190
+SAIGE,GWAS,Scalable and accurate sequencing-based association study in large phenome-wide analysis,"Zhou et al., 2018",Nature Genetics,,https://doi.org/10.1038/s41588-018-0184-y
+GCTA-COJO,GWAS,Conditional and joint multiple-SNP analysis of GWAS summary statistics identifies additional variants influencing complex traits,"Yang et al., 2012",Nature Genetics,,https://doi.org/10.1038/ng.2213
+METAL,Meta-analysis,Meta-analysis of genome-wide association studies with METAL,"Willer et al., 2010",Bioinformatics,,https://doi.org/10.1093/bioinformatics/btq340
+FUMA,Functional Annotation,FUMA: functional mapping and annotation of genetic associations,"Watanabe et al., 2017",Nature Communications,,https://doi.org/10.1038/s41467-017-01261-5
+PrediXcan,TWAS,A gene-based association method for mapping traits using reference transcriptome data,"Gamazon et al., 2015",Nature Genetics,,https://doi.org/10.1038/ng.3367
+S-PrediXcan,TWAS,Integrating predicted transcriptome from multiple tissues improves association detection,"Barbeira et al., 2018",PLOS Genetics,,https://doi.org/10.1371/journal.pgen.1007586
+FUSION,TWAS,Integrative approaches for large-scale transcriptome-wide association studies,"Gusev et al., 2016",Nature Genetics,,https://doi.org/10.1038/ng.3506
+eCAVIAR,Colocalization,Colocalization of GWAS and eQTL Signals Detects Target Genes,"Hormozdiari et al., 2016",American Journal of Human Genetics,,https://doi.org/10.1016/j.ajhg.2016.10.003
+MAGMA,Functional Annotation,MAGMA: Generalized gene-set analysis of GWAS data,"de Leeuw et al., 2015",PLOS Computational Biology,,https://doi.org/10.1371/journal.pcbi.1004219
+PRS-CSx,PRS,Polygenic prediction via Bayesian regression and continuous shrinkage priors,"Ruan et al., 2022",Nature Genetics,,https://doi.org/10.1038/s41588-022-01054-7
