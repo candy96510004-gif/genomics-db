@@ -302,9 +302,7 @@
         "doi": "https://doi.org/10.1038/s41588-021-00870-7",
         "note": "",
         "analysis_methods": {
-          "statistical_methods": [
-            "Genetic correlation"
-          ],
+          "statistical_methods": [],
           "software": [],
           "sample_size": "不明",
           "data_type": "GWAS summary statistics"
@@ -327,9 +325,7 @@
         "doi": "https://doi.org/10.1186/s13742-015-0047-8",
         "note": "PLINK 1.9 論文，PLINK2 持續更新中",
         "analysis_methods": {
-          "statistical_methods": [
-            "Genetic correlation"
-          ],
+          "statistical_methods": [],
           "software": [
             "PLINK / PLINK2"
           ],
