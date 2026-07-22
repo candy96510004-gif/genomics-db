@@ -1195,5 +1195,28 @@
     "use": "跨族群 PRS 計算、處理 summary statistics 中的雜訊與異質性",
     "link": "",
     "papers": []
+  },
+  {
+    "id": 45,
+    "name": "BridgePRS",
+    "cat": "PRS",
+    "desc": "採用 Projected Summary Statistics (PSS) 與 Bayesian Bridge prior 建立 PRS，可降低 summary statistics 與 LD reference 不一致造成的 posterior impropriety，並提升不同情境下的預測穩定性。",
+    "use": "q",
+    "link": "https://arxiv.org/abs/2401.15014",
+    "papers": [
+      {
+        "title": "Constructing Genetic Risk Scores: Robust Bayesian Approach through Projected Summary Statistics",
+        "author": "期刊：bioRxiv",
+        "journal": "DOI：https://arxiv.org/abs/2401.15014",
+        "doi": "",
+        "note": "完成後：",
+        "analysis_methods": {
+          "statistical_methods": [],
+          "software": [],
+          "sample_size": "不明",
+          "data_type": "GWAS summary statistics"
+        }
+      }
+    ]
   }
 ]
