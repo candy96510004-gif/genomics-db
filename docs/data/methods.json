@@ -175,10 +175,9 @@
         "note": "SuSiE-RSS（summary stats 版本）",
         "analysis_methods": {
           "statistical_methods": [
-            "Mendelian randomization",
             "Fine-mapping",
-            "Genetic correlation",
-            "GWAS"
+            "GWAS",
+            "Bayesian regression"
           ],
           "software": [
             "R"
@@ -206,8 +205,8 @@
         "analysis_methods": {
           "statistical_methods": [
             "Fine-mapping",
-            "Genetic correlation",
-            "GWAS"
+            "GWAS",
+            "Bayesian regression"
           ],
           "software": [
             "FINEMAP"
@@ -362,7 +361,6 @@
         "analysis_methods": {
           "statistical_methods": [
             "Fine-mapping",
-            "Heritability estimation",
             "GWAS",
             "Mixed model"
           ],
@@ -394,7 +392,7 @@
         "analysis_methods": {
           "statistical_methods": [
             "Fine-mapping",
-            "PCA"
+            "Simulation"
           ],
           "software": [],
           "sample_size": "不明",
@@ -522,11 +520,7 @@
         "doi": "https://pubmed.ncbi.nlm.nih.gov/41843578/",
         "note": "由 discover 從 PubMed 自動加入",
         "analysis_methods": {
-          "statistical_methods": [
-            "Logistic regression",
-            "Mendelian randomization",
-            "GWAS"
-          ],
+          "statistical_methods": [],
           "software": [],
           "sample_size": "不明",
           "data_type": "GWAS summary statistics"
@@ -718,7 +712,9 @@
         "note": "PAINTOR 原始論文",
         "analysis_methods": {
           "statistical_methods": [
-            "Fine-mapping"
+            "Fine-mapping",
+            "Bayesian regression",
+            "Functional annotation"
           ],
           "software": [
             "PAINTOR"
