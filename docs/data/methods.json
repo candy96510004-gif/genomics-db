@@ -302,7 +302,11 @@
         "doi": "https://doi.org/10.1038/s41588-021-00870-7",
         "note": "",
         "analysis_methods": {
-          "statistical_methods": [],
+          "statistical_methods": [
+            "GWAS",
+            "Ridge regression",
+            "Mixed model"
+          ],
           "software": [],
           "sample_size": "不明",
           "data_type": "GWAS summary statistics"
@@ -325,7 +329,11 @@
         "doi": "https://doi.org/10.1186/s13742-015-0047-8",
         "note": "PLINK 1.9 論文，PLINK2 持續更新中",
         "analysis_methods": {
-          "statistical_methods": [],
+          "statistical_methods": [
+            "GWAS",
+            "Linear regression",
+            "Logistic regression"
+          ],
           "software": [
             "PLINK / PLINK2"
           ],
@@ -461,7 +469,8 @@
         "note": "由 discover 從 PubMed 自動加入",
         "analysis_methods": {
           "statistical_methods": [
-            "GWAS"
+            "GWAS",
+            "Permutation test"
           ],
           "software": [],
           "sample_size": "不明",
@@ -487,7 +496,7 @@
         "analysis_methods": {
           "statistical_methods": [
             "GWAS",
-            "Simulation"
+            "Mixed model"
           ],
           "software": [],
           "sample_size": " 人",
@@ -819,8 +828,8 @@
         "note": "BOLT-LMM 原始論文",
         "analysis_methods": {
           "statistical_methods": [
-            "Mixed model",
-            "GWAS"
+            "GWAS",
+            "Mixed model"
           ],
           "software": [
             "BOLT-LMM"
@@ -847,8 +856,8 @@
         "note": "SAIGE 原始論文",
         "analysis_methods": {
           "statistical_methods": [
-            "Mixed model",
             "GWAS",
+            "Mixed model",
             "Logistic regression"
           ],
           "software": [
@@ -878,7 +887,8 @@
         "analysis_methods": {
           "statistical_methods": [
             "GWAS",
-            "Linear regression"
+            "Linear regression",
+            "Conditional analysis"
           ],
           "software": [
             "GCTA"
