@@ -977,7 +977,8 @@
         "analysis_methods": {
           "statistical_methods": [
             "Linear regression",
-            "GWAS"
+            "GWAS",
+            "Gene expression prediction"
           ],
           "software": [
             "PrediXcan",
@@ -1006,8 +1007,7 @@
         "analysis_methods": {
           "statistical_methods": [
             "Linear regression",
-            "GWAS",
-            "Meta-analysis"
+            "GWAS"
           ],
           "software": [
             "MetaXcan",
