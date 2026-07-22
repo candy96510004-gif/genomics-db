@@ -926,7 +926,7 @@
         "analysis_methods": {
           "statistical_methods": [
             "GWAS",
-            "Meta-analysis"
+            "Gene prioritization"
           ],
           "software": [
             "FUMA"
@@ -1070,7 +1070,8 @@
         "analysis_methods": {
           "statistical_methods": [
             "Linear regression",
-            "GWAS"
+            "GWAS",
+            "Gene-set analysis"
           ],
           "software": [
             "MAGMA"
