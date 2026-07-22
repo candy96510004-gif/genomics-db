@@ -33,6 +33,7 @@ CATS = [
     "MR",
     "TWAS",
     "Functional Annotation",
+    "Rare Variant",
     "其他",
 ]
 
@@ -74,6 +75,9 @@ CAT_RULES = {
         "functional annotation", "gene set", "pathway analysis", "magma",
         "fuma", "enrichment analysis", "tissue expression",
     ],
+    "Rare Variant": [
+        "rare variant", "rare variants", "burden test", "gene-based association", "variant-    set", "skat", "skat-o", "staar", "saige-gene", "saige-gene+", "acat", "raremetal",
+    ],
 }
 
 DISCOVER_QUERIES = [
@@ -87,6 +91,10 @@ DISCOVER_QUERIES = [
     "summary statistics method GWAS tool",
     "TWAS transcriptome-wide association method",
     "colocalization GWAS eQTL method",
+    "rare variant association method",
+    "rare variant association test",
+    "sequence kernel association test",
+    "gene-based association method",
 ]
 
 SKIP_KEYWORDS = [
@@ -119,6 +127,7 @@ STAT_KEYWORDS = {
     "Cross-validation":           ["cross-validation"],
     "TWAS":                       ["transcriptome-wide", "twas", "gene expression prediction"],
     "Colocalization":             ["colocalisation", "colocalization", "coloc", "clpp"],
+    "Rare variant analysis":      ["rare variant", "skat", "burden test", "staar", "gene-based association",],
 }
 SOFTWARE_KEYWORDS = {
     "PLINK / PLINK2": ["plink"],
