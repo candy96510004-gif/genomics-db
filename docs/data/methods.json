@@ -916,7 +916,8 @@
         "analysis_methods": {
           "statistical_methods": [
             "Meta-analysis",
-            "GWAS"
+            "GWAS",
+            "Fixed-effect"
           ],
           "software": [
             "METAL"
