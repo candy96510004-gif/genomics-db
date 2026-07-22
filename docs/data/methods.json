@@ -73,7 +73,6 @@
         "note": "",
         "analysis_methods": {
           "statistical_methods": [
-            "Bayesian regression",
             "PRS / C+T",
             "Shrinkage / regularization"
           ],
@@ -574,8 +573,7 @@
         "analysis_methods": {
           "statistical_methods": [
             "PRS / C+T",
-            "Shrinkage / regularization",
-            "Bayesian regression"
+            "Shrinkage / regularization"
           ],
           "software": [
             "LDAK"
@@ -658,7 +656,6 @@
         "note": "COLOC 原始論文",
         "analysis_methods": {
           "statistical_methods": [
-            "Bayesian regression",
             "Fine-mapping",
             "Genetic correlation"
           ],
@@ -687,7 +684,6 @@
         "note": "CAVIAR 原始論文",
         "analysis_methods": {
           "statistical_methods": [
-            "Bayesian regression",
             "Fine-mapping"
           ],
           "software": [
@@ -715,7 +711,6 @@
         "note": "PAINTOR 原始論文",
         "analysis_methods": {
           "statistical_methods": [
-            "Bayesian regression",
             "Fine-mapping"
           ],
           "software": [
@@ -801,8 +796,7 @@
         "note": "CAUSE 原始論文",
         "analysis_methods": {
           "statistical_methods": [
-            "Mendelian randomization",
-            "Bayesian regression"
+            "Mendelian randomization"
           ],
           "software": [
             "R"
@@ -830,7 +824,6 @@
         "analysis_methods": {
           "statistical_methods": [
             "Mixed model",
-            "Bayesian regression",
             "GWAS"
           ],
           "software": [
@@ -1032,7 +1025,6 @@
         "analysis_methods": {
           "statistical_methods": [
             "Linear regression",
-            "Bayesian regression",
             "GWAS"
           ],
           "software": [
@@ -1060,7 +1052,6 @@
         "note": "eCAVIAR 原始論文",
         "analysis_methods": {
           "statistical_methods": [
-            "Bayesian regression",
             "Fine-mapping"
           ],
           "software": [
@@ -1116,7 +1107,6 @@
         "note": "PRS-CSx 跨族群版本論文",
         "analysis_methods": {
           "statistical_methods": [
-            "Bayesian regression",
             "Shrinkage / regularization",
             "PRS / C+T"
           ],
