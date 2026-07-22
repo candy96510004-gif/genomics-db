@@ -104,7 +104,8 @@
             "LD score regression",
             "Heritability estimation",
             "GWAS",
-            "PCA"
+            "PCA",
+            "Genetic correlation"
           ],
           "software": [
             "LDSC"
@@ -146,8 +147,9 @@
         "note": "",
         "analysis_methods": {
           "statistical_methods": [
+            "LD score regression",
             "Heritability estimation",
-            "Genetic correlation",
+            "Functional annotation",
             "GWAS"
           ],
           "software": [],
@@ -606,7 +608,8 @@
         "analysis_methods": {
           "statistical_methods": [
             "Mixed model",
-            "Heritability estimation"
+            "Heritability estimation",
+            "REML"
           ],
           "software": [
             "GCTA"
@@ -633,7 +636,6 @@
         "note": "SumHer 方法論文",
         "analysis_methods": {
           "statistical_methods": [
-            "LD score regression",
             "Heritability estimation"
           ],
           "software": [
