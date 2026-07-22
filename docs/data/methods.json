@@ -234,8 +234,8 @@
         "analysis_methods": {
           "statistical_methods": [
             "Mendelian randomization",
-            "Genetic correlation",
-            "GWAS"
+            "GWAS",
+            "Instrumental variable"
           ],
           "software": [
             "TwoSampleMR",
@@ -254,7 +254,8 @@
         "analysis_methods": {
           "statistical_methods": [
             "Mendelian randomization",
-            "GWAS"
+            "GWAS",
+            "Instrumental variable"
           ],
           "software": [],
           "sample_size": "不明",
@@ -279,7 +280,9 @@
         "note": "",
         "analysis_methods": {
           "statistical_methods": [
-            "Mendelian randomization"
+            "Mendelian randomization",
+            "Outlier detection",
+            "Horizontal pleiotropy"
           ],
           "software": [],
           "sample_size": "不明",
@@ -418,7 +421,8 @@
         "analysis_methods": {
           "statistical_methods": [
             "Mendelian randomization",
-            "GWAS"
+            "GWAS",
+            "Bayesian network"
           ],
           "software": [],
           "sample_size": "不明",
@@ -743,8 +747,8 @@
         "analysis_methods": {
           "statistical_methods": [
             "Mendelian randomization",
-            "IVW",
-            "GWAS"
+            "GWAS",
+            "HEIDI-outlier"
           ],
           "software": [
             "GCTA"
@@ -772,7 +776,7 @@
         "analysis_methods": {
           "statistical_methods": [
             "Mendelian randomization",
-            "Genetic correlation"
+            "Directionality test"
           ],
           "software": [
             "TwoSampleMR",
@@ -800,7 +804,8 @@
         "note": "CAUSE 原始論文",
         "analysis_methods": {
           "statistical_methods": [
-            "Mendelian randomization"
+            "Mendelian randomization",
+            "Bayesian regression"
           ],
           "software": [
             "R"
@@ -1173,7 +1178,7 @@
         "analysis_methods": {
           "statistical_methods": [
             "Mendelian randomization",
-            "GWAS"
+            "Bayesian regression"
           ],
           "software": [],
           "sample_size": "不明",
