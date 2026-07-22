@@ -510,29 +510,6 @@
     ]
   },
   {
-    "id": 19,
-    "name": "Causal Gene Identification",
-    "cat": "Fine-mapping",
-    "desc": "簡化 GWAS loci 中因果基因鑑定流程的方法，整合多種功能性注釋資料提升定位準確度",
-    "use": "",
-    "link": "",
-    "papers": [
-      {
-        "title": "Simplifying causal gene identification in GWAS loci.",
-        "author": "Schipper et al., 2026",
-        "journal": "PLoS genetics",
-        "doi": "https://pubmed.ncbi.nlm.nih.gov/41843578/",
-        "note": "由 discover 從 PubMed 自動加入",
-        "analysis_methods": {
-          "statistical_methods": [],
-          "software": [],
-          "sample_size": "不明",
-          "data_type": "GWAS summary statistics"
-        }
-      }
-    ]
-  },
-  {
     "name": "lassosum",
     "cat": "PRS",
     "desc": "使用 LASSO 正則化搭配 LD 參考資料計算 PRS，透過彈性網路懲罰項縮減效應值，不需個體水準資料，計算效率高。",
@@ -1186,15 +1163,6 @@
         }
       }
     ]
-  },
-  {
-    "id": 44,
-    "name": "PRS-PSS",
-    "cat": "PRS",
-    "desc": "基於 Projected Summary Statistics 的穩健貝葉斯 PRS 方法，使用彈性收縮先驗，提升跨族群預測準確度。",
-    "use": "跨族群 PRS 計算、處理 summary statistics 中的雜訊與異質性",
-    "link": "",
-    "papers": []
   },
   {
     "id": 45,
