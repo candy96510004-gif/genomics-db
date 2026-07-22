@@ -16,7 +16,6 @@
         "analysis_methods": {
           "statistical_methods": [
             "PRS / C+T",
-            "Genetic correlation",
             "Shrinkage / regularization"
           ],
           "software": [
@@ -44,7 +43,8 @@
         "note": "LDpred2 方法論文",
         "analysis_methods": {
           "statistical_methods": [
-            "Shrinkage / regularization"
+            "Shrinkage / regularization",
+            "Bayesian regression"
           ],
           "software": [
             "LDpred2",
@@ -73,8 +73,8 @@
         "note": "",
         "analysis_methods": {
           "statistical_methods": [
-            "PRS / C+T",
-            "Shrinkage / regularization"
+            "Shrinkage / regularization",
+            "Bayesian regression"
           ],
           "software": [
             "PRS-CS"
@@ -544,8 +544,8 @@
         "analysis_methods": {
           "statistical_methods": [
             "Shrinkage / regularization",
-            "PRS / C+T",
-            "Cross-validation"
+            "Cross-validation",
+            "LASSO"
           ],
           "software": [
             "R",
