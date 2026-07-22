@@ -1141,7 +1141,6 @@
         "note": "discover 從 PubMed 加入",
         "analysis_methods": {
           "statistical_methods": [
-            "Meta-analysis",
             "Fine-mapping",
             "GWAS",
             "Shrinkage / regularization"
