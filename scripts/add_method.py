@@ -76,11 +76,16 @@ CAT_RULES = {
         "fuma", "enrichment analysis", "tissue expression",
     ],
     "Rare Variant": [
-        "rare variant", "rare variants", "burden test", "gene-based association", "variant-    set", "skat", "skat-o", "staar", "saige-gene", "saige-gene+", "acat", "raremetal",
+        "rare variant", "rare variants", "burden test", "gene-based association",
+        "variant-set", "skat", "skat-o", "staar", "saige-gene", "saige-gene+",
+        "acat", "acat-v", "acat-o", "raremetal", "metaskat", "variable threshold",
+        "cmc", "combined multivariate", "collapsing method", "exome sequencing association",
+        "whole exome", "ultra-rare", "low-frequency variant",
     ],
 }
 
 DISCOVER_QUERIES = [
+    # GWAS / 一般方法
     "GWAS statistical method novel algorithm",
     "polygenic score new method development",
     "fine-mapping method Bayesian GWAS",
@@ -91,10 +96,21 @@ DISCOVER_QUERIES = [
     "summary statistics method GWAS tool",
     "TWAS transcriptome-wide association method",
     "colocalization GWAS eQTL method",
+    # Rare Variant
     "rare variant association method",
     "rare variant association test",
-    "sequence kernel association test",
-    "gene-based association method",
+    "sequence kernel association test SKAT",
+    "gene-based rare variant association",
+    "burden test rare variant exome",
+    "STAAR rare variant association framework",
+    "SAIGE-GENE rare variant mixed model",
+    "ACAT aggregated Cauchy association test",
+    "RareMETAL rare variant meta-analysis",
+    "MetaSKAT meta-analysis rare variant",
+    "variable threshold rare variant test",
+    "combined multivariate collapsing rare variant",
+    "whole exome sequencing rare variant method",
+    "gene-level association test exome",
 ]
 
 SKIP_KEYWORDS = [
@@ -127,7 +143,11 @@ STAT_KEYWORDS = {
     "Cross-validation":           ["cross-validation"],
     "TWAS":                       ["transcriptome-wide", "twas", "gene expression prediction"],
     "Colocalization":             ["colocalisation", "colocalization", "coloc", "clpp"],
-    "Rare variant analysis":      ["rare variant", "skat", "burden test", "staar", "gene-based association",],
+    "Rare variant analysis":      ["rare variant", "skat", "burden test", "staar", "gene-based association"],
+    "SKAT":                       ["sequence kernel association", "skat-o", "skat"],
+    "Burden test":                ["burden test", "collapsing method", "combined multivariate"],
+    "ACAT":                       ["aggregated cauchy", "acat-v", "acat-o"],
+    "Variable threshold":         ["variable threshold"],
 }
 SOFTWARE_KEYWORDS = {
     "PLINK / PLINK2": ["plink"],
@@ -149,6 +169,12 @@ SOFTWARE_KEYWORDS = {
     "MAGMA":          ["magma"],
     "FUMA":           ["fuma"],
     "GCTA":           ["gcta"],
+    "SKAT / SKAT-O":  ["skat-o", "skat"],
+    "STAAR":          ["staar"],
+    "SAIGE-GENE":     ["saige-gene"],
+    "ACAT-V / ACAT-O":["acat-v", "acat-o", "acat"],
+    "RareMETAL":      ["raremetal"],
+    "MetaSKAT":       ["metaskat"],
     "R":              [" in r ", "r package", "r software", "cran"],
     "Python":         ["python"],
 }

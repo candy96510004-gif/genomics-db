@@ -1196,5 +1196,185 @@
     "use": "WES、WGS、基因層級罕見變異關聯分析",
     "link": "q",
     "papers": []
+  },
+  {
+    "id": 47,
+    "name": "SAIGE-GENE",
+    "cat": "Rare Variant",
+    "desc": "基於 SAIGE 混合模型框架的基因層級 rare variant 關聯分析工具，支援 burden test、SKAT 及 SKAT-O，有效控制樣本不平衡與族群結構問題，適用於大型生物銀行 WES/WGS 資料。",
+    "use": "",
+    "link": "",
+    "papers": [
+      {
+        "title": "Scalable generalized linear mixed model for region-based association tests in large biobanks and cohorts.",
+        "author": "Zhou et al., 2020",
+        "journal": "Nature genetics",
+        "doi": "https://pubmed.ncbi.nlm.nih.gov/32424355/",
+        "note": "discover 從 PubMed 加入",
+        "analysis_methods": {
+          "statistical_methods": [
+            "Mixed model",
+            "Rare variant analysis"
+          ],
+          "software": [
+            "SAIGE",
+            "SAIGE-GENE"
+          ],
+          "sample_size": "不明",
+          "data_type": "GWAS summary statistics"
+        }
+      },
+      {
+        "title": "Scalable mixed model methods for set-based association studies on large-scale categorical data analysis and its application to exome-sequencing data in UK Biobank.",
+        "author": "Bi et al., 2023",
+        "journal": "American journal of human genetics",
+        "doi": "https://pubmed.ncbi.nlm.nih.gov/37019109/",
+        "note": "discover 從 PubMed 加入",
+        "analysis_methods": {
+          "statistical_methods": [
+            "Mixed model",
+            "Rare variant analysis"
+          ],
+          "software": [
+            "SAIGE",
+            "SAIGE-GENE"
+          ],
+          "sample_size": "不明",
+          "data_type": "GWAS summary statistics"
+        }
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "name": "SEQSpark",
+    "cat": "Rare Variant",
+    "desc": "大規模 WGS/WES rare variant 關聯分析的完整流程工具，支援 burden test、SKAT 等多種基因層級檢定，整合資料品質控制到關聯分析的全流程，適合分散式運算環境。",
+    "use": "",
+    "link": "",
+    "papers": [
+      {
+        "title": "SEQSpark: A Complete Analysis Tool for Large-Scale Rare Variant Association Studies Using Whole-Genome and Exome Sequence Data.",
+        "author": "Zhang et al., 2017",
+        "journal": "American journal of human genetics",
+        "doi": "https://pubmed.ncbi.nlm.nih.gov/28669402/",
+        "note": "discover 從 PubMed 加入",
+        "analysis_methods": {
+          "statistical_methods": [
+            "PCA",
+            "Rare variant analysis"
+          ],
+          "software": [],
+          "sample_size": "不明",
+          "data_type": "GWAS summary statistics"
+        }
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "name": "MR-RAPS",
+    "cat": "MR",
+    "desc": "針對大量工具變數下的穩健雙樣本 MR 方法，使用 adjusted profile score 處理 horizontal pleiotropy，在工具變數數量多時比 IVW 和 MR-Egger 更準確穩健。",
+    "use": "",
+    "link": "",
+    "papers": [
+      {
+        "title": "A new robust and accurate two-sample Mendelian randomization method with a large number of genetic variants",
+        "author": "Zhang et al., 2024",
+        "journal": "medRxiv",
+        "doi": "https://doi.org/10.1101/2024.04.16.24305933",
+        "note": "discover 從 Semantic Scholar 加入",
+        "analysis_methods": {
+          "statistical_methods": [
+            "Mendelian randomization"
+          ],
+          "software": [],
+          "sample_size": "不明",
+          "data_type": "GWAS summary statistics"
+        }
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "name": "Weighted Mode MR",
+    "cat": "MR",
+    "desc": "基於 zero modal pleiotropy assumption 的 MR 方法，假設最多工具變數指向的因果估計值為真值，對 horizontal pleiotropy 具有高度穩健性，適合工具變數品質參差不齊的情況。",
+    "use": "",
+    "link": "",
+    "papers": [
+      {
+        "title": "Robust inference in summary data Mendelian randomization via the zero modal pleiotropy assumption",
+        "author": "Hartwig et al., 2017",
+        "journal": "bioRxiv",
+        "doi": "https://doi.org/10.1093/ije/dyx102",
+        "note": "discover 從 Semantic Scholar 加入",
+        "analysis_methods": {
+          "statistical_methods": [
+            "Mendelian randomization",
+            "IVW",
+            "MR-Egger",
+            "Weighted median",
+            "GWAS"
+          ],
+          "software": [],
+          "sample_size": "不明",
+          "data_type": "GWAS summary statistics"
+        }
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "name": "HiC-SKAT",
+    "cat": "Rare Variant",
+    "desc": "基於 zero modal pleiotropy assumption 的 MR 方法，假設最多工具變數指向的因果估計值為真值，對 horizontal pleiotropy 具有高度穩健性，適合工具變數品質參差不齊的情況。",
+    "use": "",
+    "link": "",
+    "papers": [
+      {
+        "title": "Hi-C informed kernel association test for integrating 3D genome structure into variant-set analysis.",
+        "author": "Huang et al., 2026",
+        "journal": "Briefings in bioinformatics",
+        "doi": "https://pubmed.ncbi.nlm.nih.gov/42480046/",
+        "note": "discover 從 PubMed 加入",
+        "analysis_methods": {
+          "statistical_methods": [
+            "Rare variant analysis"
+          ],
+          "software": [],
+          "sample_size": "不明",
+          "data_type": "GWAS summary statistics"
+        }
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "name": "SAIGE-SURVIVAL",
+    "cat": "Rare Variant",
+    "desc": "SAIGE 框架的延伸，專為大型生物銀行 WGS 的 time-to-event（存活分析）表現型設計的 rare variant set-based 關聯分析方法，支援 burden test 和 SKAT，可有效處理族群結構與樣本不平衡問題。",
+    "use": "",
+    "link": "",
+    "papers": [
+      {
+        "title": "Scalable and accurate rare-variant association tests for whole genome sequencing time-to-event analysis in large biobanks.",
+        "author": "Song et al., 2026",
+        "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+        "doi": "https://pubmed.ncbi.nlm.nih.gov/41758668/",
+        "note": "discover 從 PubMed 加入",
+        "analysis_methods": {
+          "statistical_methods": [
+            "Rare variant analysis"
+          ],
+          "software": [
+            "STAAR"
+          ],
+          "sample_size": "不明",
+          "data_type": "GWAS summary statistics"
+        }
+      }
+    ]
   }
 ]
