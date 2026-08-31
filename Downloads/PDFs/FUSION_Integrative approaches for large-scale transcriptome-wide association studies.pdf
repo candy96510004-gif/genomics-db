@@ -1,0 +1,1084 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="nexus-font-support">
+
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="google" content="nositelinkssearchbox"/>
+    <meta name="tdm-reservation" content="0">
+    <title>
+        Integrative approaches for large-scale transcriptome-wide association studies
+      -  Amsterdam UMC</title>
+    
+    
+    
+
+
+
+<meta property="og:site_name" content="Amsterdam UMC">
+
+
+    <meta property="og:title" content="Integrative approaches for large-scale transcriptome-wide association studies"/>
+
+
+<meta property="og:url" content="https://pure.amsterdamumc.nl/en/publications/integrative-approaches-for-large-scale-transcriptome-wide-associa/">
+<meta property="og:locale" content="en_GB">
+
+
+
+
+    
+        <meta property="og:image" content="https://pure.amsterdamumc.nl/skin/headerImage/">
+    
+
+
+
+
+    
+        <meta property="og:type" content="article">
+    
+
+    
+
+    
+
+
+    <link rel="stylesheet" href="/assets/application-d8c4196ba42289b701050fcf209ab3eb.css" />
+    
+    
+        <link rel="shortcut icon" href="/skin/favIcon/"/>
+    
+    <link href="/skin/css/" rel="stylesheet"/>
+    
+    <script src="/skin/script/" type="text/javascript"></script>
+    <script type="text/javascript" src="/assets/application-d9c3c96b32ee7877543159e1191a25d2.js" ></script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="/assets/html5shiv.min-ca5300beead9a4a9d2c9c584a9016410.js" ></script>
+    <script type="text/javascript" src="/assets/respond.min-678d372b349e434d9923e1b591f14a1e.js" ></script>
+    <![endif]-->
+    
+        
+        
+        <meta name="citation_title" content="Integrative approaches for large-scale transcriptome-wide association studies"></meta><meta name="citation_author" content="Alexander Gusev"></meta><meta name="citation_author" content="Arthur Ko"></meta><meta name="citation_author" content="Huwenbo Shi"></meta><meta name="citation_author" content="Gaurav Bhatia"></meta><meta name="citation_author" content="Wonil Chung"></meta><meta name="citation_author" content="Brenda W. J. H. Penninx"></meta><meta name="citation_author_institution" content="ANS - Complex Trait Genetics"></meta><meta name="citation_author_institution" content="Psychiatry"></meta><meta name="citation_author_institution" content="Affiliatie VU"></meta><meta name="citation_author_email" content="b.penninx@amsterdamumc.nl"></meta><meta name="citation_author_orcid" content="0000-0001-7779-9672"></meta><meta name="citation_author" content="Rick Jansen"></meta><meta name="citation_author_institution" content="Psychiatry"></meta><meta name="citation_author_institution" content="ANS - Complex Trait Genetics"></meta><meta name="citation_author_institution" content="Affiliatie VU"></meta><meta name="citation_author_email" content="ri.jansen@amsterdamumc.nl"></meta><meta name="citation_author_orcid" content="0000-0002-3333-6737"></meta><meta name="citation_author" content="Eco J. C. de Geus"></meta><meta name="citation_author" content="Dorret I. Boomsma"></meta><meta name="citation_author" content="Fred A. Wright"></meta><meta name="citation_author" content="Patrick F. Sullivan"></meta><meta name="citation_author" content="Elina Nikkola"></meta><meta name="citation_author" content="Marcus Alvarez"></meta><meta name="citation_author" content="Mete Civelek"></meta><meta name="citation_author" content="Aldons J. Lusis"></meta><meta name="citation_author" content="Terho Lehtimaki"></meta><meta name="citation_author" content="Emma Raitoharju"></meta><meta name="citation_author" content="Mika Kahonen"></meta><meta name="citation_author" content="Ilkka Seppala"></meta><meta name="citation_author" content="Olli T. Raitakari"></meta><meta name="citation_author" content="Johanna Kuusisto"></meta><meta name="citation_author" content="Markku Laakso"></meta><meta name="citation_author" content="Alkes L. Price"></meta><meta name="citation_author" content="Paivi Pajukanta"></meta><meta name="citation_author" content="Bogdan Pasaniuc"></meta><meta name="citation_publication_date" content="2016/03"></meta><meta name="citation_pdf_url" content="https://pure.amsterdamumc.nl/files/160594053/Integrative-approaches-for-large-scale-transcriptome-wide-association-studies.pdf"></meta><meta name="citation_online_date" content="2025/11/10"></meta><meta name="citation_doi" content="10.1038/ng.3506"></meta><meta name="citation_language" content="English"></meta><meta name="citation_pmid" content="26854917"></meta><meta name="citation_journal_title" content="Nature genetics"></meta><meta name="citation_issn" content="1061-4036"></meta><meta name="citation_journal_abbrev" content="Nat Genet"></meta><meta name="citation_publisher" content="Nature Publishing Group"></meta><meta name="citation_volume" content="48"></meta><meta name="citation_issue" content="3"></meta><meta name="citation_firstpage" content="245"></meta><meta name="citation_lastpage" content="252"></meta>
+        <script src="/assets/Chart.min-27bff060c3e539ceb22e763c8f2e9e10.js"></script>
+        <script src="/assets/jquery.content-chart-9c09bb79ba3fc3829b6478d0e114f737.js"></script>
+        
+    
+    
+    <!-- Google Analytics: No account ID (G) found -->
+    <script src="//assets.adobedtm.com/4a848ae9611a/ea83f870454d/launch-af020409b299.min.js" async=""></script>
+    
+    
+</head>
+
+<body class="" data-page="publications">
+
+<div id="aria-polite" aria-live="polite"></div>
+<div id="aria-assertive" aria-live="assertive"></div>
+
+<a href="#main-navigation" class="sr-only sr-only-focusable">Skip to main navigation</a>
+
+    <a href="#main-search" class="sr-only sr-only-focusable">Skip to search</a>
+
+<a href="#main-content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+
+
+
+
+
+
+    <header class="header" id="page-header">
+        <div class="primary  ">
+            <div class="container">
+                
+                <a href="/en/" class="logo">
+                    
+                        <span class="sr-only">Amsterdam UMC Home</span>
+                        <img src="/skin/headerImage/" alt="Amsterdam UMC Logo"/>
+                    
+                </a>
+                
+                    <ul class="header-tools ">
+                        
+                            <li class="help-and-faq">
+                                <a href="https://uvanl.libguides.com/c.php?g=723188" target="_blank">
+                                    <i class="icon icon-lifebuoy" aria-hidden="true"></i>
+                                    <span class="label">Help &amp; FAQ</span>
+                                    <span class="sr-only">&nbsp; Link opens in a new tab</span>
+                                </a>
+                            </li>
+                        
+                        
+                    </ul>
+                
+                
+                
+            </div>
+        </div>
+
+        
+            <div class="header-search">
+                
+<form action="/en/searchAll/index/integrative-approaches-for-large-scale-transcriptome-wide-associa/" method="get"
+      class="search-form" id="search-everything">
+
+    <div class="global-search-wrapper">
+        <div class="global-search mini">
+            <div class="field-button-wrapper">
+                <div class="search-cell search-field">
+                    <label for="main-search" class="sr-only">Search content at Amsterdam UMC</label>
+                    <input id="main-search" class="search-field" value="" name="search"
+                           placeholder="Search..."/>
+                </div>
+
+                <div class="search-submit">
+                    <button type="submit" aria-label="Search">
+                        <i class="icon icon-magnifying-glass" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+    $(function () {
+        var searchForm = $("#search-everything");
+        var searchField = $(".search-field", searchForm);
+        searchForm.on("submit", function () {
+            var field = searchField.find("input");
+            var searchString = field.val();
+
+            // No enter key submit nothing :-)
+            if (!searchString) return false;
+
+            if (searchString.length >= 200) {
+                searchForm.attr("method", "post");
+                searchForm.attr("action", "/en/concepts/copypaste/");
+                field.attr("name", "text");
+            }
+        });
+    });
+</script>
+            </div>
+        
+
+
+        
+        
+            <div class="subMenu">
+                <div class="secondary">
+                    <div class="container">
+                        <nav id="main-navigation" aria-label="Main navigation" class="content-navigation three-third">
+                            <ul data-value="More" role="menubar" aria-label="Main navigation">
+                                <li class="" role="none">
+                                    <a href="/en/" role="menuitem" tabindex="-1">Home</a>
+                                </li>
+
+                                
+                                    <li class="" role="none">
+                                        <a class="portal_link" tabindex="-1" role="menuitem" href="/en/persons/"><span>Researchers</span></a>
+                                    </li>
+                                
+                                    <li class="" role="none">
+                                        <a class="portal_link" tabindex="-1" role="menuitem" href="/en/organisations/"><span>Departments &amp; Research Institutes</span></a>
+                                    </li>
+                                
+                                    <li class="" role="none">
+                                        <a class="portal_link" tabindex="-1" role="menuitem" href="/en/projects/"><span>Projects &amp; Funding</span></a>
+                                    </li>
+                                
+                                    <li class="selected" role="none">
+                                        <a class="portal_link" tabindex="0" role="menuitem" href="/en/publications/"><span>Publications</span></a>
+                                    </li>
+                                
+                                    <li class="" role="none">
+                                        <a class="portal_link" tabindex="-1" role="menuitem" href="/en/datasets/"><span>Datasets</span></a>
+                                    </li>
+                                
+                                    <li class="" role="none">
+                                        <a class="portal_link" tabindex="-1" role="menuitem" href="/en/prizes/"><span>Prizes</span></a>
+                                    </li>
+                                
+                                    <li class="" role="none">
+                                        <a class="portal_link" tabindex="-1" role="menuitem" href="/en/activities/"><span>Activities</span></a>
+                                    </li>
+                                
+                                    <li class="" role="none">
+                                        <a class="portal_link" tabindex="-1" role="menuitem" href="/en/courses/"><span>Courses</span></a>
+                                    </li>
+                                
+                                    <li class="" role="none">
+                                        <a class="portal_link" tabindex="-1" role="menuitem" href="/en/equipments/"><span>Cohorts</span></a>
+                                    </li>
+                                
+                                    <li class="" role="none">
+                                        <a class="portal_link" tabindex="-1" role="menuitem" href="/en/clippings/"><span>Press/Media</span></a>
+                                    </li>
+                                
+                                    <li class="" role="none">
+                                        <a class="portal_link" tabindex="-1" role="menuitem" href="/en/impacts/"><span>Impact</span></a>
+                                    </li>
+                                
+                            </ul>
+                        </nav>
+
+                    </div>
+                </div>
+            </div>
+        
+    </header>
+
+    <main id="page-content">
+        
+    <div class="page-section page-section-publications page-section-publications-view ">
+
+        
+        
+        
+        
+        <section
+                class="page-section-header page-section-header-publications page-section-header-publications-view
+                 no-backdrop-image"
+                data-stickyheader=""
+                style="">
+            
+            
+        
+
+
+<div class="container">
+    <div class="row">
+        <div class="introduction no-metrics">
+            <div class="rendering"><h1><span>Integrative approaches for large-scale transcriptome-wide association studies</span></h1></div>
+            <div class="rendering rendering_researchoutput  rendering_researchoutput_associatespersonsclassifiedportal rendering_contributiontojournal rendering_associatespersonsclassifiedportal rendering_contributiontojournal_associatespersonsclassifiedportal"><ul class="relations persons"><li>Alexander Gusev</li><li>, Arthur Ko</li><li>, Huwenbo Shi</li><li>, Gaurav Bhatia</li><li>, Wonil Chung</li><li>, <a rel="Person" href="https://pure.amsterdamumc.nl/en/persons/brenda-penninx/" class="link person"><span>Brenda W. J. H. Penninx</span></a></li><li>, <a rel="Person" href="https://pure.amsterdamumc.nl/en/persons/rick-jansen/" class="link person"><span>Rick Jansen</span></a></li><li>, Eco J. C. de Geus</li><li>, Dorret I. Boomsma</li><li>, Fred A. Wright</li><li>, Patrick F. Sullivan</li><li>, Elina Nikkola</li><li>, Marcus Alvarez</li><li>, Mete Civelek</li><li>, Aldons J. Lusis</li><li>, Terho Lehtimaki</li><li>, Emma Raitoharju</li><li>, Mika Kahonen</li><li>, Ilkka Seppala</li><li>, Olli T. Raitakari</li><span class="common_hidden publication_authors_full_inline_list">Johanna Kuusisto, Markku Laakso, Alkes L. Price, Paivi Pajukanta, Bogdan Pasaniuc</span><button aria-expanded="" class="author-link btn show" aria-label="Show all related authors" aria-pressed="" data-customdata="Author list shown, click to hide author list"><span>Show 5 more</span></button><button aria-expanded="" class="author-link btn hide" aria-label="Hide all related authors" aria-pressed="" data-customdata="Authors list hidden, click to show author list"><span>Show less</span></button></ul></div>
+            <div class="rendering rendering_researchoutput  rendering_researchoutput_associatesorganisationsportal rendering_contributiontojournal rendering_associatesorganisationsportal rendering_contributiontojournal_associatesorganisationsportal"><ul class="relations organisations"><li class="researchprogramme"><a rel="Organisation" href="https://pure.amsterdamumc.nl/en/organisations/ans-complex-trait-genetics-2/" class="link"><span>ANS - Complex Trait Genetics</span></a></li><li class="department"><a rel="Organisation" href="https://pure.amsterdamumc.nl/en/organisations/psychiatry-2/" class="link"><span>Psychiatry</span></a></li><li class="university"><a rel="Organisation" href="https://pure.amsterdamumc.nl/en/organisations/affiliatie-vu-2/" class="link"><span>Affiliatie VU</span></a></li></ul></div>
+            
+            <div class="rendering rendering_researchoutput  rendering_researchoutput_publicationcontenttyperendererportalng rendering_contributiontojournal rendering_publicationcontenttyperendererportalng rendering_contributiontojournal_publicationcontenttyperendererportalng"><p class="type"><span class="type_family">Research output<span class="type_family_sep">: </span></span><span class="type_classification_parent">Contribution to journal<span class="type_parent_sep"> › </span></span><span class="type_classification">Article</span><span class="type_classification"><span class="type_parent_sep"> › </span>Academic</span><span class="type_classification"><span class="type_parent_sep"> › </span>peer-review</span></p></div>
+        </div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="publication-metrics" role="region" aria-label="Publication metrics section">
+        
+            <div class="metrics-container">
+                
+                    <div class="metrics-wrap metrics-top one">
+                        
+                        
+                            <div class="metric metrics-downloads">
+                                <span class="count tooltipped tooltipped-n" aria-label="Total downloads for this work">438</span>
+                                <span class="label">Downloads
+(Pure)</span>
+                            </div>
+                        
+                    </div>
+                
+                
+                    <div class="metrics-wrap metrics-bottom ">
+                        
+                            <div class="metric metric-plum-x">
+                                <a href="https://plu.mx/plum/a/?doi=10.1038/ng.3506" class="plumx-plum-print-popup" data-on-empty="plumXError" data-on-fail="plumXError" data-on-success="plumXSuccess" data-popup="left" data-hide-when-empty="true" data-site="plum"
+                                   data-badge="false"></a>
+                            </div>
+                        
+
+                        
+                            <div class="metric metric-altmetric">
+                                
+                                    <div data-badge-popover="top" data-badge-type="donut" data-doi="10.1038/ng.3506" data-hide-no-mentions="true" data-link-target='_blank'
+                                         class="altmetric-embed"></div>
+                                
+                            </div>
+                        
+                    </div>
+                
+            </div>
+        
+    </div>
+
+
+    </div>
+
+</div>
+<div class="subMenu">
+    <div class="content-profile-navigation">
+    <div class="container">
+        <nav role="navigation">
+            <ul role="menubar">
+                <li class="selected" role="none">
+                    <a class="portal_link" role="menuitem" href="/en/publications/integrative-approaches-for-large-scale-transcriptome-wide-associa/"><span>
+                        <i class="icon icon-publication" aria-hidden="true"></i>
+                        <span class="label">Overview</span>
+                    </span></a>
+                </li>
+                
+                    <li class="" role="none">
+                        <a class="portal_link" role="menuitem" href="/en/publications/integrative-approaches-for-large-scale-transcriptome-wide-associa/fingerprints/"><span>
+                            <i class="icon icon-fingerprint" aria-hidden="true"></i>
+                            <span class="label">Fingerprint</span>
+                        </span></a>
+                    </li>
+                
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        <li class="" role="none">
+                            <a class="portal_link" role="menuitem" href="/en/publications/integrative-approaches-for-large-scale-transcriptome-wide-associa/equipments/"><span>
+                                <i class="icon icon-equipments"></i>
+                                <span class="label">Cohorts</span>
+                                <span class="count">(1)</span>
+                            </span></a>
+                        </li>
+                    
+                
+
+            </ul>
+        </nav>
+    </div>
+    </div>
+</div>
+
+    
+        </section>
+
+        <div id="main-content"
+             class="page-section-content page-section-content-publications page-section-content-publications-view  no-margin ">
+            
+        <section class="page-section content-relation-section">
+            <div class="container">
+                <div class="clearfix">
+                    <div class="content-content publication-content">
+                        
+                        
+                            <h2 class="subheader">Abstract</h2>
+                        <div class="rendering rendering_researchoutput  rendering_researchoutput_abstractportal rendering_contributiontojournal rendering_abstractportal rendering_contributiontojournal_abstractportal"><div class="textblock">Many genetic variants influence complex traits by modulating gene expression, thus altering the abundance of one or multiple proteins. Here we introduce a powerful strategy that integrates gene expression measurements with summary association statistics from large-scale genome-wide association studies (GWAS) to identify genes whose cis-regulated expression is associated with complex traits. We leverage expression imputation from genetic data to perform a transcriptome-wide association study (TWAS) to identify significant expression-trait associations. We applied our approaches to expression data from blood and adipose tissue measured in ∼3,000 individuals overall. We imputed gene expression into GWAS data from over 900,000 phenotype measurements to identify 69 new genes significantly associated with obesity-related traits (BMI, lipids and height). Many of these genes are associated with relevant phenotypes in the Hybrid Mouse Diversity Panel. Our results showcase the power of integrating genotype, gene expression and phenotype to gain insights into the genetic basis of complex traits.</div></div>
+                        <div class="rendering rendering_researchoutput  rendering_researchoutput_detailsportal rendering_contributiontojournal rendering_detailsportal rendering_contributiontojournal_detailsportal"><div class="article"><table class="properties"><tbody><tr class="language"><th scope="row">Original language</th><td>English</td></tr><tr><th scope="row">Pages (from-to)</th><td>245-252</td></tr><tr><th scope="row">Journal</th><td><a rel="Journal" href="#" class="link"><span>Nature genetics</span></a></td></tr><tr><th scope="row">Volume</th><td>48</td></tr><tr><th scope="row">Issue number</th><td>3</td></tr><tr class="digital_object_identifiers"><th scope="row">DOIs</th><td><ul class="relations digital_object_identifiers"><li><a onclick="window.open(this.href, '_blank','noopener,noreferrer'); return false;" href="https://doi.org/10.1038/ng.3506" class="link"><span>https://doi.org/10.1038/ng.3506</span></a> </li></ul></td></tr><tr class="status"><th scope="row">Publication status</th><td><span class="prefix">Published - </span><span class="date">Mar 2016</span></td></tr></tbody></table></div></div>
+                        
+
+                        
+
+                        
+    <div class="sdgs-content-page">
+        <h2 id="sdg-title" class="subheader">UN SDGs</h2>
+        <p class="sdg-text">This output contributes to the following UN <a href="https://www.un.org/sustainabledevelopment/sustainable-development-goals/" target="_blank">Sustainable Development Goals (SDGs)</a></p>
+        <ol class="sdg_icons" aria-labelledby="sdg-title">
+            
+                <li class="content-page">
+                    
+                    <img alt="SDG 3 - Good Health and Well-being" title="SDG 3 - Good Health and Well-being" class="good_health_and_well_being"
+                         src="/assets/sdg_icons/good_health_and_well_being-9e564c34dfe97e37b42d22a76cae8ae4.svg"
+                         role="presentation"/>
+                    <div class="sdg-name">
+                        <span>SDG 3</span>
+                        <span>Good Health and Well-being</span>
+                    </div>
+                </li>
+            
+        </ol>
+    </div>
+
+
+                        
+
+                    </div>
+
+                    <div class="content-sidebar publication-sidebar">
+                        
+                            <h2 class="subheader">Access to Document</h2>
+                        <div class="rendering rendering_researchoutput  rendering_researchoutput_publicationaccessrenderer rendering_contributiontojournal rendering_publicationaccessrenderer rendering_contributiontojournal_publicationaccessrenderer"><ul class="dois"><li><div class="doi"><a onclick="window.open(this.href, '_blank','noopener,noreferrer'); return false;" href="https://doi.org/10.1038/ng.3506" class="link"><span>10.1038/ng.3506</span></a></div></li></ul><ul class="documents"><li class="open-access"><div class="document"><a onclick="if (this.href) {window.open(this.href)}; return false;" href="/files/160594053/Integrative-approaches-for-large-scale-transcriptome-wide-association-studies.pdf" class="link document-link"><span>Integrative-approaches-for-large-scale-transcriptome-wide-association-studies.pdf</span></a><span class="meta">Final published version, 1.01 MB</span><span class="meta">Licence: <a onclick="window.open(this.href, '_blank','noopener,noreferrer'); return false;" href="https://uvanl.libguides.com/c.php?g=723188&amp;amp;p=5354908" class="link">Taverne</a></span></div></li></ul></div>
+
+                        
+
+                        
+
+                        
+
+                        <div class="rendering rendering_researchoutput  rendering_researchoutput_versioneddocumentspureportal rendering_contributiontojournal rendering_versioneddocumentspureportal rendering_contributiontojournal_versioneddocumentspureportal"><ul class="relations documents"></ul></div>
+
+                        
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+            <section class="page-section content-relation-section publication-fingerprint">
+                <div class="container">
+                    <div class="header">
+                        <h2 class="section-title">
+                            <i class="icon icon-fingerprint" aria-hidden="true"></i>
+                            <span class="title">Fingerprint</span>
+                        </h2>
+                        <span class="sub-title">
+                            Dive into the research topics of 'Integrative approaches for large-scale transcriptome-wide association studies'. Together they form a unique fingerprint.
+                        </span>
+                    </div>
+
+                    <ul class="publication-top-concepts" role="menubar"  aria-label="Related fingerprints">
+                        
+                            <li class="concept-badge-large-container dropdown-overflow" role="none">
+
+    <button tabindex="0"
+            class="concept-badge-large dropdown-toggle"
+            type="button"
+            role="menuitem"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="48f48f4e-6089-408f-af73-808eb157fef5"
+            data-concept-uuid="48f48f4e-6089-408f-af73-808eb157fef5"
+            data-rank-size="32"
+            data-rank-thickness="8"
+            data-rank-value="1.0"
+            data-summary="true"
+            data-summary-url="/en/concepts/summary/">
+        <span class="concept-wrapper" title="100%">
+            <span class="rank"></span>
+            <span class="concept">Complex Traits</span>
+            <span class="thesauri">Keyphrases</span>
+            <span class="value sr-only">100%</span>
+        </span>
+    </button>
+
+    <div class="dropdown-container"></div>
+
+</li>
+                        
+                            <li class="concept-badge-large-container dropdown-overflow" role="none">
+
+    <button tabindex="0"
+            class="concept-badge-large dropdown-toggle"
+            type="button"
+            role="menuitem"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="3c370bc7-fb03-4945-8d8c-e802b4562330"
+            data-concept-uuid="3c370bc7-fb03-4945-8d8c-e802b4562330"
+            data-rank-size="32"
+            data-rank-thickness="8"
+            data-rank-value="1.0"
+            data-summary="true"
+            data-summary-url="/en/concepts/summary/">
+        <span class="concept-wrapper" title="100%">
+            <span class="rank"></span>
+            <span class="concept">Integrative Approach</span>
+            <span class="thesauri">Keyphrases</span>
+            <span class="value sr-only">100%</span>
+        </span>
+    </button>
+
+    <div class="dropdown-container"></div>
+
+</li>
+                        
+                            <li class="concept-badge-large-container dropdown-overflow" role="none">
+
+    <button tabindex="0"
+            class="concept-badge-large dropdown-toggle"
+            type="button"
+            role="menuitem"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="ae0be88b-ae26-41de-b4b5-2a18254a486b"
+            data-concept-uuid="ae0be88b-ae26-41de-b4b5-2a18254a486b"
+            data-rank-size="32"
+            data-rank-thickness="8"
+            data-rank-value="1.0"
+            data-summary="true"
+            data-summary-url="/en/concepts/summary/">
+        <span class="concept-wrapper" title="100%">
+            <span class="rank"></span>
+            <span class="concept">Transcriptome-wide Association Study</span>
+            <span class="thesauri">Keyphrases</span>
+            <span class="value sr-only">100%</span>
+        </span>
+    </button>
+
+    <div class="dropdown-container"></div>
+
+</li>
+                        
+                            <li class="concept-badge-large-container dropdown-overflow" role="none">
+
+    <button tabindex="0"
+            class="concept-badge-large dropdown-toggle"
+            type="button"
+            role="menuitem"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="18f47508-b4f4-4023-a68a-c6617974487e"
+            data-concept-uuid="18f47508-b4f4-4023-a68a-c6617974487e"
+            data-rank-size="32"
+            data-rank-thickness="8"
+            data-rank-value="1.0"
+            data-summary="true"
+            data-summary-url="/en/concepts/summary/">
+        <span class="concept-wrapper" title="100%">
+            <span class="rank"></span>
+            <span class="concept">Transcriptome</span>
+            <span class="thesauri">Biochemistry, Genetics and Molecular Biology</span>
+            <span class="value sr-only">100%</span>
+        </span>
+    </button>
+
+    <div class="dropdown-container"></div>
+
+</li>
+                        
+                            <li class="concept-badge-large-container dropdown-overflow" role="none">
+
+    <button tabindex="0"
+            class="concept-badge-large dropdown-toggle"
+            type="button"
+            role="menuitem"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="5379a05c-ddcf-4d06-a429-03d7922ee0a8"
+            data-concept-uuid="5379a05c-ddcf-4d06-a429-03d7922ee0a8"
+            data-rank-size="32"
+            data-rank-thickness="8"
+            data-rank-value="1.0"
+            data-summary="true"
+            data-summary-url="/en/concepts/summary/">
+        <span class="concept-wrapper" title="100%">
+            <span class="rank"></span>
+            <span class="concept">Gene Expression</span>
+            <span class="thesauri">Biochemistry, Genetics and Molecular Biology</span>
+            <span class="value sr-only">100%</span>
+        </span>
+    </button>
+
+    <div class="dropdown-container"></div>
+
+</li>
+                        
+                            <li class="concept-badge-large-container dropdown-overflow" role="none">
+
+    <button tabindex="0"
+            class="concept-badge-large dropdown-toggle"
+            type="button"
+            role="menuitem"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="374edd61-4a1e-4810-a6aa-5ad952da083f"
+            data-concept-uuid="374edd61-4a1e-4810-a6aa-5ad952da083f"
+            data-rank-size="32"
+            data-rank-thickness="8"
+            data-rank-value="1.0"
+            data-summary="true"
+            data-summary-url="/en/concepts/summary/">
+        <span class="concept-wrapper" title="100%">
+            <span class="rank"></span>
+            <span class="concept">Wide Association Study</span>
+            <span class="thesauri">Biochemistry, Genetics and Molecular Biology</span>
+            <span class="value sr-only">100%</span>
+        </span>
+    </button>
+
+    <div class="dropdown-container"></div>
+
+</li>
+                        
+                            <li class="concept-badge-large-container dropdown-overflow" role="none">
+
+    <button tabindex="0"
+            class="concept-badge-large dropdown-toggle"
+            type="button"
+            role="menuitem"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="14bbf851-bf16-4ad7-a7fd-8a01aa0a9f44"
+            data-concept-uuid="14bbf851-bf16-4ad7-a7fd-8a01aa0a9f44"
+            data-rank-size="32"
+            data-rank-thickness="8"
+            data-rank-value="0.6666667"
+            data-summary="true"
+            data-summary-url="/en/concepts/summary/">
+        <span class="concept-wrapper" title="66%">
+            <span class="rank"></span>
+            <span class="concept">Genome-wide Association Study</span>
+            <span class="thesauri">Keyphrases</span>
+            <span class="value sr-only">66%</span>
+        </span>
+    </button>
+
+    <div class="dropdown-container"></div>
+
+</li>
+                        
+                            <li class="concept-badge-large-container dropdown-overflow" role="none">
+
+    <button tabindex="0"
+            class="concept-badge-large dropdown-toggle"
+            type="button"
+            role="menuitem"
+            aria-haspopup="true"
+            aria-expanded="false"
+            aria-controls="6181d18a-ef47-47b7-837a-289591b740e7"
+            data-concept-uuid="6181d18a-ef47-47b7-837a-289591b740e7"
+            data-rank-size="32"
+            data-rank-thickness="8"
+            data-rank-value="0.5"
+            data-summary="true"
+            data-summary-url="/en/concepts/summary/">
+        <span class="concept-wrapper" title="50%">
+            <span class="rank"></span>
+            <span class="concept">Genome-Wide Association Study</span>
+            <span class="thesauri">Biochemistry, Genetics and Molecular Biology</span>
+            <span class="value sr-only">50%</span>
+        </span>
+    </button>
+
+    <div class="dropdown-container"></div>
+
+</li>
+                        
+                    </ul>
+                    <div class="footer">
+                        <div class="view-all align-center">
+                            <a class="portal_link btn-primary btn-large btn-content-link" href="/en/publications/integrative-approaches-for-large-scale-transcriptome-wide-associa/fingerprints/"><span>
+                                View full fingerprint
+                                <i class="icon icon-right-open-mini" aria-hidden="true"></i>
+                            </span></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <section class="page-section content-relation-section publication-equipments">
+                    <div class="container">
+                        <div class="header">
+    
+    
+    
+    
+    <h2 class="section-title" id="related-equipments-title">
+    <i class="icon icon-equipments" aria-hidden="true"></i>
+        <span class="title">
+            
+                Cohorts
+            
+        </span>
+    </h2>
+
+
+    
+
+    
+
+    
+
+</div>
+
+                        <div class="relation-list relation-list-equipments">
+                            <ul class="list-results">
+                                
+                                    <li class="list-result-item">
+                                        <div role="region" class="search-result-region" aria-label="Search result 1">
+
+                                            <div class="result-container">
+                                                
+
+                                                <div class="rendering rendering_equipment rendering_short rendering_equipment_short"><h3 class="title"><a rel="Equipment" href="https://pure.amsterdamumc.nl/en/equipments/netherlands-study-of-depression-and-anxiety-nesda/" class="link"><span>Netherlands Study of Depression and Anxiety (NESDA)</span></a></h3><p class="equipment-person"><a rel="Person" href="https://pure.amsterdamumc.nl/en/persons/brenda-penninx/" class="link person"><span>Penninx, B.</span></a> (PI), Riemsma, S. (Data Manager), <a rel="Person" href="https://pure.amsterdamumc.nl/en/persons/dulce-viegas-cal%C3%A7ada/" class="link person"><span>Viegas Calçada, D.</span></a> (Data Manager), Zandbelt, T. (Data Manager), <a rel="Person" href="https://pure.amsterdamumc.nl/en/persons/merijn-eikelenboom/" class="link person"><span>Eikelenboom, M.</span></a> (Coordinator), Horsfall, M. (Coordinator), <a rel="Person" href="https://pure.amsterdamumc.nl/en/persons/femke-lamers/" class="link person"><span>Lamers, F.</span></a> (Researcher), <a rel="Person" href="https://pure.amsterdamumc.nl/en/persons/laura-han/" class="link person"><span>Han, L.</span></a> (Researcher), <a rel="Person" href="https://pure.amsterdamumc.nl/en/persons/yuri-milaneschi/" class="link person"><span>Milaneschi, Y.</span></a> (Researcher), <a rel="Person" href="https://pure.amsterdamumc.nl/en/persons/simon-braak/" class="link person"><span>Braak, S.</span></a> (Researcher) &amp; <a rel="Person" href="https://pure.amsterdamumc.nl/en/persons/rick-jansen/" class="link person"><span>Jansen, R.</span></a> (Researcher)</p><a rel="Organisation" href="https://pure.amsterdamumc.nl/en/organisations/psychiatry-2/" class="link organisation"><span>Psychiatry</span></a><p class="type"><span class="type_family">Facility/equipment<span class="type_family_sep">: </span></span><span class="type_classification">Facility</span></p></div>
+
+                                                
+                                                
+
+                                                
+                                                    <ul class="content-concept-list" role="menubar" aria-label="Related fingerprints">
+                                                        
+                                                            <li class="concept-badge-small-container dropdown-overflow" role="none">
+    <button tabindex="-1" class="concept-badge-small tooltipped tooltipped-multiline tooltipped-e dropdown-toggle"
+            role="menuitem"
+            aria-expanded="false"
+            aria-haspopup="true"
+            data-concept-uuid="6f032ab0-5629-43be-9652-d49f3bb26961"
+            data-rank-value="1.0"
+            data-summary-url="/en/concepts/summary/">
+        <span class="concept-wrapper">
+            <span class="rank"></span>
+            <span class="concept">Major Depressive Disorder</span>
+            <span class="value sr-only">100%</span>
+        </span>
+    </button>
+
+    <div class="dropdown-container"></div>
+</li>
+
+                                                        
+                                                            <li class="concept-badge-small-container dropdown-overflow" role="none">
+    <button tabindex="-1" class="concept-badge-small tooltipped tooltipped-multiline tooltipped-e dropdown-toggle"
+            role="menuitem"
+            aria-expanded="false"
+            aria-haspopup="true"
+            data-concept-uuid="101fd549-2e90-4786-857f-6b62335c91e5"
+            data-rank-value="0.729940061603936"
+            data-summary-url="/en/concepts/summary/">
+        <span class="concept-wrapper">
+            <span class="rank"></span>
+            <span class="concept">Anxiety Disorders</span>
+            <span class="value sr-only">72%</span>
+        </span>
+    </button>
+
+    <div class="dropdown-container"></div>
+</li>
+
+                                                        
+                                                            <li class="concept-badge-small-container dropdown-overflow" role="none">
+    <button tabindex="-1" class="concept-badge-small tooltipped tooltipped-multiline tooltipped-e dropdown-toggle"
+            role="menuitem"
+            aria-expanded="false"
+            aria-haspopup="true"
+            data-concept-uuid="3d9aaca6-61ef-4df5-9f9f-91a34ab410f7"
+            data-rank-value="0.5226435620489039"
+            data-summary-url="/en/concepts/summary/">
+        <span class="concept-wrapper">
+            <span class="rank"></span>
+            <span class="concept">Anxiety Disorder</span>
+            <span class="value sr-only">52%</span>
+        </span>
+    </button>
+
+    <div class="dropdown-container"></div>
+</li>
+
+                                                        
+                                                            <li class="concept-badge-small-container dropdown-overflow" role="none">
+    <button tabindex="-1" class="concept-badge-small tooltipped tooltipped-multiline tooltipped-e dropdown-toggle"
+            role="menuitem"
+            aria-expanded="false"
+            aria-haspopup="true"
+            data-concept-uuid="1c670526-c711-4262-b3e9-8ad542fe718f"
+            data-rank-value="0.477537676253437"
+            data-summary-url="/en/concepts/summary/">
+        <span class="concept-wrapper">
+            <span class="rank"></span>
+            <span class="concept">Depressive Disorder</span>
+            <span class="value sr-only">47%</span>
+        </span>
+    </button>
+
+    <div class="dropdown-container"></div>
+</li>
+
+                                                        
+                                                            <li class="concept-badge-small-container dropdown-overflow" role="none">
+    <button tabindex="-1" class="concept-badge-small tooltipped tooltipped-multiline tooltipped-e dropdown-toggle"
+            role="menuitem"
+            aria-expanded="false"
+            aria-haspopup="true"
+            data-concept-uuid="87bda253-450a-4776-8a97-57ebeaf72373"
+            data-rank-value="0.4198640948349582"
+            data-summary-url="/en/concepts/summary/">
+        <span class="concept-wrapper">
+            <span class="rank"></span>
+            <span class="concept">Meta-analysis</span>
+            <span class="value sr-only">41%</span>
+        </span>
+    </button>
+
+    <div class="dropdown-container"></div>
+</li>
+
+                                                        
+                                                    </ul>
+                                                
+                                            </div>
+                                            
+                                        </div>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="footer">
+                            
+                        </div>
+                    </div>
+                </section>
+            
+        
+        <section class="page-section cite">
+            <div class="container">
+                <section class="publication-cite" aria-labelledby="publications-cite-title">
+    <h2 class="subheader" id="publications-cite-title">Cite this</h2>
+    <ul class="tabs" role="tablist" aria-label="Cite this">
+        
+            <li class="selected" role="tab" id="tab-0" aria-controls="cite-apa" tabindex="-1"  aria-selected="false" >
+                APA
+            </li>
+        
+            <li class="" role="tab" id="tab-1" aria-controls="cite-author" tabindex="-1"  aria-selected="false" >
+                Author
+            </li>
+        
+            <li class="" role="tab" id="tab-2" aria-controls="cite-BIBTEX" tabindex="-1"  aria-selected="false" >
+                BIBTEX
+            </li>
+        
+            <li class="" role="tab" id="tab-3" aria-controls="cite-harvard" tabindex="-1"  aria-selected="false" >
+                Harvard
+            </li>
+        
+            <li class="" role="tab" id="tab-4" aria-controls="cite-standard" tabindex="-1"  aria-selected="false" >
+                Standard
+            </li>
+        
+            <li class="" role="tab" id="tab-5" aria-controls="cite-RIS" tabindex="-1"  aria-selected="false" >
+                RIS
+            </li>
+        
+            <li class="" role="tab" id="tab-6" aria-controls="cite-vancouver" tabindex="-1"  aria-selected="false" >
+                Vancouver
+            </li>
+        
+    </ul>
+    <div class="tab-container">
+        
+            <div id="cite-apa" class="tab selected" role="tabpanel" aria-labelledby="tab-0" tabindex="-1" aria-hidden="true">
+                <div class="rendering rendering_researchoutput  rendering_researchoutput_apa rendering_contributiontojournal rendering_apa rendering_contributiontojournal_apa">Gusev, A., Ko, A., Shi, H., Bhatia, G., Chung, W.<a rel="Person" href="https://pure.amsterdamumc.nl/en/persons/brenda-penninx/" class="link"><span>, Penninx, B. W. J. H.</span></a><a rel="Person" href="https://pure.amsterdamumc.nl/en/persons/rick-jansen/" class="link"><span>, Jansen, R.</span></a>, de Geus, E. J. C., Boomsma, D. I., Wright, F. A., Sullivan, P. F., Nikkola, E., Alvarez, M., Civelek, M., Lusis, A. J., Lehtimaki, T., Raitoharju, E., Kahonen, M., Seppala, I., ... Pasaniuc, B. (2016). <a rel="ContributionToJournal" href="https://pure.amsterdamumc.nl/en/publications/integrative-approaches-for-large-scale-transcriptome-wide-associa/" class="link"><span>Integrative approaches for large-scale transcriptome-wide association studies</span></a>. <span><em>Nature genetics</em></span>, <em>48</em>(3), 245-252. <a onclick="window.open(this.href, '_blank','noopener,noreferrer'); return false;" href="https://doi.org/10.1038/ng.3506" class="link"><span>https://doi.org/10.1038/ng.3506</span></a></div>
+            </div>
+        
+            <div id="cite-author" class="tab " role="tabpanel" aria-labelledby="tab-1" tabindex="-1" aria-hidden="true">
+                <div class="rendering rendering_researchoutput  rendering_researchoutput_author rendering_contributiontojournal rendering_author rendering_contributiontojournal_author">Gusev, Alexander ; Ko, Arthur ; Shi, Huwenbo et al. / <a rel="ContributionToJournal" href="https://pure.amsterdamumc.nl/en/publications/integrative-approaches-for-large-scale-transcriptome-wide-associa/" class="link"><span><strong>Integrative approaches for large-scale transcriptome-wide association studies</strong></span></a>. In: <a rel="Journal" href="#" class="link"><span>Nature genetics</span></a>. 2016 ; Vol. 48, No. 3. pp. 245-252.</div>
+            </div>
+        
+            <div id="cite-BIBTEX" class="tab " role="tabpanel" aria-labelledby="tab-2" tabindex="-1" aria-hidden="true">
+                <div class="rendering rendering_researchoutput  rendering_researchoutput_bibtex rendering_contributiontojournal rendering_bibtex rendering_contributiontojournal_bibtex"><div>@article{a54fa8b84b4f4d9aa3ce1a70bd180a2f,</div><div>  title     = "Integrative approaches for large-scale transcriptome-wide association studies",</div><div>  abstract  = "Many genetic variants influence complex traits by modulating gene expression, thus altering the abundance of one or multiple proteins. Here we introduce a powerful strategy that integrates gene expression measurements with summary association statistics from large-scale genome-wide association studies (GWAS) to identify genes whose cis-regulated expression is associated with complex traits. We leverage expression imputation from genetic data to perform a transcriptome-wide association study (TWAS) to identify significant expression-trait associations. We applied our approaches to expression data from blood and adipose tissue measured in ∼3,000 individuals overall. We imputed gene expression into GWAS data from over 900,000 phenotype measurements to identify 69 new genes significantly associated with obesity-related traits (BMI, lipids and height). Many of these genes are associated with relevant phenotypes in the Hybrid Mouse Diversity Panel. Our results showcase the power of integrating genotype, gene expression and phenotype to gain insights into the genetic basis of complex traits.",</div><div>  author    = "Alexander Gusev and Arthur Ko and Huwenbo Shi and Gaurav Bhatia and Wonil Chung and Penninx, \{Brenda W. J. H.\} and Rick Jansen and \{de Geus\}, \{Eco J. C.\} and Boomsma, \{Dorret I.\} and Wright, \{Fred A.\} and Sullivan, \{Patrick F.\} and Elina Nikkola and Marcus Alvarez and Mete Civelek and Lusis, \{Aldons J.\} and Terho Lehtimaki and Emma Raitoharju and Mika Kahonen and Ilkka Seppala and Raitakari, \{Olli T.\} and Johanna Kuusisto and Markku Laakso and Price, \{Alkes L.\} and Paivi Pajukanta and Bogdan Pasaniuc",</div><div>  year      = "2016",</div><div>  month     = mar,</div><div>  doi       = "10.1038/ng.3506",</div><div>  language  = "English",</div><div>  volume    = "48",</div><div>  pages     = "245--252",</div><div>  journal   = "Nature genetics",</div><div>  issn      = "1061-4036",</div><div>  publisher = "Nature Publishing Group",</div><div>  number    = "3",</div><p>}</p></div>
+            </div>
+        
+            <div id="cite-harvard" class="tab " role="tabpanel" aria-labelledby="tab-3" tabindex="-1" aria-hidden="true">
+                <div class="rendering rendering_researchoutput  rendering_researchoutput_harvard rendering_contributiontojournal rendering_harvard rendering_contributiontojournal_harvard">Gusev, A, Ko, A, Shi, H, Bhatia, G, Chung, W<a rel="Person" href="https://pure.amsterdamumc.nl/en/persons/brenda-penninx/" class="link"><span>, Penninx, BWJH</span></a><a rel="Person" href="https://pure.amsterdamumc.nl/en/persons/rick-jansen/" class="link"><span>, Jansen, R</span></a>, de Geus, EJC, Boomsma, DI, Wright, FA, Sullivan, PF, Nikkola, E, Alvarez, M, Civelek, M, Lusis, AJ, Lehtimaki, T, Raitoharju, E, Kahonen, M, Seppala, I, Raitakari, OT, Kuusisto, J, Laakso, M, Price, AL, Pajukanta, P &amp; Pasaniuc, B 2016, '<a rel="ContributionToJournal" href="https://pure.amsterdamumc.nl/en/publications/integrative-approaches-for-large-scale-transcriptome-wide-associa/" class="link harvard_title"><span>Integrative approaches for large-scale transcriptome-wide association studies</span></a>', <span><em>Nature genetics</em></span>, vol. 48, no. 3, pp. 245-252. <a onclick="window.open(this.href, '_blank','noopener,noreferrer'); return false;" href="https://doi.org/10.1038/ng.3506" class="link"><span>https://doi.org/10.1038/ng.3506</span></a></div>
+            </div>
+        
+            <div id="cite-standard" class="tab " role="tabpanel" aria-labelledby="tab-4" tabindex="-1" aria-hidden="true">
+                <div class="rendering rendering_researchoutput  rendering_researchoutput_standard rendering_contributiontojournal rendering_standard rendering_contributiontojournal_standard"><a rel="ContributionToJournal" href="https://pure.amsterdamumc.nl/en/publications/integrative-approaches-for-large-scale-transcriptome-wide-associa/" class="link"><span><strong>Integrative approaches for large-scale transcriptome-wide association studies.</strong></span></a> / Gusev, Alexander; Ko, Arthur; Shi, Huwenbo et al. <br />In: <span>Nature genetics</span>, Vol. 48, No. 3, 03.2016, p. 245-252.<p class="type"><span class="type_family">Research output<span class="type_family_sep">: </span></span><span class="type_classification_parent">Contribution to journal<span class="type_parent_sep"> › </span></span><span class="type_classification">Article</span><span class="type_classification"><span class="type_parent_sep"> › </span>Academic</span><span class="type_classification"><span class="type_parent_sep"> › </span>peer-review</span></p></div>
+            </div>
+        
+            <div id="cite-RIS" class="tab " role="tabpanel" aria-labelledby="tab-5" tabindex="-1" aria-hidden="true">
+                <div class="rendering rendering_researchoutput  rendering_researchoutput_ris rendering_contributiontojournal rendering_ris rendering_contributiontojournal_ris"><p>TY  - JOUR</p><p>T1  - Integrative approaches for large-scale transcriptome-wide association studies</p><p>AU  - Gusev, Alexander</p><p>AU  - Ko, Arthur</p><p>AU  - Shi, Huwenbo</p><p>AU  - Bhatia, Gaurav</p><p>AU  - Chung, Wonil</p><p>AU  - Penninx, Brenda W. J. H.</p><p>AU  - Jansen, Rick</p><p>AU  - de Geus, Eco J. C.</p><p>AU  - Boomsma, Dorret I.</p><p>AU  - Wright, Fred A.</p><p>AU  - Sullivan, Patrick F.</p><p>AU  - Nikkola, Elina</p><p>AU  - Alvarez, Marcus</p><p>AU  - Civelek, Mete</p><p>AU  - Lusis, Aldons J.</p><p>AU  - Lehtimaki, Terho</p><p>AU  - Raitoharju, Emma</p><p>AU  - Kahonen, Mika</p><p>AU  - Seppala, Ilkka</p><p>AU  - Raitakari, Olli T.</p><p>AU  - Kuusisto, Johanna</p><p>AU  - Laakso, Markku</p><p>AU  - Price, Alkes L.</p><p>AU  - Pajukanta, Paivi</p><p>AU  - Pasaniuc, Bogdan</p><p>PY  - 2016/3</p><p>Y1  - 2016/3</p><p>N2  - Many genetic variants influence complex traits by modulating gene expression, thus altering the abundance of one or multiple proteins. Here we introduce a powerful strategy that integrates gene expression measurements with summary association statistics from large-scale genome-wide association studies (GWAS) to identify genes whose cis-regulated expression is associated with complex traits. We leverage expression imputation from genetic data to perform a transcriptome-wide association study (TWAS) to identify significant expression-trait associations. We applied our approaches to expression data from blood and adipose tissue measured in ∼3,000 individuals overall. We imputed gene expression into GWAS data from over 900,000 phenotype measurements to identify 69 new genes significantly associated with obesity-related traits (BMI, lipids and height). Many of these genes are associated with relevant phenotypes in the Hybrid Mouse Diversity Panel. Our results showcase the power of integrating genotype, gene expression and phenotype to gain insights into the genetic basis of complex traits.</p><p>AB  - Many genetic variants influence complex traits by modulating gene expression, thus altering the abundance of one or multiple proteins. Here we introduce a powerful strategy that integrates gene expression measurements with summary association statistics from large-scale genome-wide association studies (GWAS) to identify genes whose cis-regulated expression is associated with complex traits. We leverage expression imputation from genetic data to perform a transcriptome-wide association study (TWAS) to identify significant expression-trait associations. We applied our approaches to expression data from blood and adipose tissue measured in ∼3,000 individuals overall. We imputed gene expression into GWAS data from over 900,000 phenotype measurements to identify 69 new genes significantly associated with obesity-related traits (BMI, lipids and height). Many of these genes are associated with relevant phenotypes in the Hybrid Mouse Diversity Panel. Our results showcase the power of integrating genotype, gene expression and phenotype to gain insights into the genetic basis of complex traits.</p><p>U2  - 10.1038/ng.3506</p><p>DO  - 10.1038/ng.3506</p><p>M3  - Article</p><p>C2  - 26854917</p><p>SN  - 1061-4036</p><p>VL  - 48</p><p>SP  - 245</p><p>EP  - 252</p><p>JO  - Nature genetics</p><p>JF  - Nature genetics</p><p>IS  - 3</p><p>ER  - </p></div>
+            </div>
+        
+            <div id="cite-vancouver" class="tab " role="tabpanel" aria-labelledby="tab-6" tabindex="-1" aria-hidden="true">
+                <div class="rendering rendering_researchoutput  rendering_researchoutput_vancouver rendering_contributiontojournal rendering_vancouver rendering_contributiontojournal_vancouver">Gusev A, Ko A, Shi H, Bhatia G, Chung W<a rel="Person" href="https://pure.amsterdamumc.nl/en/persons/brenda-penninx/" class="link"><span>, Penninx BWJH</span></a> et al. <span class="title"><a rel="ContributionToJournal" href="https://pure.amsterdamumc.nl/en/publications/integrative-approaches-for-large-scale-transcriptome-wide-associa/" class="link"><span>Integrative approaches for large-scale transcriptome-wide association studies</span></a></span>. <span>Nature genetics</span>. 2016 Mar;48(3):245-252. doi: 10.1038/ng.3506</div>
+            </div>
+        
+
+        <script>
+            $(function() {
+                $(".tab-container .rendering a:not([href^='http://dx.doi.org'])").contents().unwrap();
+            });
+        </script>
+    </div>
+</section>
+
+            </div>
+        </section>
+        <script>
+    $(function () {
+        if($('.publication-sidebar').length > 0){
+            if($('a.document-link').length === 0){
+                $(".metrics-top").addClass("one");
+                $('div.metrics-downloads').remove();
+            }
+        }
+    });
+
+    function plumXError(e) {
+        $(e).closest('.metric-plum-x').closest('.metrics-bottom').addClass('one');
+        $(e).closest('.metric-plum-x').remove();
+    }
+    $('div.altmetric-embed').on('altmetric:hide', function () {
+        $(this).closest('.metric-altmetric').closest('.metrics-bottom').addClass('one');
+        $(this).closest('.metric-altmetric').remove();
+    });
+</script>
+        
+
+
+
+    
+    
+    
+    
+    
+    
+
+    
+        
+        
+        
+    
+
+    <div class="share-box">
+        <ul>
+            <li class="icon-share"></li>
+            <li><a aria-label="Share on Facebook"
+                   href="https://www.facebook.com/sharer.php?u=https://pure.amsterdamumc.nl/en/publications/integrative-approaches-for-large-scale-transcriptome-wide-associa/%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dsharelink%26doi%3D10.1038%2Fng.3506&p[summary]=Check+out+this+research+output+at+Amsterdam+UMC%3A+Integrative+approaches+for+large-scale+transcriptome-wide+association+studies"
+                   class="icon-facebook"
+                   onclick="window.location.origin('https://www.facebook.com/sharer.php?u=https://pure.amsterdamumc.nl/en/publications/integrative-approaches-for-large-scale-transcriptome-wide-associa/%3Futm_source%3Dfacebook%26utm_medium%3Dsocial%26utm_campaign%3Dsharelink%26doi%3D10.1038%2Fng.3506&p[summary]=Check+out+this+research+output+at+Amsterdam+UMC%3A+Integrative+approaches+for+large-scale+transcriptome-wide+association+studies', 'Facebook', 'width=600,height=600,scrollbars=no,resizable=no');
+                   return false;" target="popup"></a></li>
+            <li><a aria-label="Share on Twitter"
+                   href="https://twitter.com/intent/tweet?url=https://pure.amsterdamumc.nl/en/publications/integrative-approaches-for-large-scale-transcriptome-wide-associa/%3Futm_source%3Dtwitter%26utm_medium%3Dsocial%26utm_campaign%3Dsharelink%26doi%3D10.1038%2Fng.3506&text=Check+out+this+research+output+at+Amsterdam+UMC%3A+Integrative+approaches+for+large-scale+transcriptome-wide+association+studies"
+                   onclick="window.location.origin('https://twitter.com/intent/tweet?url=https://pure.amsterdamumc.nl/en/publications/integrative-approaches-for-large-scale-transcriptome-wide-associa/%3Futm_source%3Dtwitter%26utm_medium%3Dsocial%26utm_campaign%3Dsharelink%26doi%3D10.1038%2Fng.3506&text=Check+out+this+research+output+at+Amsterdam+UMC%3A+Integrative+approaches+for+large-scale+transcriptome-wide+association+studies doi%3A10.1038%2Fng.3506', 'Twitter', 'width=600,height=600,scrollbars=no,resizable=no');
+                   return false;" class="twitter" target="popup"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 300 271">
+                    
+                    <path d="m236 0h46l-101 115 118 156h-92.6l-72.5-94.8-83 94.8h-46l107-123-113-148h94.9l65.5 86.6zm-16.1 244h25.5l-165-218h-27.4z"></path>
+                </svg></a></li>
+            <li><a aria-label="Share on LinkedIn"
+                   href="https://www.linkedin.com/shareArticle?mini=true&url=https://pure.amsterdamumc.nl/en/publications/integrative-approaches-for-large-scale-transcriptome-wide-associa/%3Futm_source%3Dlinkedin%26utm_medium%3Dsocial%26utm_campaign%3Dsharelink%26doi%3D10.1038%2Fng.3506&summary=Check+out+this+research+output+at+Amsterdam+UMC%3A+Integrative+approaches+for+large-scale+transcriptome-wide+association+studies"
+                   onclick="window.location.origin('https://www.linkedin.com/shareArticle?mini=true&url=https://pure.amsterdamumc.nl/en/publications/integrative-approaches-for-large-scale-transcriptome-wide-associa/%3Futm_source%3Dlinkedin%26utm_medium%3Dsocial%26utm_campaign%3Dsharelink%26doi%3D10.1038%2Fng.3506&summary=Check+out+this+research+output+at+Amsterdam+UMC%3A+Integrative+approaches+for+large-scale+transcriptome-wide+association+studies doi%3A10.1038%2Fng.3506', 'LinkedIn', 'width=600,height=600,scrollbars=no,resizable=no');
+                   return false;" class="icon-linkedin" target="popup"></a></li>
+            <li><a aria-label="Share by email" href="/cdn-cgi/l/email-protection#e9d69a9c8b838c8a9dd4a0879d8c8e9b889d809f8cccdbd98899999b86888a818c9accdbd98f869bccdbd985889b8e8cc49a8a88858cccdbd99d9b88879a8a9b80999d86848cc49e808d8cccdbd9889a9a868a80889d808687ccdbd99a9d9c8d808c9acf8b868d90d4aa818c8a82ccdbd9869c9dccdbd99d81809accdbd99b8c9a8c889b8a81ccdbd9869c9d999c9dccdbd9889dccdbd9a8849a9d8c9b8d8884ccdbd9bca4aaccdaa8ccdbd9a0879d8c8e9b889d809f8cccdbd98899999b86888a818c9accdbd98f869bccdbd985889b8e8cc49a8a88858cccdbd99d9b88879a8a9b80999d86848cc49e808d8cccdbd9889a9a868a80889d808687ccdbd99a9d9c8d808c9ac995c9819d9d999ad3c6c6999c9b8cc788849a9d8c9b8d88849c848ac78785c68c87c6999c8b85808a889d8086879ac680879d8c8e9b889d809f8cc48899999b86888a818c9ac48f869bc485889b8e8cc49a8a88858cc49d9b88879a8a9b80999d86848cc49e808d8cc4889a9a868a8088c6d69c9d84b69a869c9b8a8cd48c84888085cf888499d29c9d84b6848c8d809c84d48c84888085cf888499d29c9d84b68a88849988808e87d49a81889b8c85808782" class="icon-email"></a></li>
+        </ul>
+    </div>
+
+
+
+
+    
+        </div>
+    </div>
+
+    <div id="new-modal-overlay"></div>
+    
+    </main>
+
+    <footer id="page-footer" class="main-footer">
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="content-navigation three-third">
+                    <div dir="ltr" class="footer-columns">
+                        
+                        <div class="footer-column">
+                            <p>
+                                Powered by <a href="http://www.elsevier.com/online-tools/research-intelligence/products-and-services/pure" target="_blank">Pure <span class="sr-only">Link opens in a new tab</span></a>, <a href="http://www.scopus.com/" target="_blank">Scopus <span class="sr-only">Link opens in a new tab</span></a> & <a href="https://www.elsevier.com/products/elsevier-fingerprint-engine" target="_blank">Elsevier Fingerprint Engine&trade; <span class="sr-only">Link opens in a new tab</span></a>
+                            </p>
+
+                            <p>
+                                All content on this site: Copyright &copy; 2026 Amsterdam UMC, its licensors, and contributors. All rights are reserved, including those for text and data mining, AI training, and similar technologies. For all open access content, the relevant licensing terms apply
+                            </p>
+
+                            <p>We use cookies to help provide and enhance our service and tailor content. By continuing you agree to the <a href="/en/about/cookies/">use of cookies</a></p>
+                            
+                            
+                                <p><a href="https://pure.amsterdamumc.nl/admin/workspace.xhtml" rel="nofollow" target="_blank">Log in to Pure <span class="sr-only">&nbsp; Link opens in a new tab</span></a></p>
+                            
+                            <p></p>
+                        </div>
+
+                        <div class="footer-column">
+                            
+                                <p><a href="/invalid-url" target="_blank">Amsterdam UMC data protection policy <span class="sr-only">&nbsp; Link opens in a new tab</span></a></p>
+                            
+                            
+                            
+                                <p><a href="/en/web-accessibility/" rel="nofollow" target="_blank">About web accessibility <span class="sr-only">&nbsp; Link opens in a new tab</span></a></p>
+                            
+
+                            <p>
+                                
+                            </p>
+
+                            <p>
+                                
+                            </p>
+
+                            <p>
+                                <a href="https://elsevier.responsibledisclosure.com/hc/en-us/requests/new" target="_blank" rel="nofollow">Report vulnerability <span class="sr-only">&nbsp; Link opens in a new tab</span></a>
+                            </p>
+                        </div>
+
+                        
+                            <div class="footer-column">
+                                
+                                    
+                                        <p><a href="/cdn-cgi/l/email-protection#066973727673727463616f75727467726f6346676b7572637462676b736b6528686a"> Contact us</a></p>
+                                    
+                                
+
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="back-to-top">
+            <a href="#" class="back-to-top" aria-label="Go to top"><i class="icon icon-up-open"></i></a>
+        </div>
+    </footer>
+
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="//d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
+
+
+
+    
+
+    
+
+
+<script>window.appData = window.appData || [];</script><script type="text/javascript">
+try {(function() {
+appData.push({...{"page":{"businessUnit":"ELS:RP:ST","cmsName":"Pure Portal","environment":"prod","language":"en","loadTime":"280","loadTimestamp":"1788157170018","name":"pure portal:publications:view","noTracking":"false","productName":"PR","type":"CP-CA"},"visitor":{"accountId":"","accountName":"pr:Academic Medical Center Amsterdam","ipAddress":"","accessType":"pr:ANON_GUEST","loginStatus":"anonymous"},"content":[{"id":"a54fa8b8-4b4f-4d9a-a3ce-1a70bd180a2f","title":"Integrative approaches for large-scale transcriptome-wide association studies","recordType":"researchoutput"}]}, event: "pageLoad"});})();} catch(e) {if(console) { console.log(e) } }</script>
+<script>try {(function() {
+window.appData = window.appData || [];
+})();} catch(e) {if(console) { console.log(e) } }</script>
+
+</body>
+</html>
+

@@ -249,7 +249,7 @@
         "title": "Checking Genetic Homogeneity Between Two Samples Using Summary Statistics With Application to Mendelian Randomization.",
         "author": "Wang et al., 2026",
         "journal": "Statistics in medicine",
-        "doi": "https://pubmed.ncbi.nlm.nih.gov/42415357/",
+        "doi": "https://doi.org/10.1002/sim.70663",
         "note": "discover 從 PubMed 加入",
         "analysis_methods": {
           "statistical_methods": [
@@ -359,7 +359,7 @@
         "title": "Fine-mapping methods for complex traits: essential adaptations for samples of related individuals.",
         "author": "Wang et al., 2025",
         "journal": "Briefings in bioinformatics",
-        "doi": "https://pubmed.ncbi.nlm.nih.gov/41269279/",
+        "doi": "https://doi.org/10.1093/bib/bbaf614",
         "note": "由 discover 從 PubMed 自動加入",
         "analysis_methods": {
           "statistical_methods": [
@@ -390,7 +390,7 @@
         "title": "The impact of stability considerations on genetic fine-mapping.",
         "author": "Aw et al., 2026",
         "journal": "eLife",
-        "doi": "https://pubmed.ncbi.nlm.nih.gov/41838038/",
+        "doi": "https://doi.org/10.7554/eLife.88039",
         "note": "由 discover 從 PubMed 自動加入",
         "analysis_methods": {
           "statistical_methods": [
@@ -416,7 +416,7 @@
         "title": "MR2G: A novel framework for causal network inference using GWAS summary data.",
         "author": "Lin et al., 2026",
         "journal": "PLoS genetics",
-        "doi": "https://pubmed.ncbi.nlm.nih.gov/42189912/",
+        "doi": "https://doi.org/10.1371/journal.pgen.1012144",
         "note": "由 discover 從 PubMed 自動加入",
         "analysis_methods": {
           "statistical_methods": [
@@ -443,7 +443,7 @@
         "title": "Conditional and marginal SNP-heritability to leverage ancestral and environmental diversity.",
         "author": "Singh Sachan et al., 2026",
         "journal": "bioRxiv : the preprint server for biology",
-        "doi": "https://pubmed.ncbi.nlm.nih.gov/42244626/",
+        "doi": "https://doi.org/10.64898/2026.05.28.728536",
         "note": "由 discover 從 PubMed 自動加入",
         "analysis_methods": {
           "statistical_methods": [
@@ -469,7 +469,7 @@
         "title": "Kernel-smoothed permutation for extreme p-value estimation in genetic association studies.",
         "author": "Bian et al., 2026",
         "journal": "Genetics",
-        "doi": "https://pubmed.ncbi.nlm.nih.gov/42114112/",
+        "doi": "https://doi.org/10.1093/genetics/iyag119",
         "note": "由 discover 從 PubMed 自動加入",
         "analysis_methods": {
           "statistical_methods": [
@@ -495,7 +495,7 @@
         "title": "GAPIT version 4: integration of GWAS into genomic prediction.",
         "author": "Wang et al., 2026",
         "journal": "Molecular biology and evolution",
-        "doi": "https://pubmed.ncbi.nlm.nih.gov/42047095/",
+        "doi": "https://doi.org/10.1093/molbev/msag107",
         "note": "由 discover 從 PubMed 自動加入",
         "analysis_methods": {
           "statistical_methods": [
@@ -1124,7 +1124,7 @@
         "title": "CIT-Lasso: a scalable approach beyond guilty by association for identifying causal variants from genome-wide summary statistics.",
         "author": "He et al., 2026",
         "journal": "Genome biology",
-        "doi": "https://pubmed.ncbi.nlm.nih.gov/42443949/",
+        "doi": "https://doi.org/10.1186/s13059-026-04185-w",
         "note": "discover 從 PubMed 加入",
         "analysis_methods": {
           "statistical_methods": [
@@ -1151,7 +1151,7 @@
         "title": "Bayesian Bidirectional Mendelian Randomization Under Correlated and Uncorrelated Pleiotropy Using GWAS Summary Statistics.",
         "author": "Chen, 2026",
         "journal": "Statistics in medicine",
-        "doi": "https://pubmed.ncbi.nlm.nih.gov/42433205/",
+        "doi": "https://doi.org/10.1002/sim.70667",
         "note": "discover 從 PubMed 加入",
         "analysis_methods": {
           "statistical_methods": [
@@ -1209,7 +1209,7 @@
         "title": "Scalable generalized linear mixed model for region-based association tests in large biobanks and cohorts.",
         "author": "Zhou et al., 2020",
         "journal": "Nature genetics",
-        "doi": "https://pubmed.ncbi.nlm.nih.gov/32424355/",
+        "doi": "https://doi.org/10.1038/s41588-020-0621-6",
         "note": "discover 從 PubMed 加入",
         "analysis_methods": {
           "statistical_methods": [
@@ -1228,7 +1228,7 @@
         "title": "Scalable mixed model methods for set-based association studies on large-scale categorical data analysis and its application to exome-sequencing data in UK Biobank.",
         "author": "Bi et al., 2023",
         "journal": "American journal of human genetics",
-        "doi": "https://pubmed.ncbi.nlm.nih.gov/37019109/",
+        "doi": "https://doi.org/10.1016/j.ajhg.2023.03.010",
         "note": "discover 從 PubMed 加入",
         "analysis_methods": {
           "statistical_methods": [
@@ -1257,7 +1257,7 @@
         "title": "SEQSpark: A Complete Analysis Tool for Large-Scale Rare Variant Association Studies Using Whole-Genome and Exome Sequence Data.",
         "author": "Zhang et al., 2017",
         "journal": "American journal of human genetics",
-        "doi": "https://pubmed.ncbi.nlm.nih.gov/28669402/",
+        "doi": "https://doi.org/10.1016/j.ajhg.2017.05.017",
         "note": "discover 從 PubMed 加入",
         "analysis_methods": {
           "statistical_methods": [
@@ -1337,7 +1337,7 @@
         "title": "Hi-C informed kernel association test for integrating 3D genome structure into variant-set analysis.",
         "author": "Huang et al., 2026",
         "journal": "Briefings in bioinformatics",
-        "doi": "https://pubmed.ncbi.nlm.nih.gov/42480046/",
+        "doi": "https://doi.org/10.1093/bib/bbag390",
         "note": "discover 從 PubMed 加入",
         "analysis_methods": {
           "statistical_methods": [
@@ -1362,7 +1362,7 @@
         "title": "Scalable and accurate rare-variant association tests for whole genome sequencing time-to-event analysis in large biobanks.",
         "author": "Song et al., 2026",
         "journal": "Proceedings of the National Academy of Sciences of the United States of America",
-        "doi": "https://pubmed.ncbi.nlm.nih.gov/41758668/",
+        "doi": "https://doi.org/10.1073/pnas.2525288123",
         "note": "discover 從 PubMed 加入",
         "analysis_methods": {
           "statistical_methods": [
