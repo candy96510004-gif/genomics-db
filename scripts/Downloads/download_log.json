@@ -1,0 +1,1027 @@
+{
+  "10.1093/gigascience/giz082": {
+    "status": "success",
+    "source": "Europe PMC",
+    "file": "Downloads\\PDFs\\PRSice-2_PRSice-2_ Polygenic Risk Score software for biobank-scale data.pdf",
+    "detail": "PMCID=PMC6629542; 680,498 bytes (https://europepmc.org/api/getPdf?pmcid=PMC6629542)",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "failed",
+        "detail": "OA metadata found, but no direct PDF URL"
+      },
+      {
+        "source": "Europe PMC",
+        "result": "success",
+        "detail": "PMCID=PMC6629542; 680,498 bytes (https://europepmc.org/api/getPdf?pmcid=PMC6629542)"
+      }
+    ]
+  },
+  "10.1093/bioinformatics/btaa1029": {
+    "status": "success",
+    "source": "Unpaywall",
+    "file": "Downloads\\PDFs\\LDpred2_LDpred2_ better, faster, stronger.pdf",
+    "detail": "555,129 bytes (https://pure.au.dk/ws/files/219661202/btaa1029.pdf)",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "success",
+        "detail": "555,129 bytes (https://pure.au.dk/ws/files/219661202/btaa1029.pdf)"
+      }
+    ]
+  },
+  "10.1038/s41467-019-09718-5": {
+    "status": "success",
+    "source": "Unpaywall",
+    "file": "Downloads\\PDFs\\PRS-CS_Polygenic prediction via Bayesian regression and continuous shrinkage priors.pdf",
+    "detail": "849,809 bytes (https://www.nature.com/articles/s41467-019-09718-5.pdf)",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "success",
+        "detail": "849,809 bytes (https://www.nature.com/articles/s41467-019-09718-5.pdf)"
+      }
+    ]
+  },
+  "10.1038/ng.3211": {
+    "status": "success",
+    "source": "Unpaywall",
+    "file": "Downloads\\PDFs\\LDSC_LD Score regression distinguishes confounding from polygenicity in genome-wide association studies.pdf",
+    "detail": "844,006 bytes (https://lirias.kuleuven.be/retrieve/656fa65f-53d3-47f1-a1cd-3b4a1b8e0f28)",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "success",
+        "detail": "844,006 bytes (https://lirias.kuleuven.be/retrieve/656fa65f-53d3-47f1-a1cd-3b4a1b8e0f28)"
+      }
+    ]
+  },
+  "10.1038/ng.3406": {
+    "status": "failed",
+    "reason": "No verified open-access PDF was downloadable from the configured sources. This does not necessarily mean a VPN is required.",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "failed",
+        "detail": "OA metadata found, but no direct PDF URL"
+      },
+      {
+        "source": "Europe PMC",
+        "result": "failed",
+        "detail": "RetryError: HTTPSConnectionPool(host='europepmc.org', port=443): Max retries exceeded with url: /api/getPdf?pmcid=PMC4797329 (Caused by ResponseError('too many 500 error responses'))"
+      },
+      {
+        "source": "OpenAlex",
+        "result": "failed",
+        "detail": "no OpenAlex pdf_url"
+      },
+      {
+        "source": "Semantic Scholar",
+        "result": "failed",
+        "detail": "HTTP 403 (https://pmc.ncbi.nlm.nih.gov/articles/4797329)"
+      },
+      {
+        "source": "bioRxiv/medRxiv",
+        "result": "failed",
+        "detail": "not a bioRxiv/medRxiv DOI"
+      }
+    ]
+  },
+  "10.1038/ng.3404": {
+    "status": "failed",
+    "reason": "No verified open-access PDF was downloadable from the configured sources. This does not necessarily mean a VPN is required.",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "failed",
+        "detail": "OA metadata found, but no direct PDF URL"
+      },
+      {
+        "source": "Europe PMC",
+        "result": "failed",
+        "detail": "RetryError: HTTPSConnectionPool(host='europepmc.org', port=443): Max retries exceeded with url: /api/getPdf?pmcid=PMC4626285 (Caused by ResponseError('too many 500 error responses'))"
+      },
+      {
+        "source": "OpenAlex",
+        "result": "failed",
+        "detail": "no OpenAlex pdf_url"
+      },
+      {
+        "source": "Semantic Scholar",
+        "result": "failed",
+        "detail": "HTTP 403 (https://pmc.ncbi.nlm.nih.gov/articles/4626285)"
+      },
+      {
+        "source": "bioRxiv/medRxiv",
+        "result": "failed",
+        "detail": "not a bioRxiv/medRxiv DOI"
+      }
+    ]
+  },
+  "10.1371/journal.pgen.1010299": {
+    "status": "success",
+    "source": "Europe PMC",
+    "file": "Downloads\\PDFs\\SuSiE_Fine-mapping from summary data with the Sum of Single Effects model.pdf",
+    "detail": "PMCID=PMC9337707; 1,312,727 bytes (https://europepmc.org/api/getPdf?pmcid=PMC9337707)",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "failed",
+        "detail": "OA metadata found, but no direct PDF URL"
+      },
+      {
+        "source": "Europe PMC",
+        "result": "success",
+        "detail": "PMCID=PMC9337707; 1,312,727 bytes (https://europepmc.org/api/getPdf?pmcid=PMC9337707)"
+      }
+    ]
+  },
+  "10.1093/bioinformatics/btw018": {
+    "status": "success",
+    "source": "Europe PMC",
+    "file": "Downloads\\PDFs\\FINEMAP_FINEMAP_ efficient variable selection using summary data from genome-wide association studies.pdf",
+    "detail": "PMCID=PMC4866522; 832,075 bytes (https://europepmc.org/api/getPdf?pmcid=PMC4866522)",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "failed",
+        "detail": "HTTP 403 (https://academic.oup.com/bioinformatics/article-pdf/32/10/1493/6687224/btw018.pdf) | not a PDF; Content-Type=text/html; charset=utf-8 (https://helda.helsinki.fi/handle/10138/164645)"
+      },
+      {
+        "source": "Europe PMC",
+        "result": "success",
+        "detail": "PMCID=PMC4866522; 832,075 bytes (https://europepmc.org/api/getPdf?pmcid=PMC4866522)"
+      }
+    ]
+  },
+  "10.7554/eLife.34408": {
+    "status": "success",
+    "source": "Unpaywall",
+    "file": "Downloads\\PDFs\\TwoSampleMR_The MR-Base platform supports systematic causal inference across the human phenome.pdf",
+    "detail": "2,348,359 bytes (https://research-information.bris.ac.uk/ws/files/157434078/MR_Base_elife_34408_v1.pdf)",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "success",
+        "detail": "2,348,359 bytes (https://research-information.bris.ac.uk/ws/files/157434078/MR_Base_elife_34408_v1.pdf)"
+      }
+    ]
+  },
+  "10.1002/sim.70663": {
+    "status": "failed",
+    "reason": "No verified open-access PDF was downloadable from the configured sources. This does not necessarily mean a VPN is required.",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "failed",
+        "detail": "HTTP 403 (https://pmc.ncbi.nlm.nih.gov/articles/PMC13342494/pdf/SIM-45-0.pdf)"
+      },
+      {
+        "source": "Europe PMC",
+        "result": "failed",
+        "detail": "no PDF link in core metadata (PMCID=none, isOpenAccess=N)"
+      },
+      {
+        "source": "OpenAlex",
+        "result": "failed",
+        "detail": "HTTP 403 (https://pmc.ncbi.nlm.nih.gov/articles/PMC13342494/pdf/SIM-45-0.pdf)"
+      },
+      {
+        "source": "Semantic Scholar",
+        "result": "failed",
+        "detail": "HTTP 403 (https://onlinelibrary.wiley.com/doi/10.1002/sim.70663)"
+      },
+      {
+        "source": "bioRxiv/medRxiv",
+        "result": "failed",
+        "detail": "not a bioRxiv/medRxiv DOI"
+      }
+    ]
+  },
+  "10.1038/s41588-018-0099-7": {
+    "status": "failed",
+    "reason": "No verified open-access PDF was downloadable from the configured sources. This does not necessarily mean a VPN is required.",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "failed",
+        "detail": "not marked open access"
+      },
+      {
+        "source": "Europe PMC",
+        "result": "failed",
+        "detail": "RetryError: HTTPSConnectionPool(host='europepmc.org', port=443): Max retries exceeded with url: /api/getPdf?pmcid=PMC6083837 (Caused by ResponseError('too many 500 error responses'))"
+      },
+      {
+        "source": "OpenAlex",
+        "result": "failed",
+        "detail": "no OpenAlex pdf_url"
+      },
+      {
+        "source": "Semantic Scholar",
+        "result": "failed",
+        "detail": "HTTP 403 (https://pmc.ncbi.nlm.nih.gov/articles/PMC6083837)"
+      },
+      {
+        "source": "bioRxiv/medRxiv",
+        "result": "failed",
+        "detail": "not a bioRxiv/medRxiv DOI"
+      }
+    ]
+  },
+  "10.1038/s41588-021-00870-7": {
+    "status": "success",
+    "source": "Unpaywall",
+    "file": "Downloads\\PDFs\\megaPRS_New and improved methods for estimating polygenic score accuracy in polygenic score analyses.pdf",
+    "detail": "6,024,609 bytes (https://www.nature.com/articles/s41588-021-00870-7.pdf)",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "success",
+        "detail": "6,024,609 bytes (https://www.nature.com/articles/s41588-021-00870-7.pdf)"
+      }
+    ]
+  },
+  "10.1186/s13742-015-0047-8": {
+    "status": "success",
+    "source": "Unpaywall",
+    "file": "Downloads\\PDFs\\PLINK2_Second-generation PLINK_ rising to the challenge of larger and richer datasets.pdf",
+    "detail": "787,773 bytes (https://arxiv.org/pdf/1410.4803)",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "success",
+        "detail": "787,773 bytes (https://arxiv.org/pdf/1410.4803)"
+      }
+    ]
+  },
+  "10.1093/bib/bbaf614": {
+    "status": "success",
+    "source": "Europe PMC",
+    "file": "Downloads\\PDFs\\Fine-mapping for Related Samples_Fine-mapping methods for complex traits_ essential adaptations for samples of related individuals..pdf",
+    "detail": "PMCID=PMC12636493; 2,120,828 bytes (https://europepmc.org/api/getPdf?pmcid=PMC12636493)",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "failed",
+        "detail": "HTTP 403 (https://academic.oup.com/bib/article-pdf/26/6/bbaf614/65450751/bbaf614.pdf) | HTTP 403 (https://flore.unifi.it/bitstream/2158/1447273/1/wang2025bib.pdf)"
+      },
+      {
+        "source": "Europe PMC",
+        "result": "success",
+        "detail": "PMCID=PMC12636493; 2,120,828 bytes (https://europepmc.org/api/getPdf?pmcid=PMC12636493)"
+      }
+    ]
+  },
+  "10.7554/eLife.88039": {
+    "status": "success",
+    "source": "Europe PMC",
+    "file": "Downloads\\PDFs\\Fine-mapping Stability Analysis_The impact of stability considerations on genetic fine-mapping..pdf",
+    "detail": "PMCID=PMC12991658; 4,792,131 bytes (https://europepmc.org/api/getPdf?pmcid=PMC12991658)",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "failed",
+        "detail": "HTTP 403 (https://pmc.ncbi.nlm.nih.gov/articles/PMC12991658/pdf/elife-88039.pdf)"
+      },
+      {
+        "source": "Europe PMC",
+        "result": "success",
+        "detail": "PMCID=PMC12991658; 4,792,131 bytes (https://europepmc.org/api/getPdf?pmcid=PMC12991658)"
+      }
+    ]
+  },
+  "10.1371/journal.pgen.1012144": {
+    "status": "success",
+    "source": "Unpaywall",
+    "file": "Downloads\\PDFs\\MR2G_MR2G_ A novel framework for causal network inference using GWAS summary data..pdf",
+    "detail": "3,444,027 bytes (https://journals.plos.org/plosgenetics/article/file?id=10.1371/journal.pgen.1012144&type=printable)",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "success",
+        "detail": "3,444,027 bytes (https://journals.plos.org/plosgenetics/article/file?id=10.1371/journal.pgen.1012144&type=printable)"
+      }
+    ]
+  },
+  "10.64898/2026.05.28.728536": {
+    "status": "failed",
+    "reason": "No verified open-access PDF was downloadable from the configured sources. This does not necessarily mean a VPN is required.",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "failed",
+        "detail": "OA metadata found, but no direct PDF URL"
+      },
+      {
+        "source": "Europe PMC",
+        "result": "failed",
+        "detail": "no PDF link in core metadata (PMCID=none, isOpenAccess=N)"
+      },
+      {
+        "source": "OpenAlex",
+        "result": "failed",
+        "detail": "no OpenAlex pdf_url"
+      },
+      {
+        "source": "Semantic Scholar",
+        "result": "failed",
+        "detail": "HTTP 403 (https://pmc.ncbi.nlm.nih.gov/articles/PMC13232093/)"
+      },
+      {
+        "source": "bioRxiv/medRxiv",
+        "result": "failed",
+        "detail": "not a bioRxiv/medRxiv DOI"
+      }
+    ]
+  },
+  "10.1093/genetics/iyag119": {
+    "status": "failed",
+    "reason": "No verified open-access PDF was downloadable from the configured sources. This does not necessarily mean a VPN is required.",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "failed",
+        "detail": "OA metadata found, but no direct PDF URL"
+      },
+      {
+        "source": "Europe PMC",
+        "result": "failed",
+        "detail": "no PDF link in core metadata (PMCID=none, isOpenAccess=N)"
+      },
+      {
+        "source": "OpenAlex",
+        "result": "failed",
+        "detail": "no OpenAlex pdf_url"
+      },
+      {
+        "source": "Semantic Scholar",
+        "result": "failed",
+        "detail": "HTTP 403 (https://academic.oup.com/genetics/article/doi/10.1093/genetics/iyag119/8675958)"
+      },
+      {
+        "source": "bioRxiv/medRxiv",
+        "result": "failed",
+        "detail": "not a bioRxiv/medRxiv DOI"
+      }
+    ]
+  },
+  "10.1093/molbev/msag107": {
+    "status": "success",
+    "source": "Europe PMC",
+    "file": "Downloads\\PDFs\\GAPIT4_GAPIT version 4_ integration of GWAS into genomic prediction..pdf",
+    "detail": "PMCID=PMC13183175; 663,361 bytes (https://europepmc.org/api/getPdf?pmcid=PMC13183175)",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "failed",
+        "detail": "OA metadata found, but no direct PDF URL"
+      },
+      {
+        "source": "Europe PMC",
+        "result": "success",
+        "detail": "PMCID=PMC13183175; 663,361 bytes (https://europepmc.org/api/getPdf?pmcid=PMC13183175)"
+      }
+    ]
+  },
+  "10.1002/gepi.22050": {
+    "status": "success",
+    "source": "Semantic Scholar",
+    "file": "Downloads\\PDFs\\lassosum_Polygenic scores via penalized regression on summary statistics.pdf",
+    "detail": "421,378 bytes (https://www.biorxiv.org/content/biorxiv/early/2017/03/22/058214.full.pdf)",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "failed",
+        "detail": "not marked open access"
+      },
+      {
+        "source": "Europe PMC",
+        "result": "failed",
+        "detail": "no PDF link in core metadata (PMCID=none, isOpenAccess=N)"
+      },
+      {
+        "source": "OpenAlex",
+        "result": "failed",
+        "detail": "no OpenAlex pdf_url"
+      },
+      {
+        "source": "Semantic Scholar",
+        "result": "success",
+        "detail": "421,378 bytes (https://www.biorxiv.org/content/biorxiv/early/2017/03/22/058214.full.pdf)"
+      }
+    ]
+  },
+  "10.1038/ng.2310": {
+    "status": "failed",
+    "reason": "No verified open-access PDF was downloadable from the configured sources. This does not necessarily mean a VPN is required.",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "failed",
+        "detail": "not marked open access"
+      },
+      {
+        "source": "Europe PMC",
+        "result": "failed",
+        "detail": "RetryError: HTTPSConnectionPool(host='europepmc.org', port=443): Max retries exceeded with url: /api/getPdf?pmcid=PMC3386377 (Caused by ResponseError('too many 500 error responses'))"
+      },
+      {
+        "source": "OpenAlex",
+        "result": "failed",
+        "detail": "no OpenAlex pdf_url"
+      },
+      {
+        "source": "Semantic Scholar",
+        "result": "failed",
+        "detail": "HTTP 403 (https://pmc.ncbi.nlm.nih.gov/articles/PMC3386377)"
+      },
+      {
+        "source": "bioRxiv/medRxiv",
+        "result": "failed",
+        "detail": "not a bioRxiv/medRxiv DOI"
+      }
+    ]
+  },
+  "10.1038/s41588-018-0295-5": {
+    "status": "failed",
+    "reason": "No verified open-access PDF was downloadable from the configured sources. This does not necessarily mean a VPN is required.",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "failed",
+        "detail": "OA metadata found, but no direct PDF URL"
+      },
+      {
+        "source": "Europe PMC",
+        "result": "failed",
+        "detail": "RetryError: HTTPSConnectionPool(host='europepmc.org', port=443): Max retries exceeded with url: /api/getPdf?pmcid=PMC11180539 (Caused by ResponseError('too many 500 error responses'))"
+      },
+      {
+        "source": "OpenAlex",
+        "result": "failed",
+        "detail": "no OpenAlex pdf_url"
+      },
+      {
+        "source": "Semantic Scholar",
+        "result": "failed",
+        "detail": "HTTP 403 (https://pmc.ncbi.nlm.nih.gov/articles/PMC11180539)"
+      },
+      {
+        "source": "bioRxiv/medRxiv",
+        "result": "failed",
+        "detail": "not a bioRxiv/medRxiv DOI"
+      }
+    ]
+  },
+  "10.1371/journal.pgen.1004383": {
+    "status": "success",
+    "source": "Unpaywall",
+    "file": "Downloads\\PDFs\\COLOC_Genetic colocalisation analysis_ a unified framework for molecular biology and GWAS.pdf",
+    "detail": "1,709,450 bytes (https://journals.plos.org/plosgenetics/article/file?id=10.1371/journal.pgen.1004383&type=printable)",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "success",
+        "detail": "1,709,450 bytes (https://journals.plos.org/plosgenetics/article/file?id=10.1371/journal.pgen.1004383&type=printable)"
+      }
+    ]
+  },
+  "10.1534/genetics.114.167908": {
+    "status": "success",
+    "source": "Europe PMC",
+    "file": "Downloads\\PDFs\\CAVIAR_Identifying causal variants at loci with multiple signals of association.pdf",
+    "detail": "PMCID=PMC4196608; 1,442,681 bytes (https://europepmc.org/api/getPdf?pmcid=PMC4196608)",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "failed",
+        "detail": "HTTP 403 (https://academic.oup.com/genetics/article/198/2/497/5935918) | HTTP 403 (https://escholarship.org/content/qt4gt4n1kv/qt4gt4n1kv.pdf?t=rsse3g)"
+      },
+      {
+        "source": "Europe PMC",
+        "result": "success",
+        "detail": "PMCID=PMC4196608; 1,442,681 bytes (https://europepmc.org/api/getPdf?pmcid=PMC4196608)"
+      }
+    ]
+  },
+  "10.1371/journal.pgen.1004722": {
+    "status": "success",
+    "source": "Unpaywall",
+    "file": "Downloads\\PDFs\\PAINTOR_Probabilistic fine-mapping of complex trait loci using functional annotation data.pdf",
+    "detail": "557,935 bytes (https://journals.plos.org/plosgenetics/article/file?id=10.1371/journal.pgen.1004722&type=printable)",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "success",
+        "detail": "557,935 bytes (https://journals.plos.org/plosgenetics/article/file?id=10.1371/journal.pgen.1004722&type=printable)"
+      }
+    ]
+  },
+  "10.1038/s41588-017-0010-x": {
+    "status": "failed",
+    "reason": "No verified open-access PDF was downloadable from the configured sources. This does not necessarily mean a VPN is required.",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "failed",
+        "detail": "metadata HTTP 404"
+      },
+      {
+        "source": "Europe PMC",
+        "result": "failed",
+        "detail": "DOI not found in Europe PMC"
+      },
+      {
+        "source": "OpenAlex",
+        "result": "failed",
+        "detail": "metadata HTTP 404"
+      },
+      {
+        "source": "Semantic Scholar",
+        "result": "failed",
+        "detail": "metadata HTTP 404"
+      },
+      {
+        "source": "bioRxiv/medRxiv",
+        "result": "failed",
+        "detail": "not a bioRxiv/medRxiv DOI"
+      }
+    ]
+  },
+  "10.1371/journal.pgen.1007081": {
+    "status": "success",
+    "source": "Unpaywall",
+    "file": "Downloads\\PDFs\\Steiger Filtering_Orienting the causal relationship between imprecisely measured traits using GWAS summary data.pdf",
+    "detail": "3,530,488 bytes (https://journals.plos.org/plosgenetics/article/file?id=10.1371/journal.pgen.1007081&type=printable)",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "success",
+        "detail": "3,530,488 bytes (https://journals.plos.org/plosgenetics/article/file?id=10.1371/journal.pgen.1007081&type=printable)"
+      }
+    ]
+  },
+  "10.1038/s41588-020-0631-4": {
+    "status": "failed",
+    "reason": "No verified open-access PDF was downloadable from the configured sources. This does not necessarily mean a VPN is required.",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "failed",
+        "detail": "OA metadata found, but no direct PDF URL"
+      },
+      {
+        "source": "Europe PMC",
+        "result": "failed",
+        "detail": "RetryError: HTTPSConnectionPool(host='europepmc.org', port=443): Max retries exceeded with url: /api/getPdf?pmcid=PMC7343608 (Caused by ResponseError('too many 500 error responses'))"
+      },
+      {
+        "source": "OpenAlex",
+        "result": "failed",
+        "detail": "no OpenAlex pdf_url"
+      },
+      {
+        "source": "Semantic Scholar",
+        "result": "failed",
+        "detail": "HTTP 403 (https://pmc.ncbi.nlm.nih.gov/articles/PMC7343608)"
+      },
+      {
+        "source": "bioRxiv/medRxiv",
+        "result": "failed",
+        "detail": "not a bioRxiv/medRxiv DOI"
+      }
+    ]
+  },
+  "10.1038/ng.3190": {
+    "status": "failed",
+    "reason": "No verified open-access PDF was downloadable from the configured sources. This does not necessarily mean a VPN is required.",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "failed",
+        "detail": "HTTP 403 (https://escholarship.org/content/qt0tb188tg/qt0tb188tg.pdf)"
+      },
+      {
+        "source": "Europe PMC",
+        "result": "failed",
+        "detail": "RetryError: HTTPSConnectionPool(host='europepmc.org', port=443): Max retries exceeded with url: /api/getPdf?pmcid=PMC4342297 (Caused by ResponseError('too many 429 error responses'))"
+      },
+      {
+        "source": "OpenAlex",
+        "result": "failed",
+        "detail": "HTTP 403 (https://escholarship.org/content/qt0tb188tg/qt0tb188tg.pdf)"
+      },
+      {
+        "source": "Semantic Scholar",
+        "result": "failed",
+        "detail": "HTTP 403 (https://escholarship.org/content/qt0tb188tg/qt0tb188tg.pdf)"
+      },
+      {
+        "source": "bioRxiv/medRxiv",
+        "result": "failed",
+        "detail": "not a bioRxiv/medRxiv DOI"
+      }
+    ]
+  },
+  "10.1038/s41588-018-0184-y": {
+    "status": "success",
+    "source": "Semantic Scholar",
+    "file": "Downloads\\PDFs\\SAIGE_Scalable and accurate sequencing-based association study in large phenome-wide analysis.pdf",
+    "detail": "665,173 bytes (https://www.biorxiv.org/content/biorxiv/early/2018/04/24/212357.full.pdf)",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "failed",
+        "detail": "not marked open access"
+      },
+      {
+        "source": "Europe PMC",
+        "result": "failed",
+        "detail": "RetryError: HTTPSConnectionPool(host='europepmc.org', port=443): Max retries exceeded with url: /api/getPdf?pmcid=PMC6119127 (Caused by ResponseError('too many 429 error responses'))"
+      },
+      {
+        "source": "OpenAlex",
+        "result": "failed",
+        "detail": "no OpenAlex pdf_url"
+      },
+      {
+        "source": "Semantic Scholar",
+        "result": "success",
+        "detail": "665,173 bytes (https://www.biorxiv.org/content/biorxiv/early/2018/04/24/212357.full.pdf)"
+      }
+    ]
+  },
+  "10.1038/ng.2213": {
+    "status": "failed",
+    "reason": "No verified open-access PDF was downloadable from the configured sources. This does not necessarily mean a VPN is required.",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "failed",
+        "detail": "not marked open access"
+      },
+      {
+        "source": "Europe PMC",
+        "result": "failed",
+        "detail": "RetryError: HTTPSConnectionPool(host='europepmc.org', port=443): Max retries exceeded with url: /api/getPdf?pmcid=PMC3593158 (Caused by ResponseError('too many 500 error responses'))"
+      },
+      {
+        "source": "OpenAlex",
+        "result": "failed",
+        "detail": "no OpenAlex pdf_url"
+      },
+      {
+        "source": "Semantic Scholar",
+        "result": "failed",
+        "detail": "HTTP 403 (https://pmc.ncbi.nlm.nih.gov/articles/PMC3593158)"
+      },
+      {
+        "source": "bioRxiv/medRxiv",
+        "result": "failed",
+        "detail": "not a bioRxiv/medRxiv DOI"
+      }
+    ]
+  },
+  "10.1093/bioinformatics/btq340": {
+    "status": "success",
+    "source": "Europe PMC",
+    "file": "Downloads\\PDFs\\METAL_Meta-analysis of genome-wide association studies with METAL.pdf",
+    "detail": "PMCID=PMC2922887; 80,100 bytes (https://europepmc.org/api/getPdf?pmcid=PMC2922887)",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "failed",
+        "detail": "OA metadata found, but no direct PDF URL"
+      },
+      {
+        "source": "Europe PMC",
+        "result": "success",
+        "detail": "PMCID=PMC2922887; 80,100 bytes (https://europepmc.org/api/getPdf?pmcid=PMC2922887)"
+      }
+    ]
+  },
+  "10.1038/s41467-017-01261-5": {
+    "status": "success",
+    "source": "Unpaywall",
+    "file": "Downloads\\PDFs\\FUMA_FUMA_ functional mapping and annotation of genetic associations.pdf",
+    "detail": "1,309,522 bytes (https://www.nature.com/articles/s41467-017-01261-5.pdf)",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "success",
+        "detail": "1,309,522 bytes (https://www.nature.com/articles/s41467-017-01261-5.pdf)"
+      }
+    ]
+  },
+  "10.1038/ng.3367": {
+    "status": "failed",
+    "reason": "No verified open-access PDF was downloadable from the configured sources. This does not necessarily mean a VPN is required.",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "failed",
+        "detail": "OA metadata found, but no direct PDF URL"
+      },
+      {
+        "source": "Europe PMC",
+        "result": "failed",
+        "detail": "RetryError: HTTPSConnectionPool(host='europepmc.org', port=443): Max retries exceeded with url: /api/getPdf?pmcid=PMC4552594 (Caused by ResponseError('too many 500 error responses'))"
+      },
+      {
+        "source": "OpenAlex",
+        "result": "failed",
+        "detail": "no OpenAlex pdf_url"
+      },
+      {
+        "source": "Semantic Scholar",
+        "result": "failed",
+        "detail": "HTTP 403 (https://pmc.ncbi.nlm.nih.gov/articles/4552594)"
+      },
+      {
+        "source": "bioRxiv/medRxiv",
+        "result": "failed",
+        "detail": "not a bioRxiv/medRxiv DOI"
+      }
+    ]
+  },
+  "10.1371/journal.pgen.1007586": {
+    "status": "success",
+    "source": "Unpaywall",
+    "file": "Downloads\\PDFs\\S-PrediXcan_Integrating predicted transcriptome from multiple tissues improves association detection.pdf",
+    "detail": "4,284,808 bytes (https://journals.plos.org/plosgenetics/article/file?id=10.1371/journal.pgen.1007586&type=printable)",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "success",
+        "detail": "4,284,808 bytes (https://journals.plos.org/plosgenetics/article/file?id=10.1371/journal.pgen.1007586&type=printable)"
+      }
+    ]
+  },
+  "10.1038/ng.3506": {
+    "status": "success",
+    "source": "Unpaywall",
+    "file": "Downloads\\PDFs\\FUSION_Integrative approaches for large-scale transcriptome-wide association studies.pdf",
+    "detail": "710,967 bytes (https://pure.amsterdamumc.nl/ws/files/160594053/Integrative-approaches-for-large-scale-transcriptome-wide-association-studies.pdf)",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "success",
+        "detail": "710,967 bytes (https://pure.amsterdamumc.nl/ws/files/160594053/Integrative-approaches-for-large-scale-transcriptome-wide-association-studies.pdf)"
+      }
+    ]
+  },
+  "10.1016/j.ajhg.2016.10.003": {
+    "status": "success",
+    "source": "Unpaywall",
+    "file": "Downloads\\PDFs\\eCAVIAR_Colocalization of GWAS and eQTL Signals Detects Target Genes.pdf",
+    "detail": "838,531 bytes (https://www.cell.com/ajhg/pdf/S0002-9297(16)30439-6.pdf)",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "success",
+        "detail": "838,531 bytes (https://www.cell.com/ajhg/pdf/S0002-9297(16)30439-6.pdf)"
+      }
+    ]
+  },
+  "10.1371/journal.pcbi.1004219": {
+    "status": "success",
+    "source": "Unpaywall",
+    "file": "Downloads\\PDFs\\MAGMA_MAGMA_ Generalized gene-set analysis of GWAS data.pdf",
+    "detail": "551,180 bytes (https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1004219&type=printable)",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "success",
+        "detail": "551,180 bytes (https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1004219&type=printable)"
+      }
+    ]
+  },
+  "10.1038/s41588-022-01054-7": {
+    "status": "failed",
+    "reason": "No verified open-access PDF was downloadable from the configured sources. This does not necessarily mean a VPN is required.",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "failed",
+        "detail": "HTTP 403 (https://pmc.ncbi.nlm.nih.gov/articles/PMC9117455/pdf/nihms-1790135.pdf)"
+      },
+      {
+        "source": "Europe PMC",
+        "result": "failed",
+        "detail": "RetryError: HTTPSConnectionPool(host='europepmc.org', port=443): Max retries exceeded with url: /api/getPdf?pmcid=PMC9117455 (Caused by ResponseError('too many 500 error responses')) | RetryError: HTTPSConnectionPool(host='europepmc.org', port=443): Max retries exceeded with url: /api/getPdf?pmcid=PMC9117455 (Caused by ResponseError('too many 500 error responses'))"
+      },
+      {
+        "source": "OpenAlex",
+        "result": "failed",
+        "detail": "HTTP 403 (https://pmc.ncbi.nlm.nih.gov/articles/PMC9117455/pdf/nihms-1790135.pdf)"
+      },
+      {
+        "source": "Semantic Scholar",
+        "result": "failed",
+        "detail": "HTTP 403 (https://pmc.ncbi.nlm.nih.gov/articles/PMC9117455/pdf/nihms-1790135.pdf)"
+      },
+      {
+        "source": "bioRxiv/medRxiv",
+        "result": "failed",
+        "detail": "not a bioRxiv/medRxiv DOI"
+      }
+    ]
+  },
+  "10.1186/s13059-026-04185-w": {
+    "status": "success",
+    "source": "Unpaywall",
+    "file": "Downloads\\PDFs\\CIT-Lasso_CIT-Lasso_ a scalable approach beyond guilty by association for identifying causal variants from genome-wide summary statistics..pdf",
+    "detail": "3,173,231 bytes (https://link.springer.com/content/pdf/10.1186/s13059-026-04185-w.pdf)",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "success",
+        "detail": "3,173,231 bytes (https://link.springer.com/content/pdf/10.1186/s13059-026-04185-w.pdf)"
+      }
+    ]
+  },
+  "10.1002/sim.70667": {
+    "status": "failed",
+    "reason": "No verified open-access PDF was downloadable from the configured sources. This does not necessarily mean a VPN is required.",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "failed",
+        "detail": "OA metadata found, but no direct PDF URL"
+      },
+      {
+        "source": "Europe PMC",
+        "result": "failed",
+        "detail": "no PDF link in core metadata (PMCID=none, isOpenAccess=N)"
+      },
+      {
+        "source": "OpenAlex",
+        "result": "failed",
+        "detail": "no OpenAlex pdf_url"
+      },
+      {
+        "source": "Semantic Scholar",
+        "result": "failed",
+        "detail": "HTTP 403 (https://pmc.ncbi.nlm.nih.gov/articles/PMC13355236/)"
+      },
+      {
+        "source": "bioRxiv/medRxiv",
+        "result": "failed",
+        "detail": "not a bioRxiv/medRxiv DOI"
+      }
+    ]
+  },
+  "10.1038/s41588-020-0621-6": {
+    "status": "success",
+    "source": "Semantic Scholar",
+    "file": "Downloads\\PDFs\\SAIGE-GENE_Scalable generalized linear mixed model for region-based association tests in large biobanks and cohorts..pdf",
+    "detail": "884,089 bytes (https://www.biorxiv.org/content/biorxiv/early/2020/01/31/583278.full.pdf)",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "failed",
+        "detail": "OA metadata found, but no direct PDF URL"
+      },
+      {
+        "source": "Europe PMC",
+        "result": "failed",
+        "detail": "RetryError: HTTPSConnectionPool(host='europepmc.org', port=443): Max retries exceeded with url: /api/getPdf?pmcid=PMC7871731 (Caused by ResponseError('too many 500 error responses'))"
+      },
+      {
+        "source": "OpenAlex",
+        "result": "failed",
+        "detail": "no OpenAlex pdf_url"
+      },
+      {
+        "source": "Semantic Scholar",
+        "result": "success",
+        "detail": "884,089 bytes (https://www.biorxiv.org/content/biorxiv/early/2020/01/31/583278.full.pdf)"
+      }
+    ]
+  },
+  "10.1016/j.ajhg.2023.03.010": {
+    "status": "success",
+    "source": "Unpaywall",
+    "file": "Downloads\\PDFs\\SAIGE-GENE_Scalable mixed model methods for set-based association studies on large-scale categorical data analysis and its application to exome-sequen.pdf",
+    "detail": "3,305,593 bytes (https://www.cell.com/ajhg/pdf/S0002-9297(23)00094-0.pdf)",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "success",
+        "detail": "3,305,593 bytes (https://www.cell.com/ajhg/pdf/S0002-9297(23)00094-0.pdf)"
+      }
+    ]
+  },
+  "10.1016/j.ajhg.2017.05.017": {
+    "status": "success",
+    "source": "Europe PMC",
+    "file": "Downloads\\PDFs\\SEQSpark_SEQSpark_ A Complete Analysis Tool for Large-Scale Rare Variant Association Studies Using Whole-Genome and Exome Sequence Data..pdf",
+    "detail": "PMCID=PMC5501866; 523,477 bytes (https://europepmc.org/api/getPdf?pmcid=PMC5501866)",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "failed",
+        "detail": "HTTP 403 (https://www.cell.com/article/S0002929717302355/pdf)"
+      },
+      {
+        "source": "Europe PMC",
+        "result": "success",
+        "detail": "PMCID=PMC5501866; 523,477 bytes (https://europepmc.org/api/getPdf?pmcid=PMC5501866)"
+      }
+    ]
+  },
+  "10.1101/2024.04.16.24305933": {
+    "status": "success",
+    "source": "Unpaywall",
+    "file": "Downloads\\PDFs\\MR-RAPS_A new robust and accurate two-sample Mendelian randomization method with a large number of genetic variants.pdf",
+    "detail": "1,675,909 bytes (https://www.medrxiv.org/content/medrxiv/early/2024/04/18/2024.04.16.24305933.full.pdf)",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "success",
+        "detail": "1,675,909 bytes (https://www.medrxiv.org/content/medrxiv/early/2024/04/18/2024.04.16.24305933.full.pdf)"
+      }
+    ]
+  },
+  "10.1093/ije/dyx102": {
+    "status": "success",
+    "source": "Europe PMC",
+    "file": "Downloads\\PDFs\\Weighted Mode MR_Robust inference in summary data Mendelian randomization via the zero modal pleiotropy assumption.pdf",
+    "detail": "PMCID=PMC5837715; 423,182 bytes (https://europepmc.org/api/getPdf?pmcid=PMC5837715)",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "failed",
+        "detail": "HTTP 403 (https://academic.oup.com/ije/article-pdf/46/6/1985/24171931/dyx102.pdf) | not a PDF; Content-Type=text/html;charset=utf-8 (https://research-information.bris.ac.uk/en/publications/robust-inference-in-summary-data-mendelian-randomisation-via-the-/)"
+      },
+      {
+        "source": "Europe PMC",
+        "result": "success",
+        "detail": "PMCID=PMC5837715; 423,182 bytes (https://europepmc.org/api/getPdf?pmcid=PMC5837715)"
+      }
+    ]
+  },
+  "10.1093/bib/bbag390": {
+    "status": "failed",
+    "reason": "No verified open-access PDF was downloadable from the configured sources. This does not necessarily mean a VPN is required.",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "failed",
+        "detail": "OA metadata found, but no direct PDF URL"
+      },
+      {
+        "source": "Europe PMC",
+        "result": "failed",
+        "detail": "no PDF link in core metadata (PMCID=none, isOpenAccess=N)"
+      },
+      {
+        "source": "OpenAlex",
+        "result": "failed",
+        "detail": "no OpenAlex pdf_url"
+      },
+      {
+        "source": "Semantic Scholar",
+        "result": "failed",
+        "detail": "HTTP 403 (https://academic.oup.com/bib/article/doi/10.1093/bib/bbag390/8739373)"
+      },
+      {
+        "source": "bioRxiv/medRxiv",
+        "result": "failed",
+        "detail": "not a bioRxiv/medRxiv DOI"
+      }
+    ]
+  },
+  "10.1073/pnas.2525288123": {
+    "status": "failed",
+    "reason": "No verified open-access PDF was downloadable from the configured sources. This does not necessarily mean a VPN is required.",
+    "attempts": [
+      {
+        "source": "Unpaywall",
+        "result": "failed",
+        "detail": "HTTP 403 (https://pmc.ncbi.nlm.nih.gov/articles/PMC12956888/pdf/pnas.202525288.pdf)"
+      },
+      {
+        "source": "Europe PMC",
+        "result": "failed",
+        "detail": "no PDF link in core metadata (PMCID=none, isOpenAccess=N)"
+      },
+      {
+        "source": "OpenAlex",
+        "result": "failed",
+        "detail": "HTTP 403 (https://pmc.ncbi.nlm.nih.gov/articles/PMC12956888/pdf/pnas.202525288.pdf)"
+      },
+      {
+        "source": "Semantic Scholar",
+        "result": "failed",
+        "detail": "not a PDF; Content-Type=text/html;charset=utf-8 (https://www.pnas.org/doi/10.1073/pnas.2525288123)"
+      },
+      {
+        "source": "bioRxiv/medRxiv",
+        "result": "failed",
+        "detail": "not a bioRxiv/medRxiv DOI"
+      }
+    ]
+  }
+}

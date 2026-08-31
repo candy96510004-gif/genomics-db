@@ -75,16 +75,45 @@ def pmid_to_pmcid(pmid):
 def try_pmc(doi, filepath):
     pmid = doi_to_pmid(doi)
     if not pmid:
+        print(f"    (PMC debug) PMID 找不到", flush=True)
         return False
+    print(f"    (PMC debug) PMID={pmid}", flush=True)
     pmcid = pmid_to_pmcid(pmid)
     if not pmcid:
+        # 備用：直接用 DOI 查 Europe PMC 的 PMCID
+        try:
+            r = requests.get("https://www.ebi.ac.uk/europepmc/webservices/rest/search",
+                params={"query":f"DOI:{doi}","format":"json","resultType":"core"}, timeout=15)
+            results = r.json().get("resultList",{}).get("result",[])
+            if results:
+                pmcid = results[0].get("pmcid","").replace("PMC","")
+        except Exception:
+            pass
+    if not pmcid:
+        print(f"    (PMC debug) PMCID 找不到", flush=True)
         return False
-    try:
-        r = requests.get(f"https://pmc.ncbi.nlm.nih.gov/articles/PMC{pmcid}/pdf/",
-            timeout=30, headers=HEADERS)
-        return write_pdf(r, filepath)
-    except Exception:
-        return False
+    print(f"    (PMC debug) PMCID={pmcid}", flush=True)
+    browser_headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Accept": "application/pdf,text/html,*/*",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Referer": f"https://pmc.ncbi.nlm.nih.gov/articles/PMC{pmcid}/",
+    }
+    urls = [
+        f"https://pmc.ncbi.nlm.nih.gov/articles/PMC{pmcid}/pdf/",
+        f"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC{pmcid}/pdf/",
+        f"https://europepmc.org/backend/ptpmcrender.fcgi?accid=PMC{pmcid}&blobtype=pdf",
+    ]
+    for url in urls:
+        try:
+            r = requests.get(url, timeout=30, headers=browser_headers, allow_redirects=True)
+            print(f"    (PMC debug) {url} -> status={r.status_code}, size={len(r.content)}", flush=True)
+            if write_pdf(r, filepath):
+                return True
+        except Exception as e:
+            print(f"    (PMC debug) {url} -> error={e}", flush=True)
+            continue
+    return False
 
 # ── 來源 2：Unpaywall ─────────────────────────────────────
 def try_unpaywall(doi, filepath):
@@ -184,6 +213,15 @@ SOURCES = [
     ("Semantic Scholar", try_semantic_scholar),
     ("bioRxiv/medRxiv",  try_biorxiv),
 ]
+
+# 重置失敗紀錄，讓腳本重新嘗試
+reset_failed = input("是否重新嘗試之前失敗的論文？(y/n) [y]：").strip().lower()
+if reset_failed != "n":
+    before = sum(1 for v in download_log.values() if v == "failed")
+    for k in list(download_log.keys()):
+        if download_log[k] == "failed":
+            del download_log[k]
+    print(f"已重置 {before} 筆失敗紀錄，重新嘗試下載")
 
 print("載入 methods.json ...")
 try:
