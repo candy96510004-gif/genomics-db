@@ -561,7 +561,12 @@ function render(){
       ${allMethods.length ? `<div style="display:flex;flex-wrap:wrap;gap:4px">${allMethods.map(t=>`<span class="tag stat" style="font-size:10px;padding:2px 6px">${t}</span>`).join("")}</div>` : ""}
       <div class="card-footer">
         <span>📄 ${pCount} paper${pCount!==1?"s":""}</span>
-        ${m.link ? `<span>🔗 docs</span>` : ""}
+        ${(m.papers||[]).some(p => p.doi)
+          ? `<span onclick="event.stopPropagation(); openDetail(${m.id})" style="cursor:pointer">🔗 papers</span>`
+          : ""}
+        ${m.link
+          ? `<span onclick="event.stopPropagation(); window.open('${m.link}', '_blank', 'noopener,noreferrer')" style="cursor:pointer">🔗 docs</span>`
+          : ""}
       </div>
     </div>`;
   }).join("");
